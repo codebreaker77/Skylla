@@ -23,6 +23,8 @@ platform or training a selector.
 
 ## Read the design
 
+- [Next study and advantage plan](docs/NEXT_STUDY.md): the proposed expansion
+  decision, bounded research schedule, fair comparisons, and assets to build.
 - [Literature review](docs/LITERATURE.md): recent papers, evidence boundaries,
   adjacent systems, and remaining novelty questions.
 - [Product direction](docs/DIRECTION.md): alternatives considered, recommended

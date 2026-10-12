@@ -30,6 +30,11 @@ The initial product combines a small evidence record, executable probe contracts
 and interchangeable selection policies. A trained selector is optional and must
 outperform cheap alternatives before becoming a product dependency.
 
+The [next-study proposal](NEXT_STUDY.md) focuses on deciding when the available
+experiment menu needs expansion. This follows the rehearsal's missed-candidate
+failure. It extends the generator/selector boundary without committing to a
+trained controller or claiming that adaptive experiment planning is new.
+
 The [current harness audit](HARNESSES.md) identifies direct overlap with Cursor
 Debug Mode and strong native debugging capabilities in Claude Code, Codex, and
 open-source harnesses. Skylla must improve those workflows under fair budgets.
