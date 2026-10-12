@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "benchmark_commit": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+  "purpose": "Development screening, not a frozen holdout or prevalence sample",
+  "test_environment_deviation": "Local Python 3.9; tox matrix replaced with direct pytest where present",
+  "cases": [
+    {
+      "id": "cookiecutter-1",
+      "repository": "https://github.com/cookiecutter/cookiecutter",
+      "buggy_commit": "c15633745df6abdb24e02746b82aadb20b8cdf8c",
+      "fixed_commit": "7f6804c4953a18386809f11faf4d86898570debc",
+      "benchmark_python": "3.6.9",
+      "test_file": "tests/test_generate_context.py",
+      "test_mode": "pytest",
+      "targets": [
+        "tests/test_generate_context.py::test_generate_context_decodes_non_ascii_chars"
+      ],
+      "original_commands": [
+        "tox tests/test_generate_context.py::test_generate_context_decodes_non_ascii_chars"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    },
+    {
+      "id": "cookiecutter-2",
+      "repository": "https://github.com/cookiecutter/cookiecutter",
+      "buggy_commit": "d7e7b28811e474e14d1bed747115e47dcdd15ba3",
+      "fixed_commit": "90434ff4ea4477941444f1e83313beb414838535",
+      "benchmark_python": "3.6.9",
+      "test_file": "tests/test_hooks.py",
+      "test_mode": "pytest",
+      "targets": [
+        "tests/test_hooks.py::TestFindHooks::test_find_hook",
+        "tests/test_hooks.py::TestExternalHooks::test_run_hook"
+      ],
+      "original_commands": [
+        "tox tests/test_hooks.py::TestFindHooks::test_find_hook",
+        "tox tests/test_hooks.py::TestExternalHooks::test_run_hook"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    },
+    {
+      "id": "cookiecutter-3",
+      "repository": "https://github.com/cookiecutter/cookiecutter",
+      "buggy_commit": "5c282f020a8db7e5e7c4e7b51b010556ca31fb7f",
+      "fixed_commit": "7129d474206761a6156925db78eee4b62a0e3944",
+      "benchmark_python": "3.6.9",
+      "test_file": "tests/test_read_user_choice.py",
+      "test_mode": "pytest",
+      "targets": [
+        "tests/test_read_user_choice.py::test_click_invocation"
+      ],
+      "original_commands": [
+        "tox tests/test_read_user_choice.py::test_click_invocation"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    },
+    {
+      "id": "cookiecutter-4",
+      "repository": "https://github.com/cookiecutter/cookiecutter",
+      "buggy_commit": "9568ab6ecd2d6836646006c59473c4a4ac0dee04",
+      "fixed_commit": "457a1a4e862aab4102b644ff1d2b2e2b5a766b3c",
+      "benchmark_python": "3.6.9",
+      "test_file": "tests/test_hooks.py",
+      "test_mode": "pytest",
+      "targets": [
+        "tests/test_hooks.py::TestExternalHooks::test_run_failing_hook"
+      ],
+      "original_commands": [
+        "tox tests/test_hooks.py::TestExternalHooks::test_run_failing_hook"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    },
+    {
+      "id": "luigi-5",
+      "repository": "https://github.com/spotify/luigi",
+      "buggy_commit": "45b5711d1900184ccd66c65216d28c0d69d10d4a",
+      "fixed_commit": "1fbec18ceb7c5de352e6d1df12960c61f09e67c2",
+      "benchmark_python": "3.8.3",
+      "test_file": "test/util_test.py",
+      "test_mode": "pytest",
+      "targets": [
+        "test/util_test.py::BasicsTest::test_inherits_has_effect_MRO",
+        "test/util_test.py::BasicsTest::test_requires_has_effect_MRO"
+      ],
+      "original_commands": [
+        "pytest test/util_test.py::BasicsTest::test_inherits_has_effect_MRO",
+        "pytest test/util_test.py::BasicsTest::test_requires_has_effect_MRO"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    },
+    {
+      "id": "luigi-7",
+      "repository": "https://github.com/spotify/luigi",
+      "buggy_commit": "dd1f2ce0061e7787166522a3c75339ba4755dd2c",
+      "fixed_commit": "daf9ce99a3a7ed4227d1564570c5fce8848357e5",
+      "benchmark_python": "3.8.3",
+      "test_file": "test/scheduler_api_test.py",
+      "test_mode": "pytest",
+      "targets": [
+        "test/scheduler_api_test.py::SchedulerApiTest::test_status_wont_override"
+      ],
+      "original_commands": [
+        "pytest test/scheduler_api_test.py::SchedulerApiTest::test_status_wont_override"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    },
+    {
+      "id": "luigi-9",
+      "repository": "https://github.com/spotify/luigi",
+      "buggy_commit": "f7e0b7710fd8b12f27625b1efb62a8fde6e206c4",
+      "fixed_commit": "b7115974c3deadf77113686248b39567cb67e38f",
+      "benchmark_python": "3.8.3",
+      "test_file": "test/execution_summary_test.py",
+      "test_mode": "pytest",
+      "targets": [
+        "test/execution_summary_test.py::ExecutionSummaryTest::test_status_with_task_retry"
+      ],
+      "original_commands": [
+        "pytest test/execution_summary_test.py::ExecutionSummaryTest::test_status_with_task_retry"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    },
+    {
+      "id": "tornado-3",
+      "repository": "https://github.com/tornadoweb/tornado",
+      "buggy_commit": "940fd87fe9145d1154c8457221f86d56ea063c65",
+      "fixed_commit": "aa622e724f80e0f7fcee369f75d69d1db13d72f2",
+      "benchmark_python": "3.7.0",
+      "test_file": "tornado/test/httpclient_test.py",
+      "test_mode": "unittest",
+      "targets": [
+        "tornado.test.httpclient_test.SyncHTTPClientSubprocessTest"
+      ],
+      "original_commands": [
+        "python -m unittest -q tornado.test.httpclient_test.SyncHTTPClientSubprocessTest"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    },
+    {
+      "id": "tornado-5",
+      "repository": "https://github.com/tornadoweb/tornado",
+      "buggy_commit": "2d4053daa56c609d642b214399e046671d4a593e",
+      "fixed_commit": "886643965b5cb782503d8d7b374b7a794ec2077b",
+      "benchmark_python": "3.7.0",
+      "test_file": "tornado/test/ioloop_test.py",
+      "test_mode": "unittest",
+      "targets": [
+        "tornado.test.ioloop_test.TestPeriodicCallbackMath.test_clock_backwards"
+      ],
+      "original_commands": [
+        "python -m unittest -q tornado.test.ioloop_test.TestPeriodicCallbackMath.test_clock_backwards"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    },
+    {
+      "id": "tornado-6",
+      "repository": "https://github.com/tornadoweb/tornado",
+      "buggy_commit": "fb74e4816ccfa7fc6a7abd8c8aab1f415cfc1b13",
+      "fixed_commit": "2905ee4fb3c283d40b10f609359e189c83a0dc06",
+      "benchmark_python": "3.7.0",
+      "test_file": "tornado/test/asyncio_test.py",
+      "test_mode": "unittest",
+      "targets": [
+        "tornado.test.asyncio_test.LeakTest.test_ioloop_close_leak",
+        "tornado.test.asyncio_test.LeakTest.test_asyncio_close_leak"
+      ],
+      "original_commands": [
+        "python -m unittest -q tornado.test.asyncio_test.LeakTest.test_ioloop_close_leak",
+        "python -m unittest -q tornado.test.asyncio_test.LeakTest.test_asyncio_close_leak"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    },
+    {
+      "id": "tornado-7",
+      "repository": "https://github.com/tornadoweb/tornado",
+      "buggy_commit": "fa3409179588536f2f743d16e537f6f9827fa92f",
+      "fixed_commit": "a3b44cd701e0e82693363701bc0346b0125d2362",
+      "benchmark_python": "3.7.0",
+      "test_file": "tornado/test/ioloop_test.py",
+      "test_mode": "unittest",
+      "targets": [
+        "tornado.test.ioloop_test.TestIOLoopFutures.test_run_in_executor_native"
+      ],
+      "original_commands": [
+        "python -m unittest -q tornado.test.ioloop_test.TestIOLoopFutures.test_run_in_executor_native"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    },
+    {
+      "id": "tqdm-6",
+      "repository": "https://github.com/tqdm/tqdm",
+      "buggy_commit": "a4b9c86db548b2d0dbb5af7a6bbdc26ab47e1eec",
+      "fixed_commit": "6dad2e89019317e875c46d5a3a82a811ad6de2f9",
+      "benchmark_python": "3.6.9",
+      "test_file": "tqdm/tests/tests_synchronisation.py",
+      "test_mode": "pytest",
+      "targets": [
+        "tqdm/tests/tests_synchronisation.py::test_imap"
+      ],
+      "original_commands": [
+        "python3 -m pytest tqdm/tests/tests_synchronisation.py::test_imap"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    }
+  ]
+}

@@ -1,0 +1,2183 @@
+{
+  "schema_version": 1,
+  "purpose": "Development screening; not repair success or a frozen holdout",
+  "triage_review": "Fixture/loader/skipped-test handling corrected after inspecting setup failures; original statuses retained",
+  "manifest_sha256": "a42d90006a9e7aec39122a743ba88fefd1039aa283756ef4520996c86d8a790b",
+  "candidates": 12,
+  "attempts": 22,
+  "recorded_test_processes": 96,
+  "latest_admitted_ids": [
+    "cookiecutter-1",
+    "cookiecutter-2",
+    "cookiecutter-3",
+    "cookiecutter-4",
+    "luigi-5",
+    "luigi-7",
+    "luigi-9",
+    "tornado-5",
+    "tornado-6",
+    "tornado-7"
+  ],
+  "latest_not_admitted_ids": [
+    "tornado-3",
+    "tqdm-6"
+  ],
+  "results": [
+    {
+      "id": "cookiecutter-1",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.676496,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-1-buggy-1.json",
+          "raw_log_sha256": "5826d74dcd44f061bb59debf58f607286a86b5f332beee94d69be891d59c7ae8",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.696295,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-1-buggy-2.json",
+          "raw_log_sha256": "68b4b0a9ee0e4f9e80aba9c493225628f9fe5b667b7a0a7e000bd7b191565100",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.605952,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-1-buggy-3.json",
+          "raw_log_sha256": "473e308f8790d438ee677f5ba530ef2d55ef4d6f83ead660b48a019e48a492e6",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.470864,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-1-fixed-1.json",
+          "raw_log_sha256": "d781d2c26adc171d4f3f61aee061e6c7f69045738dbbb169fad871be13489d25",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.450709,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-1-fixed-2.json",
+          "raw_log_sha256": "96c42207a2d74e9e4709c0447e3cc00cdfd02a6cafe90668e26e8ea4cef2e5be",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.51387,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-1-fixed-3.json",
+          "raw_log_sha256": "c9821fcdce0aac5ae1c59d2d18d8461845e30f57bc9587ae25be547391abd435",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        }
+      ],
+      "sources": [
+        {
+          "id": "cookiecutter-1",
+          "variant": "buggy",
+          "commit": "c15633745df6abdb24e02746b82aadb20b8cdf8c",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/c15633745df6abdb24e02746b82aadb20b8cdf8c",
+          "archive_sha256": "75bb145e8a19de439250a02ee874baac4339677cf96dd31023941c25243ead41",
+          "files": 234,
+          "path": "artifacts\\sources\\cookiecutter-1-buggy",
+          "excluded_archive_prefixes": [
+            "docs/"
+          ],
+          "omitted_links": [
+            "docs/AUTHORS.md",
+            "docs/BACKERS.md",
+            "docs/CODE_OF_CONDUCT.md",
+            "docs/CONTRIBUTING.md",
+            "docs/HISTORY.md",
+            "docs/README.md",
+            "docs/case_studies.md"
+          ]
+        },
+        {
+          "id": "cookiecutter-1",
+          "variant": "fixed",
+          "commit": "7f6804c4953a18386809f11faf4d86898570debc",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/7f6804c4953a18386809f11faf4d86898570debc",
+          "archive_sha256": "a36c6a7fac13bd5e3e70fe3833e9fa145a8863d5bd328732cd3732ca3c8fbeba",
+          "files": 235,
+          "path": "artifacts\\sources\\cookiecutter-1-fixed",
+          "excluded_archive_prefixes": [
+            "docs/"
+          ],
+          "omitted_links": [
+            "docs/AUTHORS.md",
+            "docs/BACKERS.md",
+            "docs/CODE_OF_CONDUCT.md",
+            "docs/CONTRIBUTING.md",
+            "docs/HISTORY.md",
+            "docs/README.md",
+            "docs/case_studies.md"
+          ]
+        }
+      ],
+      "admitted": true,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "cookiecutter-retry",
+      "timestamp_utc": "2026-10-12T22:01:45.653470+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": [
+        "arrow==1.4.0",
+        "atomicwrites==1.4.1",
+        "attrs==26.1.0",
+        "binaryornot==0.4.4",
+        "certifi==2026.7.22",
+        "chardet==4.0.0",
+        "click==7.1.2",
+        "colorama==0.4.6",
+        "decorator==4.4.2",
+        "future==0.18.3",
+        "idna==2.10",
+        "iniconfig==2.1.0",
+        "Jinja2==2.11.3",
+        "jinja2-time==0.2.0",
+        "MarkupSafe==2.0.1",
+        "mock==3.0.5",
+        "nose==1.3.7",
+        "packaging==26.3",
+        "pluggy==1.6.0",
+        "poyo==0.5.0",
+        "py==1.11.0",
+        "pytest==6.2.5",
+        "python-dateutil==2.8.1",
+        "python-toolbox==1.0.11",
+        "requests==2.25.1",
+        "six==1.15.0",
+        "toml==0.10.2",
+        "tornado==4.5.3",
+        "tzdata==2026.5",
+        "urllib3==1.26.20",
+        "whichcraft==0.6.1"
+      ],
+      "runner_sha256": "8b3bc8126b91a5645fd0d4f2ac3e58aefadf9cdcf01eec11183d601294c2fa4d",
+      "environment_policy": "Child home/temp redirected to workspace; unrelated pytest addopts cleared",
+      "benchmark_commit": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+      "manifest_sha256": null,
+      "original_admitted": true,
+      "repeats_required": 3,
+      "reviewed_admitted": true
+    },
+    {
+      "id": "cookiecutter-2",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "setup_failure",
+          "exit_code": 1,
+          "seconds": 0.677826,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-2-buggy-1.json",
+          "raw_log_sha256": "e09f92d0f85362d67aadf614921ed0384650d85763589dac0817e39aaeb98582",
+          "original_status": "setup_failure",
+          "reviewed_status": "setup_failure"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "setup_failure",
+          "exit_code": 1,
+          "seconds": 0.676907,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-2-fixed-1.json",
+          "raw_log_sha256": "a670a893c4e8db137489d026e11f03199d45b9ff557346d93850016d13faa31e",
+          "original_status": "setup_failure",
+          "reviewed_status": "setup_failure"
+        }
+      ],
+      "sources": [
+        {
+          "id": "cookiecutter-2",
+          "variant": "buggy",
+          "commit": "d7e7b28811e474e14d1bed747115e47dcdd15ba3",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/d7e7b28811e474e14d1bed747115e47dcdd15ba3",
+          "archive_sha256": "d5adab16985792cd4ebfb3a0fc82a3c2f7cee639a30dfebfc0031f84e6629dd2",
+          "files": 234,
+          "path": "artifacts\\sources\\cookiecutter-2-buggy",
+          "excluded_archive_prefixes": [
+            "docs/"
+          ],
+          "omitted_links": [
+            "docs/AUTHORS.md",
+            "docs/BACKERS.md",
+            "docs/CODE_OF_CONDUCT.md",
+            "docs/CONTRIBUTING.md",
+            "docs/HISTORY.md",
+            "docs/README.md",
+            "docs/case_studies.md"
+          ]
+        },
+        {
+          "id": "cookiecutter-2",
+          "variant": "fixed",
+          "commit": "90434ff4ea4477941444f1e83313beb414838535",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/90434ff4ea4477941444f1e83313beb414838535",
+          "archive_sha256": "1e294e3a2833eb38b59ee1e967f8d8a343b7d622e21cf0c4d252c25342aa65a7",
+          "files": 234,
+          "path": "artifacts\\sources\\cookiecutter-2-fixed",
+          "excluded_archive_prefixes": [
+            "docs/"
+          ],
+          "omitted_links": [
+            "docs/AUTHORS.md",
+            "docs/BACKERS.md",
+            "docs/CODE_OF_CONDUCT.md",
+            "docs/CONTRIBUTING.md",
+            "docs/HISTORY.md",
+            "docs/README.md",
+            "docs/case_studies.md"
+          ]
+        }
+      ],
+      "admitted": false,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "cookiecutter-retry",
+      "timestamp_utc": "2026-10-12T22:01:45.653470+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": [
+        "arrow==1.4.0",
+        "atomicwrites==1.4.1",
+        "attrs==26.1.0",
+        "binaryornot==0.4.4",
+        "certifi==2026.7.22",
+        "chardet==4.0.0",
+        "click==7.1.2",
+        "colorama==0.4.6",
+        "decorator==4.4.2",
+        "future==0.18.3",
+        "idna==2.10",
+        "iniconfig==2.1.0",
+        "Jinja2==2.11.3",
+        "jinja2-time==0.2.0",
+        "MarkupSafe==2.0.1",
+        "mock==3.0.5",
+        "nose==1.3.7",
+        "packaging==26.3",
+        "pluggy==1.6.0",
+        "poyo==0.5.0",
+        "py==1.11.0",
+        "pytest==6.2.5",
+        "python-dateutil==2.8.1",
+        "python-toolbox==1.0.11",
+        "requests==2.25.1",
+        "six==1.15.0",
+        "toml==0.10.2",
+        "tornado==4.5.3",
+        "tzdata==2026.5",
+        "urllib3==1.26.20",
+        "whichcraft==0.6.1"
+      ],
+      "runner_sha256": "8b3bc8126b91a5645fd0d4f2ac3e58aefadf9cdcf01eec11183d601294c2fa4d",
+      "environment_policy": "Child home/temp redirected to workspace; unrelated pytest addopts cleared",
+      "benchmark_commit": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+      "manifest_sha256": null,
+      "original_admitted": false,
+      "repeats_required": 3,
+      "reviewed_admitted": false
+    },
+    {
+      "id": "cookiecutter-3",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.498392,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-3-buggy-1.json",
+          "raw_log_sha256": "d97336fc376db625be1ba4f6911a39299adfd8af04858e6f9662e6b91288ede4",
+          "original_status": "failed",
+          "reviewed_status": "setup_failure"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.551261,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-3-buggy-2.json",
+          "raw_log_sha256": "623af25c920a23b3baf4fdd2f64f88f3c8f78805738e760b318cc9a2f9c6fc77",
+          "original_status": "failed",
+          "reviewed_status": "setup_failure"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.463391,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-3-buggy-3.json",
+          "raw_log_sha256": "eb027dc345ab263cef48d85cc2f8fcec48987f68de1976e45a97f75dc6997460",
+          "original_status": "failed",
+          "reviewed_status": "setup_failure"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.462054,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-3-fixed-1.json",
+          "raw_log_sha256": "a03f55ec2ad569613a3de981c8849f3878914c65e9c1aa4bf4a7865d257c58ff",
+          "original_status": "failed",
+          "reviewed_status": "setup_failure"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.433046,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-3-fixed-2.json",
+          "raw_log_sha256": "380d4c3ebad949c9553f596f73c10ddb6e60c7e9441ea0f1bada3192373af064",
+          "original_status": "failed",
+          "reviewed_status": "setup_failure"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.450793,
+          "raw_log": "artifacts/screening/cookiecutter-retry/cookiecutter-3-fixed-3.json",
+          "raw_log_sha256": "c74d9c81320360b021fba62f1187a26b25680043d041448724234e734b9f4a02",
+          "original_status": "failed",
+          "reviewed_status": "setup_failure"
+        }
+      ],
+      "sources": [
+        {
+          "id": "cookiecutter-3",
+          "variant": "buggy",
+          "commit": "5c282f020a8db7e5e7c4e7b51b010556ca31fb7f",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/5c282f020a8db7e5e7c4e7b51b010556ca31fb7f",
+          "archive_sha256": "73a87f0f00eb9cdc8cadd6b56826b2c0d685ef4e4af215ad3b2dbef1a7f8ebe8",
+          "files": 215,
+          "path": "artifacts\\sources\\cookiecutter-3-buggy"
+        },
+        {
+          "id": "cookiecutter-3",
+          "variant": "fixed",
+          "commit": "7129d474206761a6156925db78eee4b62a0e3944",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/7129d474206761a6156925db78eee4b62a0e3944",
+          "archive_sha256": "ad16c1bd04ca4a7623ef986e07463d598c05f1607ced4855ed2013eb611c74f5",
+          "files": 215,
+          "path": "artifacts\\sources\\cookiecutter-3-fixed"
+        }
+      ],
+      "admitted": false,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "cookiecutter-retry",
+      "timestamp_utc": "2026-10-12T22:01:45.653470+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": [
+        "arrow==1.4.0",
+        "atomicwrites==1.4.1",
+        "attrs==26.1.0",
+        "binaryornot==0.4.4",
+        "certifi==2026.7.22",
+        "chardet==4.0.0",
+        "click==7.1.2",
+        "colorama==0.4.6",
+        "decorator==4.4.2",
+        "future==0.18.3",
+        "idna==2.10",
+        "iniconfig==2.1.0",
+        "Jinja2==2.11.3",
+        "jinja2-time==0.2.0",
+        "MarkupSafe==2.0.1",
+        "mock==3.0.5",
+        "nose==1.3.7",
+        "packaging==26.3",
+        "pluggy==1.6.0",
+        "poyo==0.5.0",
+        "py==1.11.0",
+        "pytest==6.2.5",
+        "python-dateutil==2.8.1",
+        "python-toolbox==1.0.11",
+        "requests==2.25.1",
+        "six==1.15.0",
+        "toml==0.10.2",
+        "tornado==4.5.3",
+        "tzdata==2026.5",
+        "urllib3==1.26.20",
+        "whichcraft==0.6.1"
+      ],
+      "runner_sha256": "8b3bc8126b91a5645fd0d4f2ac3e58aefadf9cdcf01eec11183d601294c2fa4d",
+      "environment_policy": "Child home/temp redirected to workspace; unrelated pytest addopts cleared",
+      "benchmark_commit": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+      "manifest_sha256": null,
+      "original_admitted": false,
+      "repeats_required": 3,
+      "reviewed_admitted": false
+    },
+    {
+      "id": "cookiecutter-2",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.699386,
+          "raw_log": "artifacts/screening/dependency-retry/cookiecutter-2-buggy-1.json",
+          "raw_log_sha256": "ece064bdc846704e516034308480150f6e5faa154ad72a015e1143c7a10ab148",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.627488,
+          "raw_log": "artifacts/screening/dependency-retry/cookiecutter-2-buggy-2.json",
+          "raw_log_sha256": "2e95e5bbc0e465276fe51c8be559fdf68d6c423918d28b6ab4e5790f95ca7d23",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.647064,
+          "raw_log": "artifacts/screening/dependency-retry/cookiecutter-2-buggy-3.json",
+          "raw_log_sha256": "f1f4281365066fd813251b7a3138738875da3faba953fb9aa03c1545ea934411",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.722905,
+          "raw_log": "artifacts/screening/dependency-retry/cookiecutter-2-fixed-1.json",
+          "raw_log_sha256": "2c01ec481da08692c43da295eb5c15170bf73b1e419abcf82304d8b2d15cb42d",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.698694,
+          "raw_log": "artifacts/screening/dependency-retry/cookiecutter-2-fixed-2.json",
+          "raw_log_sha256": "841803d8d6f4b7df42c0589cf57fd1ec3f6edaba0225b3e22eefea6da2a0b153",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.697255,
+          "raw_log": "artifacts/screening/dependency-retry/cookiecutter-2-fixed-3.json",
+          "raw_log_sha256": "2b619de60405cc2bd08660443c4ec287bc4e68959dde84c06f8f29467ab66669",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        }
+      ],
+      "sources": [
+        {
+          "id": "cookiecutter-2",
+          "variant": "buggy",
+          "commit": "d7e7b28811e474e14d1bed747115e47dcdd15ba3",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/d7e7b28811e474e14d1bed747115e47dcdd15ba3",
+          "archive_sha256": "d5adab16985792cd4ebfb3a0fc82a3c2f7cee639a30dfebfc0031f84e6629dd2",
+          "files": 234,
+          "path": "artifacts\\sources\\cookiecutter-2-buggy",
+          "excluded_archive_prefixes": [
+            "docs/"
+          ],
+          "omitted_links": [
+            "docs/AUTHORS.md",
+            "docs/BACKERS.md",
+            "docs/CODE_OF_CONDUCT.md",
+            "docs/CONTRIBUTING.md",
+            "docs/HISTORY.md",
+            "docs/README.md",
+            "docs/case_studies.md"
+          ]
+        },
+        {
+          "id": "cookiecutter-2",
+          "variant": "fixed",
+          "commit": "90434ff4ea4477941444f1e83313beb414838535",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/90434ff4ea4477941444f1e83313beb414838535",
+          "archive_sha256": "1e294e3a2833eb38b59ee1e967f8d8a343b7d622e21cf0c4d252c25342aa65a7",
+          "files": 234,
+          "path": "artifacts\\sources\\cookiecutter-2-fixed",
+          "excluded_archive_prefixes": [
+            "docs/"
+          ],
+          "omitted_links": [
+            "docs/AUTHORS.md",
+            "docs/BACKERS.md",
+            "docs/CODE_OF_CONDUCT.md",
+            "docs/CONTRIBUTING.md",
+            "docs/HISTORY.md",
+            "docs/README.md",
+            "docs/case_studies.md"
+          ]
+        }
+      ],
+      "admitted": true,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "dependency-retry",
+      "timestamp_utc": "2026-10-12T22:12:17.099025+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": [
+        "arrow==1.4.0",
+        "atomicwrites==1.4.1",
+        "attrs==26.1.0",
+        "binaryornot==0.4.4",
+        "certifi==2026.7.22",
+        "chardet==4.0.0",
+        "click==7.1.2",
+        "colorama==0.4.6",
+        "decorator==4.4.2",
+        "future==0.18.3",
+        "idna==2.10",
+        "iniconfig==2.1.0",
+        "Jinja2==2.11.3",
+        "jinja2-time==0.2.0",
+        "MarkupSafe==2.0.1",
+        "mock==3.0.5",
+        "nose==1.3.7",
+        "packaging==26.3",
+        "pluggy==1.6.0",
+        "poyo==0.5.0",
+        "py==1.11.0",
+        "pytest==6.2.5",
+        "pytest-mock==3.6.1",
+        "python-dateutil==2.8.1",
+        "python-slugify==4.0.1",
+        "python-toolbox==1.0.11",
+        "requests==2.25.1",
+        "six==1.15.0",
+        "skylla @ file:///D:/labs/skylla",
+        "text-unidecode==1.3",
+        "toml==0.10.2",
+        "tornado==4.5.3",
+        "tzdata==2026.5",
+        "urllib3==1.26.20",
+        "whichcraft==0.6.1"
+      ],
+      "runner_sha256": "9e6f4b83897b9f617640257c5998a2b2f9cff5afe912eba5051ca958f34afc00",
+      "environment_policy": "Child home/temp redirected to workspace; unrelated pytest addopts cleared",
+      "benchmark_commit": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+      "manifest_sha256": null,
+      "original_admitted": true,
+      "repeats_required": 3,
+      "reviewed_admitted": true
+    },
+    {
+      "id": "cookiecutter-3",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 1.023384,
+          "raw_log": "artifacts/screening/dependency-retry/cookiecutter-3-buggy-1.json",
+          "raw_log_sha256": "63eeca9167fce25b3380ad8293f177b6e7a01bd50f5223e8188198491a5af15b",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.993016,
+          "raw_log": "artifacts/screening/dependency-retry/cookiecutter-3-buggy-2.json",
+          "raw_log_sha256": "2aec9fe841e971dcc89fc6d5391958ee6bb464514481e6875f3c8c2a1d819419",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.97618,
+          "raw_log": "artifacts/screening/dependency-retry/cookiecutter-3-buggy-3.json",
+          "raw_log_sha256": "5fa25ba9d6c8f3021b7a1d0e89a228c762206551567f417ee44f29f7e7432605",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.59422,
+          "raw_log": "artifacts/screening/dependency-retry/cookiecutter-3-fixed-1.json",
+          "raw_log_sha256": "35c3273cb45b34e736350933874598cb7e367f008631a809b049c26cd78843c3",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.535629,
+          "raw_log": "artifacts/screening/dependency-retry/cookiecutter-3-fixed-2.json",
+          "raw_log_sha256": "b3b4899c09689454ac2ae67c23f9462fdcbe29d3c3327ef426d2258fa513f134",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.508387,
+          "raw_log": "artifacts/screening/dependency-retry/cookiecutter-3-fixed-3.json",
+          "raw_log_sha256": "8bf64f5a3251d079d2d0c141295d9ad5540d4fbbe88a704b0ca320411782b226",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        }
+      ],
+      "sources": [
+        {
+          "id": "cookiecutter-3",
+          "variant": "buggy",
+          "commit": "5c282f020a8db7e5e7c4e7b51b010556ca31fb7f",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/5c282f020a8db7e5e7c4e7b51b010556ca31fb7f",
+          "archive_sha256": "73a87f0f00eb9cdc8cadd6b56826b2c0d685ef4e4af215ad3b2dbef1a7f8ebe8",
+          "files": 215,
+          "path": "artifacts\\sources\\cookiecutter-3-buggy"
+        },
+        {
+          "id": "cookiecutter-3",
+          "variant": "fixed",
+          "commit": "7129d474206761a6156925db78eee4b62a0e3944",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/7129d474206761a6156925db78eee4b62a0e3944",
+          "archive_sha256": "ad16c1bd04ca4a7623ef986e07463d598c05f1607ced4855ed2013eb611c74f5",
+          "files": 215,
+          "path": "artifacts\\sources\\cookiecutter-3-fixed"
+        }
+      ],
+      "admitted": true,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "dependency-retry",
+      "timestamp_utc": "2026-10-12T22:12:17.099025+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": [
+        "arrow==1.4.0",
+        "atomicwrites==1.4.1",
+        "attrs==26.1.0",
+        "binaryornot==0.4.4",
+        "certifi==2026.7.22",
+        "chardet==4.0.0",
+        "click==7.1.2",
+        "colorama==0.4.6",
+        "decorator==4.4.2",
+        "future==0.18.3",
+        "idna==2.10",
+        "iniconfig==2.1.0",
+        "Jinja2==2.11.3",
+        "jinja2-time==0.2.0",
+        "MarkupSafe==2.0.1",
+        "mock==3.0.5",
+        "nose==1.3.7",
+        "packaging==26.3",
+        "pluggy==1.6.0",
+        "poyo==0.5.0",
+        "py==1.11.0",
+        "pytest==6.2.5",
+        "pytest-mock==3.6.1",
+        "python-dateutil==2.8.1",
+        "python-slugify==4.0.1",
+        "python-toolbox==1.0.11",
+        "requests==2.25.1",
+        "six==1.15.0",
+        "skylla @ file:///D:/labs/skylla",
+        "text-unidecode==1.3",
+        "toml==0.10.2",
+        "tornado==4.5.3",
+        "tzdata==2026.5",
+        "urllib3==1.26.20",
+        "whichcraft==0.6.1"
+      ],
+      "runner_sha256": "9e6f4b83897b9f617640257c5998a2b2f9cff5afe912eba5051ca958f34afc00",
+      "environment_policy": "Child home/temp redirected to workspace; unrelated pytest addopts cleared",
+      "benchmark_commit": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+      "manifest_sha256": null,
+      "original_admitted": true,
+      "repeats_required": 3,
+      "reviewed_admitted": true
+    },
+    {
+      "id": "luigi-7",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "setup_failure",
+          "exit_code": 4,
+          "seconds": 1.206973,
+          "raw_log": "artifacts/screening/first-pass/luigi-7-buggy-1.json",
+          "raw_log_sha256": "47b3a87e8728f3a6ea5be68545fc261211f6e538227e9f46eebe8025082ff196",
+          "original_status": "setup_failure",
+          "reviewed_status": "setup_failure"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "setup_failure",
+          "exit_code": 4,
+          "seconds": 0.504609,
+          "raw_log": "artifacts/screening/first-pass/luigi-7-fixed-1.json",
+          "raw_log_sha256": "e06dbc22c03f1f07cbeef1e5b5bbb758f2688c15c72c4935867067f05dcd848f",
+          "original_status": "setup_failure",
+          "reviewed_status": "setup_failure"
+        }
+      ],
+      "sources": [
+        {
+          "id": "luigi-7",
+          "variant": "buggy",
+          "commit": "dd1f2ce0061e7787166522a3c75339ba4755dd2c",
+          "archive_url": "https://codeload.github.com/spotify/luigi/tar.gz/dd1f2ce0061e7787166522a3c75339ba4755dd2c",
+          "archive_sha256": "dd334a6d0964f40adf2d61522ed83338917dfab91c54740297f65926e9e04cc1",
+          "files": 338,
+          "path": "artifacts\\sources\\luigi-7-buggy"
+        },
+        {
+          "id": "luigi-7",
+          "variant": "fixed",
+          "commit": "daf9ce99a3a7ed4227d1564570c5fce8848357e5",
+          "archive_url": "https://codeload.github.com/spotify/luigi/tar.gz/daf9ce99a3a7ed4227d1564570c5fce8848357e5",
+          "archive_sha256": "5265d66d743a11c3e7b7b6c24d4369a0058d57a3d6d2c82bed9a7dde8bc01734",
+          "files": 338,
+          "path": "artifacts\\sources\\luigi-7-fixed"
+        }
+      ],
+      "admitted": false,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "first-pass",
+      "timestamp_utc": "2026-10-12T21:50:20.159771+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": false,
+      "repeats_required": 3,
+      "reviewed_admitted": false
+    },
+    {
+      "id": "tornado-5",
+      "runs": [],
+      "sources": [],
+      "admitted": false,
+      "setup_error": {
+        "variant": "buggy",
+        "type": "ValueError",
+        "message": "Unsupported archive entry: tornado-2d4053daa56c609d642b214399e046671d4a593e/maint/test/appengine/py27/cgi_runtests.py"
+      },
+      "attempt": "first-pass",
+      "timestamp_utc": "2026-10-12T21:50:20.159771+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": false,
+      "repeats_required": 3,
+      "reviewed_admitted": false
+    },
+    {
+      "id": "tornado-6",
+      "runs": [],
+      "sources": [],
+      "admitted": false,
+      "setup_error": {
+        "variant": "buggy",
+        "type": "ValueError",
+        "message": "Unsupported archive entry: tornado-fb74e4816ccfa7fc6a7abd8c8aab1f415cfc1b13/maint/test/appengine/py27/cgi_runtests.py"
+      },
+      "attempt": "first-pass",
+      "timestamp_utc": "2026-10-12T21:50:20.159771+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": false,
+      "repeats_required": 3,
+      "reviewed_admitted": false
+    },
+    {
+      "id": "cookiecutter-1",
+      "runs": [],
+      "sources": [],
+      "admitted": false,
+      "setup_error": {
+        "variant": "buggy",
+        "type": "ValueError",
+        "message": "Unsupported archive entry: cookiecutter-c15633745df6abdb24e02746b82aadb20b8cdf8c/docs/AUTHORS.md"
+      },
+      "attempt": "full-pass",
+      "timestamp_utc": "2026-10-12T21:58:18.433075+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": false,
+      "repeats_required": 3,
+      "reviewed_admitted": false
+    },
+    {
+      "id": "cookiecutter-2",
+      "runs": [],
+      "sources": [],
+      "admitted": false,
+      "setup_error": {
+        "variant": "buggy",
+        "type": "ValueError",
+        "message": "Unsupported archive entry: cookiecutter-d7e7b28811e474e14d1bed747115e47dcdd15ba3/docs/AUTHORS.md"
+      },
+      "attempt": "full-pass",
+      "timestamp_utc": "2026-10-12T21:58:18.433075+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": false,
+      "repeats_required": 3,
+      "reviewed_admitted": false
+    },
+    {
+      "id": "cookiecutter-3",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "setup_failure",
+          "exit_code": 4,
+          "seconds": 0.487027,
+          "raw_log": "artifacts/screening/full-pass/cookiecutter-3-buggy-1.json",
+          "raw_log_sha256": "c30a4d0acdb63ba0e86751dc9828bf3eafdb03c639895e8fb929e22127e3c2ab",
+          "original_status": "setup_failure",
+          "reviewed_status": "setup_failure"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "setup_failure",
+          "exit_code": 4,
+          "seconds": 0.411865,
+          "raw_log": "artifacts/screening/full-pass/cookiecutter-3-fixed-1.json",
+          "raw_log_sha256": "67e2509e838adad621d39ac6f9cebd8e527fb0bb30b611dcbbb95e522a3f2751",
+          "original_status": "setup_failure",
+          "reviewed_status": "setup_failure"
+        }
+      ],
+      "sources": [
+        {
+          "id": "cookiecutter-3",
+          "variant": "buggy",
+          "commit": "5c282f020a8db7e5e7c4e7b51b010556ca31fb7f",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/5c282f020a8db7e5e7c4e7b51b010556ca31fb7f",
+          "archive_sha256": "73a87f0f00eb9cdc8cadd6b56826b2c0d685ef4e4af215ad3b2dbef1a7f8ebe8",
+          "files": 215,
+          "path": "artifacts\\sources\\cookiecutter-3-buggy"
+        },
+        {
+          "id": "cookiecutter-3",
+          "variant": "fixed",
+          "commit": "7129d474206761a6156925db78eee4b62a0e3944",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/7129d474206761a6156925db78eee4b62a0e3944",
+          "archive_sha256": "ad16c1bd04ca4a7623ef986e07463d598c05f1607ced4855ed2013eb611c74f5",
+          "files": 215,
+          "path": "artifacts\\sources\\cookiecutter-3-fixed"
+        }
+      ],
+      "admitted": false,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "full-pass",
+      "timestamp_utc": "2026-10-12T21:58:18.433075+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": false,
+      "repeats_required": 3,
+      "reviewed_admitted": false
+    },
+    {
+      "id": "cookiecutter-4",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.535857,
+          "raw_log": "artifacts/screening/full-pass/cookiecutter-4-buggy-1.json",
+          "raw_log_sha256": "823cb2bbb93b3ef80c2acbf8e1099006898a41286bb89d94714967e97107d342",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.983618,
+          "raw_log": "artifacts/screening/full-pass/cookiecutter-4-buggy-2.json",
+          "raw_log_sha256": "ae66d1a0aa0ad62802ec06098a57600644cd07e3a2bae9ce8cff0f2d94070633",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.500694,
+          "raw_log": "artifacts/screening/full-pass/cookiecutter-4-buggy-3.json",
+          "raw_log_sha256": "47b36165ffef8a0b38acb20b8e4d639784a5eeccfa1fb496a3a151b3999d0b13",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.584753,
+          "raw_log": "artifacts/screening/full-pass/cookiecutter-4-fixed-1.json",
+          "raw_log_sha256": "d776beeb316c1b31f0b91d45d8d805eec948658ecdf570b37c46166a7bb05b3b",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.50589,
+          "raw_log": "artifacts/screening/full-pass/cookiecutter-4-fixed-2.json",
+          "raw_log_sha256": "e8a60020c505cd5d7eb5215fc8365a49ce91f25d00c2d243aeb391d85acfe8a8",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.534618,
+          "raw_log": "artifacts/screening/full-pass/cookiecutter-4-fixed-3.json",
+          "raw_log_sha256": "52ce4603dc294e7d244a2b9bdc43e7adb690979c8e2fa8e7f610ad41a4976fe4",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        }
+      ],
+      "sources": [
+        {
+          "id": "cookiecutter-4",
+          "variant": "buggy",
+          "commit": "9568ab6ecd2d6836646006c59473c4a4ac0dee04",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/9568ab6ecd2d6836646006c59473c4a4ac0dee04",
+          "archive_sha256": "028f170f040e1c368539076602c2a71001ec0eec3a450e8ca63a3440829c402a",
+          "files": 142,
+          "path": "artifacts\\sources\\cookiecutter-4-buggy"
+        },
+        {
+          "id": "cookiecutter-4",
+          "variant": "fixed",
+          "commit": "457a1a4e862aab4102b644ff1d2b2e2b5a766b3c",
+          "archive_url": "https://codeload.github.com/cookiecutter/cookiecutter/tar.gz/457a1a4e862aab4102b644ff1d2b2e2b5a766b3c",
+          "archive_sha256": "4fb39bae58b412b580e39f19667aca4ada0b90023822860bd3722cdaa0c3c445",
+          "files": 142,
+          "path": "artifacts\\sources\\cookiecutter-4-fixed"
+        }
+      ],
+      "admitted": true,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "full-pass",
+      "timestamp_utc": "2026-10-12T21:58:18.433075+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": true,
+      "repeats_required": 3,
+      "reviewed_admitted": true
+    },
+    {
+      "id": "luigi-5",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 2.126935,
+          "raw_log": "artifacts/screening/full-pass/luigi-5-buggy-1.json",
+          "raw_log_sha256": "4a403b795581b16ed6dd5eab42b209b1354ce7c47cf2e88645a1343cc5446c3a",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 2.810421,
+          "raw_log": "artifacts/screening/full-pass/luigi-5-buggy-2.json",
+          "raw_log_sha256": "bb0dcb056bed676584ef5b45fbc39570b98f9b20aa1e60bb48bfd3cecb71c766",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 2.997247,
+          "raw_log": "artifacts/screening/full-pass/luigi-5-buggy-3.json",
+          "raw_log_sha256": "5c7616e75723c3362b9931ae315d89cc2983ae6ba82073c0bbcfca87498b8346",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.034099,
+          "raw_log": "artifacts/screening/full-pass/luigi-5-fixed-1.json",
+          "raw_log_sha256": "e5e08b3a531a46547f11b174177e296c677c587a92386766e5450b4fa319c5b5",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.594457,
+          "raw_log": "artifacts/screening/full-pass/luigi-5-fixed-2.json",
+          "raw_log_sha256": "17c24fa042bf464864eaacb078205ec16fd162d8064bab9359bfc72588ed7809",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.926614,
+          "raw_log": "artifacts/screening/full-pass/luigi-5-fixed-3.json",
+          "raw_log_sha256": "687a873f23936b234d4926d7464073ef44c3b4b4877ce4e62b8759235303fe0d",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        }
+      ],
+      "sources": [
+        {
+          "id": "luigi-5",
+          "variant": "buggy",
+          "commit": "45b5711d1900184ccd66c65216d28c0d69d10d4a",
+          "archive_url": "https://codeload.github.com/spotify/luigi/tar.gz/45b5711d1900184ccd66c65216d28c0d69d10d4a",
+          "archive_sha256": "117aaf3ecefebb7d161cb8fcd5207c6c3ecebd52b4e009fbc4acf765ad2d3676",
+          "files": 339,
+          "path": "artifacts\\sources\\luigi-5-buggy"
+        },
+        {
+          "id": "luigi-5",
+          "variant": "fixed",
+          "commit": "1fbec18ceb7c5de352e6d1df12960c61f09e67c2",
+          "archive_url": "https://codeload.github.com/spotify/luigi/tar.gz/1fbec18ceb7c5de352e6d1df12960c61f09e67c2",
+          "archive_sha256": "4cd7165f0bd557e6fb87e6f1eb771f5767573c78928e88f8d17b13da3f311212",
+          "files": 339,
+          "path": "artifacts\\sources\\luigi-5-fixed"
+        }
+      ],
+      "admitted": true,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "full-pass",
+      "timestamp_utc": "2026-10-12T21:58:18.433075+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": true,
+      "repeats_required": 3,
+      "reviewed_admitted": true
+    },
+    {
+      "id": "luigi-7",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 1.190037,
+          "raw_log": "artifacts/screening/full-pass/luigi-7-buggy-1.json",
+          "raw_log_sha256": "3add883cd538751f2fed4ee3362315c827f9f87dc86d4d451c139377ef98555e",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 1.236946,
+          "raw_log": "artifacts/screening/full-pass/luigi-7-buggy-2.json",
+          "raw_log_sha256": "c6d129d0c42163a016802fdfa1cbd6e41d8fb093f0bdc73608bf0bbead5e22c2",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 1.238769,
+          "raw_log": "artifacts/screening/full-pass/luigi-7-buggy-3.json",
+          "raw_log_sha256": "c317edecf0d77e4a677a54d4c1be06a8c6b8c613463b182a7ee5efdd4e52019b",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.031698,
+          "raw_log": "artifacts/screening/full-pass/luigi-7-fixed-1.json",
+          "raw_log_sha256": "bce2b7c3235c9a4c93be4f483d033df6140802d3d90f21d4dac3c000b0b41d0f",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.957063,
+          "raw_log": "artifacts/screening/full-pass/luigi-7-fixed-2.json",
+          "raw_log_sha256": "4a6e58344d8e1bd1bd8cc9791554180e9ea3ce03edc52626e8155752edbcee96",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.918294,
+          "raw_log": "artifacts/screening/full-pass/luigi-7-fixed-3.json",
+          "raw_log_sha256": "035376f26b00d54a653546dabe84577b15f42d9de2a2b3781541691a2483867b",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        }
+      ],
+      "sources": [
+        {
+          "id": "luigi-7",
+          "variant": "buggy",
+          "commit": "dd1f2ce0061e7787166522a3c75339ba4755dd2c",
+          "archive_url": "https://codeload.github.com/spotify/luigi/tar.gz/dd1f2ce0061e7787166522a3c75339ba4755dd2c",
+          "archive_sha256": "dd334a6d0964f40adf2d61522ed83338917dfab91c54740297f65926e9e04cc1",
+          "files": 338,
+          "path": "artifacts\\sources\\luigi-7-buggy"
+        },
+        {
+          "id": "luigi-7",
+          "variant": "fixed",
+          "commit": "daf9ce99a3a7ed4227d1564570c5fce8848357e5",
+          "archive_url": "https://codeload.github.com/spotify/luigi/tar.gz/daf9ce99a3a7ed4227d1564570c5fce8848357e5",
+          "archive_sha256": "5265d66d743a11c3e7b7b6c24d4369a0058d57a3d6d2c82bed9a7dde8bc01734",
+          "files": 338,
+          "path": "artifacts\\sources\\luigi-7-fixed"
+        }
+      ],
+      "admitted": true,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "full-pass",
+      "timestamp_utc": "2026-10-12T21:58:18.433075+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": true,
+      "repeats_required": 3,
+      "reviewed_admitted": true
+    },
+    {
+      "id": "luigi-9",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 2.968537,
+          "raw_log": "artifacts/screening/full-pass/luigi-9-buggy-1.json",
+          "raw_log_sha256": "8b7a391eae704096f0c16d519d70806604b42c8a9a87689a73245b9c7c76660b",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 4.081856,
+          "raw_log": "artifacts/screening/full-pass/luigi-9-buggy-2.json",
+          "raw_log_sha256": "7c6c353711d6053ddbcd0597a9bda5828dd9a100cafd9874bba834e5aa6db4e3",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 2.826464,
+          "raw_log": "artifacts/screening/full-pass/luigi-9-buggy-3.json",
+          "raw_log_sha256": "77b66c4449036eee214d79f72f0e595c74408f3ceec07cec9035ccdc19ff0866",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.788645,
+          "raw_log": "artifacts/screening/full-pass/luigi-9-fixed-1.json",
+          "raw_log_sha256": "1bcaed5314474352df08e410838e1d64b317fe77e28da6ae11456a4646b01cc6",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.593907,
+          "raw_log": "artifacts/screening/full-pass/luigi-9-fixed-2.json",
+          "raw_log_sha256": "b2ebad37c7e877041ef23a9c88b0bb6bb939f0bf3b9502b68a61a5d341c16089",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.556429,
+          "raw_log": "artifacts/screening/full-pass/luigi-9-fixed-3.json",
+          "raw_log_sha256": "e97792537f65e6dc8bf7050bc05147e8e69a7f6bc404da94181454c50f2586aa",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        }
+      ],
+      "sources": [
+        {
+          "id": "luigi-9",
+          "variant": "buggy",
+          "commit": "f7e0b7710fd8b12f27625b1efb62a8fde6e206c4",
+          "archive_url": "https://codeload.github.com/spotify/luigi/tar.gz/f7e0b7710fd8b12f27625b1efb62a8fde6e206c4",
+          "archive_sha256": "90f0ef3e3af24aad28c92b5647f74d3bb022e59bb1ef4f79b48d3dbbae27439b",
+          "files": 336,
+          "path": "artifacts\\sources\\luigi-9-buggy"
+        },
+        {
+          "id": "luigi-9",
+          "variant": "fixed",
+          "commit": "b7115974c3deadf77113686248b39567cb67e38f",
+          "archive_url": "https://codeload.github.com/spotify/luigi/tar.gz/b7115974c3deadf77113686248b39567cb67e38f",
+          "archive_sha256": "33848fc094ea8325f92e0c99f4cca17d5bd16b786a9805c83d11c5da1227cc6f",
+          "files": 336,
+          "path": "artifacts\\sources\\luigi-9-fixed"
+        }
+      ],
+      "admitted": true,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "full-pass",
+      "timestamp_utc": "2026-10-12T21:58:18.433075+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": true,
+      "repeats_required": 3,
+      "reviewed_admitted": true
+    },
+    {
+      "id": "tornado-3",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.686488,
+          "raw_log": "artifacts/screening/full-pass/tornado-3-buggy-1.json",
+          "raw_log_sha256": "f9a33d7ca165827290923c2bee1329d19502f7940c4f32eb5b2d36f2e62de8be",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.107242,
+          "raw_log": "artifacts/screening/full-pass/tornado-3-buggy-2.json",
+          "raw_log_sha256": "a0523f96e4ed60da70e3e43fbd2ec04d275e532542e7c20da36a42b45047e380",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.116772,
+          "raw_log": "artifacts/screening/full-pass/tornado-3-buggy-3.json",
+          "raw_log_sha256": "1a1f83dcb91470b01f241fb70137b4246a395957cc789c734f5c0a7f5f1bc126",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.154044,
+          "raw_log": "artifacts/screening/full-pass/tornado-3-fixed-1.json",
+          "raw_log_sha256": "a5d9be8a83d25f122dd6aaa6e498ca97d09cc1c04f0d4504b2cb860aee52062b",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.052917,
+          "raw_log": "artifacts/screening/full-pass/tornado-3-fixed-2.json",
+          "raw_log_sha256": "12144af4acafd1b8eae41995a27d30f9bf731d77e7554498b97a16fa0e5ef657",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.375218,
+          "raw_log": "artifacts/screening/full-pass/tornado-3-fixed-3.json",
+          "raw_log_sha256": "0dc6a45791eeb2c6e65c29c55c25c43752d0f9d3bb38f751690219d77a359057",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        }
+      ],
+      "sources": [
+        {
+          "id": "tornado-3",
+          "variant": "buggy",
+          "commit": "940fd87fe9145d1154c8457221f86d56ea063c65",
+          "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/940fd87fe9145d1154c8457221f86d56ea063c65",
+          "archive_sha256": "30d27208b8bb64c377ec1970f35b43842c15627924fc7cf75e3e846ce8584a57",
+          "files": 298,
+          "path": "artifacts\\sources\\tornado-3-buggy",
+          "excluded_archive_prefixes": [
+            "maint/test/appengine/"
+          ],
+          "omitted_links": []
+        },
+        {
+          "id": "tornado-3",
+          "variant": "fixed",
+          "commit": "aa622e724f80e0f7fcee369f75d69d1db13d72f2",
+          "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/aa622e724f80e0f7fcee369f75d69d1db13d72f2",
+          "archive_sha256": "1034b31e07ff225399931d6d775e5a1ecc091e01de111f29fe7f17872c2598da",
+          "files": 298,
+          "path": "artifacts\\sources\\tornado-3-fixed",
+          "excluded_archive_prefixes": [
+            "maint/test/appengine/"
+          ],
+          "omitted_links": []
+        }
+      ],
+      "admitted": false,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "full-pass",
+      "timestamp_utc": "2026-10-12T21:58:18.433075+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": false,
+      "repeats_required": 3,
+      "reviewed_admitted": false
+    },
+    {
+      "id": "tornado-5",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.680805,
+          "raw_log": "artifacts/screening/full-pass/tornado-5-buggy-1.json",
+          "raw_log_sha256": "70bdeb0f3c3cbc1ae2b17ad450b672c1701332bd1d20858a33b7f3398055d627",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 2.945254,
+          "raw_log": "artifacts/screening/full-pass/tornado-5-buggy-2.json",
+          "raw_log_sha256": "34fba756c3ab1915e1021005997aec6b8cb8cc38791aff258383d19ebd821f06",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 1.043184,
+          "raw_log": "artifacts/screening/full-pass/tornado-5-buggy-3.json",
+          "raw_log_sha256": "359d3b6729a9acd1458f0250ea31d872c5871dbf65492ea54054c144056da1e7",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.794983,
+          "raw_log": "artifacts/screening/full-pass/tornado-5-fixed-1.json",
+          "raw_log_sha256": "df0030867427d391a925704633ee399aeaa9231adf258f58552ee0c642232c0a",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 2.732028,
+          "raw_log": "artifacts/screening/full-pass/tornado-5-fixed-2.json",
+          "raw_log_sha256": "861c3509f3b5934e40cc2463672ccff98599311b9e239ef95710dad35b025657",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 2.404378,
+          "raw_log": "artifacts/screening/full-pass/tornado-5-fixed-3.json",
+          "raw_log_sha256": "d949b3ac1bc17b60eb2fa6d041247c1ff7bd4b98423562de3e6af0e038727a98",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        }
+      ],
+      "sources": [
+        {
+          "id": "tornado-5",
+          "variant": "buggy",
+          "commit": "2d4053daa56c609d642b214399e046671d4a593e",
+          "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/2d4053daa56c609d642b214399e046671d4a593e",
+          "archive_sha256": "e9f95ebe7aca9e7208a18722aa4cbff5077d79b5d73cf09264eb01c185232041",
+          "files": 312,
+          "path": "artifacts\\sources\\tornado-5-buggy",
+          "excluded_archive_prefixes": [
+            "maint/test/appengine/"
+          ],
+          "omitted_links": [
+            "maint/test/appengine/py27/cgi_runtests.py",
+            "maint/test/appengine/py27/runtests.py",
+            "maint/test/appengine/py27/tornado"
+          ]
+        },
+        {
+          "id": "tornado-5",
+          "variant": "fixed",
+          "commit": "886643965b5cb782503d8d7b374b7a794ec2077b",
+          "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/886643965b5cb782503d8d7b374b7a794ec2077b",
+          "archive_sha256": "70d232f1ae3bdb6afbfd781d4abcbe7f47333e182fe666c1e72d6aa8606cf612",
+          "files": 312,
+          "path": "artifacts\\sources\\tornado-5-fixed",
+          "excluded_archive_prefixes": [
+            "maint/test/appengine/"
+          ],
+          "omitted_links": [
+            "maint/test/appengine/py27/cgi_runtests.py",
+            "maint/test/appengine/py27/runtests.py",
+            "maint/test/appengine/py27/tornado"
+          ]
+        }
+      ],
+      "admitted": true,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "full-pass",
+      "timestamp_utc": "2026-10-12T21:58:18.433075+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": true,
+      "repeats_required": 3,
+      "reviewed_admitted": true
+    },
+    {
+      "id": "tornado-6",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 1.256788,
+          "raw_log": "artifacts/screening/full-pass/tornado-6-buggy-1.json",
+          "raw_log_sha256": "f73c48405658b7766921e55c2d1fb6c401499325c6a3fc09c4566d421a2cdefd",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 1.221135,
+          "raw_log": "artifacts/screening/full-pass/tornado-6-buggy-2.json",
+          "raw_log_sha256": "36d8e1b7388f97f8e1346a5e4c3201780a8d7059aa73c798efcace77235f9869",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 1.383338,
+          "raw_log": "artifacts/screening/full-pass/tornado-6-buggy-3.json",
+          "raw_log_sha256": "1f877d7005dc87c0448af696e581d10f15a32fe45706f11e6f60a44d8e1860ac",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.800275,
+          "raw_log": "artifacts/screening/full-pass/tornado-6-fixed-1.json",
+          "raw_log_sha256": "5b9687afb58419cb4ce53a1cbd845c764ccb1aed87240c6b4afbe43c3735fb83",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.264311,
+          "raw_log": "artifacts/screening/full-pass/tornado-6-fixed-2.json",
+          "raw_log_sha256": "6f799b6e097d88b610652764a87ef4899fa71f5beee8191b5afc89ec7ec576a6",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.323501,
+          "raw_log": "artifacts/screening/full-pass/tornado-6-fixed-3.json",
+          "raw_log_sha256": "f5669329bfc8cd2540e8660dd69ff9f926121386fef0e439df04d0b66d7ac525",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        }
+      ],
+      "sources": [
+        {
+          "id": "tornado-6",
+          "variant": "buggy",
+          "commit": "fb74e4816ccfa7fc6a7abd8c8aab1f415cfc1b13",
+          "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/fb74e4816ccfa7fc6a7abd8c8aab1f415cfc1b13",
+          "archive_sha256": "d1456eaff466441833fe211b53e532746d9ecd5c0b7b255c9c316bb0626a6c29",
+          "files": 312,
+          "path": "artifacts\\sources\\tornado-6-buggy",
+          "excluded_archive_prefixes": [
+            "maint/test/appengine/"
+          ],
+          "omitted_links": [
+            "maint/test/appengine/py27/cgi_runtests.py",
+            "maint/test/appengine/py27/runtests.py",
+            "maint/test/appengine/py27/tornado"
+          ]
+        },
+        {
+          "id": "tornado-6",
+          "variant": "fixed",
+          "commit": "2905ee4fb3c283d40b10f609359e189c83a0dc06",
+          "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/2905ee4fb3c283d40b10f609359e189c83a0dc06",
+          "archive_sha256": "980a7bfdcb1d44068bf22f16808331dc39a931f5f00c10e8decdc0e302857e1f",
+          "files": 312,
+          "path": "artifacts\\sources\\tornado-6-fixed",
+          "excluded_archive_prefixes": [
+            "maint/test/appengine/"
+          ],
+          "omitted_links": [
+            "maint/test/appengine/py27/cgi_runtests.py",
+            "maint/test/appengine/py27/runtests.py",
+            "maint/test/appengine/py27/tornado"
+          ]
+        }
+      ],
+      "admitted": true,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "full-pass",
+      "timestamp_utc": "2026-10-12T21:58:18.433075+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": true,
+      "repeats_required": 3,
+      "reviewed_admitted": true
+    },
+    {
+      "id": "tornado-7",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.684823,
+          "raw_log": "artifacts/screening/full-pass/tornado-7-buggy-1.json",
+          "raw_log_sha256": "8cc4e4d7775149862f277119ddcef86b54b350963f5cccc148e39ad123d9f7d5",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.678732,
+          "raw_log": "artifacts/screening/full-pass/tornado-7-buggy-2.json",
+          "raw_log_sha256": "704e73e358f9a8bcc66d5ad7acc15daa3d22c3d961097e68b2d80867d9735f07",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.641113,
+          "raw_log": "artifacts/screening/full-pass/tornado-7-buggy-3.json",
+          "raw_log_sha256": "b7377fb6e4bc6ffab331937e3b12241346bfbabd9b6bd4caa8bd86e1d9baf839",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.668188,
+          "raw_log": "artifacts/screening/full-pass/tornado-7-fixed-1.json",
+          "raw_log_sha256": "74910823c80b8b4561367b21255a960e4715fc494f470a13608131091472dcaa",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.606,
+          "raw_log": "artifacts/screening/full-pass/tornado-7-fixed-2.json",
+          "raw_log_sha256": "63ca1b361f7564045b232d1907bb911b32b475be3baca301fff8ab16e4a833a0",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.61209,
+          "raw_log": "artifacts/screening/full-pass/tornado-7-fixed-3.json",
+          "raw_log_sha256": "0c9a6d0213172cfcbf60ba346f578be48994858cbb35f4a1c8a87f6886087998",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        }
+      ],
+      "sources": [
+        {
+          "id": "tornado-7",
+          "variant": "buggy",
+          "commit": "fa3409179588536f2f743d16e537f6f9827fa92f",
+          "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/fa3409179588536f2f743d16e537f6f9827fa92f",
+          "archive_sha256": "8943ce94a5eef23192f27fbfa908d6cc5bec4c33286223d40ca159e893921875",
+          "files": 307,
+          "path": "artifacts\\sources\\tornado-7-buggy",
+          "excluded_archive_prefixes": [
+            "maint/test/appengine/"
+          ],
+          "omitted_links": [
+            "maint/test/appengine/py27/cgi_runtests.py",
+            "maint/test/appengine/py27/runtests.py",
+            "maint/test/appengine/py27/tornado"
+          ]
+        },
+        {
+          "id": "tornado-7",
+          "variant": "fixed",
+          "commit": "a3b44cd701e0e82693363701bc0346b0125d2362",
+          "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/a3b44cd701e0e82693363701bc0346b0125d2362",
+          "archive_sha256": "b38ed8edf6dfafe9d207640209b6a22d5c86b0aa78ecd5d42fc91441139537ff",
+          "files": 307,
+          "path": "artifacts\\sources\\tornado-7-fixed",
+          "excluded_archive_prefixes": [
+            "maint/test/appengine/"
+          ],
+          "omitted_links": [
+            "maint/test/appengine/py27/cgi_runtests.py",
+            "maint/test/appengine/py27/runtests.py",
+            "maint/test/appengine/py27/tornado"
+          ]
+        }
+      ],
+      "admitted": true,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "full-pass",
+      "timestamp_utc": "2026-10-12T21:58:18.433075+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": true,
+      "repeats_required": 3,
+      "reviewed_admitted": true
+    },
+    {
+      "id": "tqdm-6",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.848634,
+          "raw_log": "artifacts/screening/full-pass/tqdm-6-buggy-1.json",
+          "raw_log_sha256": "e4321de9d5ade62dd2321ecf64eb1d08e4209fe02778e564920d8f9149437f74",
+          "original_status": "failed",
+          "reviewed_status": "setup_failure"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.772443,
+          "raw_log": "artifacts/screening/full-pass/tqdm-6-buggy-2.json",
+          "raw_log_sha256": "e9598af0ff82ce24e5e3c15e420ed9f642a8f8a9f317ca2cc94ad68aeb360826",
+          "original_status": "failed",
+          "reviewed_status": "setup_failure"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 1.237139,
+          "raw_log": "artifacts/screening/full-pass/tqdm-6-buggy-3.json",
+          "raw_log_sha256": "68f9db4fc57e9dde87921f9a52b3dd9d6ff02b81a2a518e218526e5dde0b8269",
+          "original_status": "failed",
+          "reviewed_status": "setup_failure"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.762246,
+          "raw_log": "artifacts/screening/full-pass/tqdm-6-fixed-1.json",
+          "raw_log_sha256": "e86bf0373ddbfb4e4d19323f0e1f8896a374cd564563f73339379107a7cf24d2",
+          "original_status": "failed",
+          "reviewed_status": "setup_failure"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.836822,
+          "raw_log": "artifacts/screening/full-pass/tqdm-6-fixed-2.json",
+          "raw_log_sha256": "330151f88b5a74a077eb960ee5931e11d9ae73af3e285edd3a9609e80174f756",
+          "original_status": "failed",
+          "reviewed_status": "setup_failure"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.855168,
+          "raw_log": "artifacts/screening/full-pass/tqdm-6-fixed-3.json",
+          "raw_log_sha256": "493744095d3f8fc189354f70066730a93e52c8ad97b32dd02109588713bac3f0",
+          "original_status": "failed",
+          "reviewed_status": "setup_failure"
+        }
+      ],
+      "sources": [
+        {
+          "id": "tqdm-6",
+          "variant": "buggy",
+          "commit": "a4b9c86db548b2d0dbb5af7a6bbdc26ab47e1eec",
+          "archive_url": "https://codeload.github.com/tqdm/tqdm/tar.gz/a4b9c86db548b2d0dbb5af7a6bbdc26ab47e1eec",
+          "archive_sha256": "b5ff33ead5925f3bb41b645d3e90aece085c221cd0b8597b8275fe7026ddbf43",
+          "files": 34,
+          "path": "artifacts\\sources\\tqdm-6-buggy"
+        },
+        {
+          "id": "tqdm-6",
+          "variant": "fixed",
+          "commit": "6dad2e89019317e875c46d5a3a82a811ad6de2f9",
+          "archive_url": "https://codeload.github.com/tqdm/tqdm/tar.gz/6dad2e89019317e875c46d5a3a82a811ad6de2f9",
+          "archive_sha256": "275251800005b1627f3ea7b73daf0c786e68b7a0576a0231c59c71520da0bde6",
+          "files": 34,
+          "path": "artifacts\\sources\\tqdm-6-fixed"
+        }
+      ],
+      "admitted": false,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "full-pass",
+      "timestamp_utc": "2026-10-12T21:58:18.433075+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": false,
+      "repeats_required": 3,
+      "reviewed_admitted": false
+    },
+    {
+      "id": "tornado-5",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.667564,
+          "raw_log": "artifacts/screening/tornado-retry/tornado-5-buggy-1.json",
+          "raw_log_sha256": "6f73f0943d4c3c4bb18aafba6fcab6e93e54e561cd5cdb84cc7fc24f6074f5e6",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.654922,
+          "raw_log": "artifacts/screening/tornado-retry/tornado-5-buggy-2.json",
+          "raw_log_sha256": "56c6230a7911ace04bdb539eba15fde224a7ea7bd2d3a6150f97402c49cefb05",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.665327,
+          "raw_log": "artifacts/screening/tornado-retry/tornado-5-buggy-3.json",
+          "raw_log_sha256": "f9ae07f487a6b47fce46bff8542c94d4e476ebe00ba402d7f09d3d9321d634af",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.604824,
+          "raw_log": "artifacts/screening/tornado-retry/tornado-5-fixed-1.json",
+          "raw_log_sha256": "9e2560e6886699f9c8d3e6ad7f7b766b4f9cfb8618e16f7427208d8b4cca8e4a",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 1.330131,
+          "raw_log": "artifacts/screening/tornado-retry/tornado-5-fixed-2.json",
+          "raw_log_sha256": "96b1191d97741ea492e1864e9754740a0949e04efc4c2589925d212cb995321e",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.636442,
+          "raw_log": "artifacts/screening/tornado-retry/tornado-5-fixed-3.json",
+          "raw_log_sha256": "7804c486f437fe0d6c99bcca00fa91266deb181e2915b2ec59ff098f5bc2418e",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        }
+      ],
+      "sources": [
+        {
+          "id": "tornado-5",
+          "variant": "buggy",
+          "commit": "2d4053daa56c609d642b214399e046671d4a593e",
+          "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/2d4053daa56c609d642b214399e046671d4a593e",
+          "archive_sha256": "e9f95ebe7aca9e7208a18722aa4cbff5077d79b5d73cf09264eb01c185232041",
+          "files": 312,
+          "path": "artifacts\\sources\\tornado-5-buggy",
+          "excluded_archive_prefixes": [
+            "maint/test/appengine/"
+          ],
+          "omitted_links": [
+            "maint/test/appengine/py27/cgi_runtests.py",
+            "maint/test/appengine/py27/runtests.py",
+            "maint/test/appengine/py27/tornado"
+          ]
+        },
+        {
+          "id": "tornado-5",
+          "variant": "fixed",
+          "commit": "886643965b5cb782503d8d7b374b7a794ec2077b",
+          "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/886643965b5cb782503d8d7b374b7a794ec2077b",
+          "archive_sha256": "70d232f1ae3bdb6afbfd781d4abcbe7f47333e182fe666c1e72d6aa8606cf612",
+          "files": 312,
+          "path": "artifacts\\sources\\tornado-5-fixed",
+          "excluded_archive_prefixes": [
+            "maint/test/appengine/"
+          ],
+          "omitted_links": [
+            "maint/test/appengine/py27/cgi_runtests.py",
+            "maint/test/appengine/py27/runtests.py",
+            "maint/test/appengine/py27/tornado"
+          ]
+        }
+      ],
+      "admitted": true,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "tornado-retry",
+      "timestamp_utc": "2026-10-12T21:55:03.973024+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": true,
+      "repeats_required": 3,
+      "reviewed_admitted": true
+    },
+    {
+      "id": "tornado-6",
+      "runs": [
+        {
+          "variant": "buggy",
+          "repeat": 1,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.707969,
+          "raw_log": "artifacts/screening/tornado-retry/tornado-6-buggy-1.json",
+          "raw_log_sha256": "9e1974ab5a28ac1d92766eb5523eb14a369e61fa88a839bbd97ad460289a0472",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 2,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.609617,
+          "raw_log": "artifacts/screening/tornado-retry/tornado-6-buggy-2.json",
+          "raw_log_sha256": "bdb25bbbd92d9a852b42794d85c7b1387751024e088b72e05c200edd57f7cbbe",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "buggy",
+          "repeat": 3,
+          "status": "failed",
+          "exit_code": 1,
+          "seconds": 0.600166,
+          "raw_log": "artifacts/screening/tornado-retry/tornado-6-buggy-3.json",
+          "raw_log_sha256": "2c2a1f31fda403898a4db2a8591c5ec9d8f549de7a2f0c65288d459f003c1b58",
+          "original_status": "failed",
+          "reviewed_status": "failed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 1,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.662622,
+          "raw_log": "artifacts/screening/tornado-retry/tornado-6-fixed-1.json",
+          "raw_log_sha256": "89586365932052ba7ee8741a8ef1b693c3b290abfa02ce1eba418efaab1fbf5d",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 2,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.660885,
+          "raw_log": "artifacts/screening/tornado-retry/tornado-6-fixed-2.json",
+          "raw_log_sha256": "4e966a1b2edcfdd98ba24952adb18201b856c9e91c967e5ec94a0b83dd2fc357",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        },
+        {
+          "variant": "fixed",
+          "repeat": 3,
+          "status": "passed",
+          "exit_code": 0,
+          "seconds": 0.714272,
+          "raw_log": "artifacts/screening/tornado-retry/tornado-6-fixed-3.json",
+          "raw_log_sha256": "7f7ca462ddae4d0a4326cbca023f6fe8e62c29befdfcfc9ddaad2a37aaa0a949",
+          "original_status": "passed",
+          "reviewed_status": "passed"
+        }
+      ],
+      "sources": [
+        {
+          "id": "tornado-6",
+          "variant": "buggy",
+          "commit": "fb74e4816ccfa7fc6a7abd8c8aab1f415cfc1b13",
+          "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/fb74e4816ccfa7fc6a7abd8c8aab1f415cfc1b13",
+          "archive_sha256": "d1456eaff466441833fe211b53e532746d9ecd5c0b7b255c9c316bb0626a6c29",
+          "files": 312,
+          "path": "artifacts\\sources\\tornado-6-buggy",
+          "excluded_archive_prefixes": [
+            "maint/test/appengine/"
+          ],
+          "omitted_links": [
+            "maint/test/appengine/py27/cgi_runtests.py",
+            "maint/test/appengine/py27/runtests.py",
+            "maint/test/appengine/py27/tornado"
+          ]
+        },
+        {
+          "id": "tornado-6",
+          "variant": "fixed",
+          "commit": "2905ee4fb3c283d40b10f609359e189c83a0dc06",
+          "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/2905ee4fb3c283d40b10f609359e189c83a0dc06",
+          "archive_sha256": "980a7bfdcb1d44068bf22f16808331dc39a931f5f00c10e8decdc0e302857e1f",
+          "files": 312,
+          "path": "artifacts\\sources\\tornado-6-fixed",
+          "excluded_archive_prefixes": [
+            "maint/test/appengine/"
+          ],
+          "omitted_links": [
+            "maint/test/appengine/py27/cgi_runtests.py",
+            "maint/test/appengine/py27/runtests.py",
+            "maint/test/appengine/py27/tornado"
+          ]
+        }
+      ],
+      "admitted": true,
+      "admission_scope": "Targeted discriminator only; mechanism ambiguity and regressions still need review",
+      "attempt": "tornado-retry",
+      "timestamp_utc": "2026-10-12T21:55:03.973024+00:00",
+      "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+      "packages": null,
+      "runner_sha256": null,
+      "environment_policy": null,
+      "benchmark_commit": null,
+      "manifest_sha256": null,
+      "original_admitted": true,
+      "repeats_required": 3,
+      "reviewed_admitted": true
+    }
+  ]
+}

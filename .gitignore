@@ -9,6 +9,8 @@ __pycache__/
 .pytest_cache/
 node_modules/
 dist/
+build/
+*.egg-info/
 artifacts/
 workspaces/
 .DS_Store

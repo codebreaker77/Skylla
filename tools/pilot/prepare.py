@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = ROOT / "experiments/rehearsal/cases.json"
 
 
-def prepare(case, variant):
+def prepare(case, variant, exclude_symlink_prefixes=()):
     commit = case[variant + "_commit"]
     target = ROOT / "artifacts/sources" / (case["id"] + "-" + variant)
     marker = target / ".skylla-source.json"
@@ -22,6 +22,8 @@ def prepare(case, variant):
         recorded = json.loads(marker.read_text(encoding="utf-8"))
         if recorded["commit"] != commit:
             raise ValueError("Cached source commit does not match manifest")
+        if recorded.get("excluded_archive_prefixes", []) != list(exclude_symlink_prefixes):
+            raise ValueError("Cached source export policy differs from requested policy")
         return recorded
     if target.exists():
         raise ValueError("Incomplete snapshot exists: " + str(target))
@@ -31,10 +33,15 @@ def prepare(case, variant):
     with urllib.request.urlopen(request, timeout=90) as response:
         archive = response.read()
     records = []
+    omitted = []
     with tarfile.open(fileobj=io.BytesIO(archive), mode="r:gz") as bundle:
         for member in bundle.getmembers():
             parts = PurePosixPath(member.name).parts[1:]
             if not parts or member.isdir():
+                continue
+            if (member.issym() or member.islnk()) and any(
+                    "/".join(parts).startswith(prefix) for prefix in exclude_symlink_prefixes):
+                omitted.append("/".join(parts))
                 continue
             if not member.isfile() or any(p in ("..", ".") or ":" in p for p in parts):
                 raise ValueError("Unsupported archive entry: " + member.name)
@@ -52,6 +59,8 @@ def prepare(case, variant):
         "archive_url": url, "archive_sha256": hashlib.sha256(archive).hexdigest(),
         "files": len(records), "path": str(target.relative_to(ROOT)),
     }
+    if exclude_symlink_prefixes:
+        result.update(excluded_archive_prefixes=list(exclude_symlink_prefixes), omitted_links=omitted)
     marker.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     return result
 

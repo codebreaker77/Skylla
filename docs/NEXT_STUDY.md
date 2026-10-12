@@ -85,8 +85,9 @@ a definitive causal conclusion.
 
 ## New prior-art checks that narrow the proposal
 
-These primary abstracts were checked on October 13; full methods/artifacts still
-need inspection before experimental adaptation or novelty claims:
+These primary abstracts were checked on October 13. Follow-up method-section
+inspection is recorded in the [claim matrix](CLAIM_MATRIX.md); code reproduction
+and a complete artifact audit remain pending:
 
 - [PROBE / Debugging the Debuggers](https://arxiv.org/abs/2605.08717), May 2026,
   revised June: organizes failed-run telemetry into diagnosis and bounded recovery

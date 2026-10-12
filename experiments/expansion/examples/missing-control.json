@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "state_id": "example-code-and-environment-v1",
+  "hypotheses": ["default_branch", "general_rendering"],
+  "required_controls": ["option_omitted"],
+  "evidence": [],
+  "budget": {
+    "remaining_seconds": 30,
+    "remaining_expansions": 1,
+    "expansion_estimated_seconds": 5
+  },
+  "candidates": [
+    {
+      "id": "explicit-width",
+      "state_id": "example-code-and-environment-v1",
+      "argv": ["python", "probe.py", "--width", "80"],
+      "covers": ["option_explicit"],
+      "outcomes": ["clean", "broken"],
+      "predictions": {"default_branch": "clean", "general_rendering": "broken"},
+      "estimated_seconds": 1,
+      "preconditions": [
+        {"id": "input_reaches_program", "state_id": "example-code-and-environment-v1", "status": "passed"}
+      ]
+    }
+  ]
+}

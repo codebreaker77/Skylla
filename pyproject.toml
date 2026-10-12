@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skylla"
+version = "0.0.1"
+description = "Local research prototype for debugging experiment decisions"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+readme = "README.md"
+dependencies = []
+
+[project.scripts]
+skylla = "skylla.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "purpose": "Development runtime probes frozen before this probe batch; no held-out or repair-benefit claim",
+  "authoring_context": "Screening symptoms and buggy source were visible; reference regression fixtures were used for screening. Full target source fixes were not inspected while authoring these probes.",
+  "common_contract": {
+    "preconditions": "Pinned source is imported from a new workspace; Python and dependency environment recorded",
+    "controls": "Code/environment held constant; only the specified schedule, close operation, or update input changes",
+    "command": "<python> probe_runtime.py --case <case-id> --probe <probe-id>",
+    "timeout_seconds": 30,
+    "reset": "New snapshot copy and subprocess per candidate; each within-probe comparison constructs fresh objects",
+    "extractor": "JSON observations and actual source-import check; qualitative mechanism interpretation is manual",
+    "unresolved": "True mechanism can be absent or multiple causes can interact; no probability claim"
+  },
+  "cases": {
+    "tornado-5": {
+      "hypotheses": {"clock_direction": "Backward clock samples affect the next scheduled callback", "overrun": "Callback overruns cause the repeated scheduling value", "period_units": "Callback period units are wrong independently of clock direction"},
+      "probes": [
+        {"id": "normal", "variable": "Nonnegative zero-duration schedule", "prediction": "A direction-specific defect need not appear; a general period defect can appear"},
+        {"id": "backward", "variable": "Negative clock deltas with fixed period", "prediction": "A direction-specific defect changes schedule advancement; pure overrun should not need negative deltas"},
+        {"id": "boundary", "variable": "Tiny negative versus zero versus positive delta", "prediction": "A direction boundary defect can occur even without a long callback"},
+        {"id": "overrun", "variable": "Positive durations exceeding the callback period", "prediction": "An overrun defect appears; a backward-only defect need not appear"}
+      ]
+    },
+    "tornado-6": {
+      "hypotheses": {"native_resource": "Underlying event loop stays open", "registration": "Closed loops remain registered", "delayed_gc": "Object collection is delayed without a persistent registration defect"},
+      "probes": [
+        {"id": "single_close", "variable": "One wrapper close", "prediction": "An open native loop differs from a closed loop retained in the registry"},
+        {"id": "repeated_close", "variable": "Ten independent wrapper closes", "prediction": "Persistent registration can grow with cycle count despite closed native loops"},
+        {"id": "gc", "variable": "Explicit garbage collection after ten closes", "prediction": "A pure collection delay can disappear; strong retained registration can remain"},
+        {"id": "asyncio_close", "variable": "Close through the native asyncio API", "prediction": "Native and wrapper close paths can differ; check closure and registration separately"}
+      ]
+    },
+    "luigi-7": {
+      "hypotheses": {"ownership": "An update from a different worker overwrites running status", "identity": "Task identity routing changes the wrong task", "order": "Status depends on update order independently of ownership"},
+      "probes": [
+        {"id": "owners", "variable": "Same versus different reporting worker", "prediction": "An ownership-dependent rule differs by actor at the same claimed task"},
+        {"id": "identity", "variable": "Update the running task versus another task", "prediction": "A routing defect can affect A when B was updated"},
+        {"id": "statuses", "variable": "UNKNOWN versus PENDING versus DONE report from another worker", "prediction": "A status-specific guard differs across reports rather than all updates"},
+        {"id": "sequence", "variable": "Report before versus after work is claimed", "prediction": "A claim-state boundary defect differs by update position"}
+      ]
+    }
+  }
+}
