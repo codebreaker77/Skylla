@@ -1,0 +1,53 @@
+{
+  "timestamp_utc": "2026-10-12T21:16:50.828787+00:00",
+  "purpose": "Development execution feasibility; no agent repair comparison",
+  "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.22000-SP0",
+  "packages": [
+    "atomicwrites==1.4.1",
+    "attrs==26.1.0",
+    "colorama==0.4.6",
+    "decorator==4.4.2",
+    "future==0.18.3",
+    "iniconfig==2.1.0",
+    "nose==1.3.7",
+    "packaging==26.3",
+    "pluggy==1.6.0",
+    "py==1.11.0",
+    "pytest==6.2.5",
+    "python-toolbox==1.0.11",
+    "six==1.15.0",
+    "toml==0.10.2"
+  ],
+  "cases_sha256": "1960c20f89c46c9a8472e955a4302123711673f3c264ddd40f60a40ac02ca146",
+  "probe_contracts_sha256": "4a8127620e45d724f05b9470a956a64a3fb8e6156e177bebf33a2d6b74ccb288",
+  "probe_implementation_sha256": "5cafab9fa58088187ac89ba86a5dcfbfdcd789534d361590a7b15255ee1cc190",
+  "runner_sha256": "5db9b103dc1508b2e406e7274b65ffd971597c4b957ca67c6c357b5623d28ca1",
+  "regressions_only": true,
+  "regression_targets_sha256": "2e0f00cfa6b835a5b89b3799710810bebe4b959b2dd0ab2123f63bcca74ea594",
+  "total_execution_seconds": 6.811902,
+  "runs": 6,
+  "cases": [
+    {
+      "id": "tqdm-2",
+      "regressions": {
+        "buggy": "failed",
+        "fixed": "failed"
+      }
+    },
+    {
+      "id": "pysnooper-3",
+      "regressions": {
+        "buggy": "passed",
+        "fixed": "passed"
+      }
+    },
+    {
+      "id": "youtube-dl-3",
+      "regressions": {
+        "buggy": "passed",
+        "fixed": "passed"
+      }
+    }
+  ]
+}

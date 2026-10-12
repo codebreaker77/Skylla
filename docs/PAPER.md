@@ -85,3 +85,11 @@ budget or misleading observations worsen repair.
 Complete the prior-art audit and three-case rehearsal in [PILOT.md](PILOT.md), then
 publish a feasibility report with actual manifests and measured costs. Only then
 freeze a larger study, consider learning a selector, and begin a results manuscript.
+
+Progress: [the first feasibility report](../experiments/rehearsal/REPORT.md) contains
+48 local executions, reproducibility results, missed-candidate observations, and
+environment limitations. [The harness audit](HARNESSES.md) and comparison arms
+now cover strong native workflows, including Cursor Debug Mode. ReplayLens's
+debugging protocol was inspected in PDF v2; implementation/artifact audits and
+matched model/harness repair continuations remain pending.
+These development observations are not evidence of superior repair performance.

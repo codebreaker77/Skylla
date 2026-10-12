@@ -30,6 +30,16 @@ The initial product combines a small evidence record, executable probe contracts
 and interchangeable selection policies. A trained selector is optional and must
 outperform cheap alternatives before becoming a product dependency.
 
+The [current harness audit](HARNESSES.md) identifies direct overlap with Cursor
+Debug Mode and strong native debugging capabilities in Claude Code, Codex, and
+open-source harnesses. Skylla must improve those workflows under fair budgets.
+Hypothesis generation plus instrumentation alone is insufficient differentiation.
+
+The [first rehearsal](../experiments/rehearsal/REPORT.md) shows why applicability
+and candidate coverage belong in the core: four probes missed tqdm's default-width
+failure, and PySnooper still exposed a separate encoding failure after its targeted
+reference fix. No selector or agent-repair advantage follows from these observations.
+
 ## First workflow
 
 1. Start from an existing failing command; capture state and reproduce the failure.

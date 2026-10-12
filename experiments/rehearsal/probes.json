@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "status": "Development contracts frozen before probe execution and before downloading target fixed snapshots",
+  "not_preregistered": true,
+  "unresolved_alternative": "The mechanism may be absent, multiple causes may interact, and a probe may be invalid.",
+  "common_contract": {
+    "preconditions": "Import pinned source from a fresh source copy under the recorded Python environment; require the recorded state fingerprint.",
+    "command": "<python> probe.py --case <case-id> --probe <probe-id>",
+    "controls": "Same code snapshot, interpreter, installed packages, and explicit inputs; new working directory and process each run.",
+    "restoration": "Run in a disposable source copy; retain results; never modify cached source snapshots.",
+    "extractor": "JSON output contains observations. Their diagnostic interpretation requires review; no usefulness label is inferred automatically.",
+    "timeout_seconds": 30,
+    "estimated_seconds": 2,
+    "failure_categories": ["setup_failure", "timeout", "unexpected", "inconclusive"]
+  },
+  "cases": {
+    "tqdm-2": {
+      "hypotheses": {
+        "width": "Custom bar layout has incorrect width allocation or truncation.",
+        "encoding": "Unicode or ANSI width accounting is responsible.",
+        "statistics": "Progress statistics rather than layout cause the failure."
+      },
+      "probes": [
+        {"id": "width", "change": "Sweep ncols with fixed ASCII bar_format and fixed statistics.", "predictions": {"width": "Width-dependent missing/extra content or exceptions may occur on ASCII.", "encoding": "Plain ASCII layouts should remain consistent.", "statistics": "Changing width alone should not alter progress statistics."}},
+        {"id": "encoding", "change": "Hold width and statistics fixed, vary plain, ANSI-colored, and wide-character prefixes.", "predictions": {"width": "ASCII may fail too; encoding is not required.", "encoding": "Mismatch is restricted to or worsened by styled/wide prefixes.", "statistics": "Changing prefix alone should not alter numeric statistics."}},
+        {"id": "statistics", "change": "Hold layout fixed, vary n, total, and elapsed.", "predictions": {"width": "Failures depend on layout occupancy as number widths change.", "encoding": "ASCII-only statistics should not need Unicode handling.", "statistics": "Unexpected percentages or iteration counts appear independently of custom formatting."}},
+        {"id": "format", "change": "Use default, full custom, bar-only, and right-side-only formats at fixed width.", "predictions": {"width": "Some custom layouts fail while default output can remain valid.", "encoding": "ASCII-only layouts should not require encoding-sensitive logic.", "statistics": "Numeric fields remain wrong across formats containing them."}}
+      ]
+    },
+    "pysnooper-3": {
+      "hypotheses": {
+        "dispatch": "Output destination is handled with an incompatible interface.",
+        "filesystem": "Path availability or file creation causes the failure.",
+        "encoding": "Text encoding causes file output to fail."
+      },
+      "probes": [
+        {"id": "destinations", "change": "Trace identical ASCII function to StringIO, a file path, and stderr.", "predictions": {"dispatch": "Failures depend on destination type.", "filesystem": "In-memory output works; file output fails.", "encoding": "ASCII should not require non-ASCII encoding support."}},
+        {"id": "file_state", "change": "Trace to an absent path and an existing writable file in a verified temporary directory.", "predictions": {"dispatch": "Both path strings can fail regardless of file existence.", "filesystem": "Failure depends on path existence or actual writeability.", "encoding": "ASCII should remain writeable in both states."}},
+        {"id": "text", "change": "Hold destination and function shape fixed; compare ASCII and non-ASCII values.", "predictions": {"dispatch": "Both values fail for the incompatible destination.", "filesystem": "Both fail at the same path if access is the issue.", "encoding": "Non-ASCII fails while ASCII succeeds."}},
+        {"id": "trace_control", "change": "Compare undecorated return value with traced return value and restored sys.gettrace().", "predictions": {"dispatch": "Undecorated control succeeds; some tracing destinations fail.", "filesystem": "Control succeeds and file destinations alone fail.", "encoding": "ASCII trace control succeeds; failure needs non-ASCII input."}}
+      ]
+    },
+    "youtube-dl-3": {
+      "hypotheses": {
+        "lookup": "Entity lookup or numeric conversion is incorrect.",
+        "matching": "Entity boundaries or adjacent entities are matched incorrectly.",
+        "recursion": "Escaped ampersands are decoded at the wrong number of levels."
+      },
+      "probes": [
+        {"id": "classes", "change": "Compare isolated named, decimal, hexadecimal, and unknown entities.", "predictions": {"lookup": "One entity class fails in isolation.", "matching": "Isolated entities can pass while composed inputs fail.", "recursion": "Simple one-level entities can pass."}},
+        {"id": "composition", "change": "Compare each isolated entity with adjacency and text separated by ampersands.", "predictions": {"lookup": "Failure persists for the same entity alone and in composition.", "matching": "Composed strings fail despite correctly decoded isolated entities.", "recursion": "Failures concentrate on encoded ampersands rather than ordinary adjacency."}},
+        {"id": "boundaries", "change": "Vary semicolons, text suffixes, and unknown entities without changing known entity names.", "predictions": {"lookup": "Terminated valid entities fail even in simple inputs.", "matching": "Boundary changes alter recognition unexpectedly.", "recursion": "Boundary changes without escaped ampersands need not fail."}},
+        {"id": "levels", "change": "Observe one and two applications on nested ampersand escapes; no assumption of idempotence.", "predictions": {"lookup": "Unexpected characters appear even at a single simple decoding level.", "matching": "Neighboring escaped sequences interfere with matching.", "recursion": "The number of decoded levels differs from ordinary one-pass decoding."}}
+      ]
+    }
+  }
+}

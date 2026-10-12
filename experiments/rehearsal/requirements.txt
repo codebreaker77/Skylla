@@ -1,0 +1,15 @@
+# Recorded environment for run-001; Python 3.9.5 on Windows.
+atomicwrites==1.4.1
+attrs==26.1.0
+colorama==0.4.6
+decorator==4.4.2
+future==0.18.3
+iniconfig==2.1.0
+nose==1.3.7
+packaging==26.3
+pluggy==1.6.0
+py==1.11.0
+pytest==6.2.5
+python-toolbox==1.0.11
+six==1.15.0
+toml==0.10.2

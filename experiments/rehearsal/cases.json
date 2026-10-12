@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "purpose": "Development rehearsal, not held-out evaluation",
+  "benchmark": {
+    "repository": "https://github.com/soarsmu/BugsInPy",
+    "commit": "11c5f1eea954a42132cfd06bf257766a7963e0fd"
+  },
+  "cases": [
+    {
+      "id": "tqdm-2",
+      "repository": "https://github.com/tqdm/tqdm",
+      "buggy_commit": "bef86db56654d271838b145ad77f7040a73a7b4d",
+      "fixed_commit": "127af5caf19e7d29c346f5ca8a9c7ef3004b664b",
+      "benchmark_python": "3.6.9",
+      "test_file": "tqdm/tests/tests_tqdm.py",
+      "test_target": "tqdm/tests/tests_tqdm.py::test_format_meter"
+    },
+    {
+      "id": "pysnooper-3",
+      "repository": "https://github.com/cool-RR/PySnooper",
+      "buggy_commit": "6e3d797be3fa0a746fb5b1b7c7fea78eb926c208",
+      "fixed_commit": "15555ed760000b049aff8fecc79d29339c1224c3",
+      "benchmark_python": "3.8.1",
+      "test_file": "tests/test_pysnooper.py",
+      "test_target": "tests/test_pysnooper.py::test_file_output",
+      "contamination_note": "An encoding-related reference fix from a different historical bug in this repository was viewed during screening. This cohort is development data only."
+    },
+    {
+      "id": "youtube-dl-3",
+      "repository": "https://github.com/ytdl-org/youtube-dl",
+      "buggy_commit": "f5469da9e6e259c1690c7ef54f1da1c19f65036f",
+      "fixed_commit": "95f3f7c20a05e7ac490e768b8470b20538ef8581",
+      "benchmark_python": "3.7.0",
+      "test_file": "test/test_utils.py",
+      "test_target": "test/test_utils.py::TestUtil::test_unescape_html"
+    }
+  ],
+  "screening_exclusions": [
+    {"id": "tqdm-1", "reason": "Reference patch exposed during initial screening; not used for probe selection evaluation."},
+    {"id": "pysnooper-1", "reason": "Reference patch exposed during initial screening; not used for probe selection evaluation."},
+    {"id": "youtube-dl-2", "reason": "Reference patch exposed during initial screening; not used for probe selection evaluation."},
+    {"id": "pysnooper-2", "reason": "Selected custom_repr test and API absent from buggy snapshot; excluded as a poor initial debugging rehearsal candidate."}
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "Comparison design; not executable harness integrations or completed runs",
+  "primary_question": "Does Skylla improve the same model/harness at a fixed total budget?",
+  "configuration_required": [
+    "harness_name", "harness_version", "model_id", "reasoning_setting",
+    "prompt_and_rules_hash", "extensions", "tool_access", "environment",
+    "session_memory_reset", "wall_clock_cap", "monetary_cap", "usage_accounting",
+    "human_intervention_policy", "independent_evaluator"
+  ],
+  "harnesses": [
+    {"name": "Claude Code", "mode": "native with documented recommended debugging practices"},
+    {"name": "Cursor", "mode": "Debug Mode, with reproduction assistance tracked"},
+    {"name": "Codex CLI", "mode": "native, with structured event logging"},
+    {"name": "OpenHands", "mode": "pinned SDK/agent configuration"},
+    {"name": "mini-swe-agent", "mode": "simple shell-action reference baseline"}
+  ],
+  "arms": [
+    {"id": "native", "change": "None; preserve native debugging tools and strong documented practices"},
+    {"id": "notebook", "change": "Add explicit hypotheses, predictions, and evidence notebook"},
+    {"id": "runtime_only", "change": "Equal runtime capabilities without Skylla selection"},
+    {"id": "skylla_cheap", "change": "Structured contracts/evidence with deterministic selection"},
+    {"id": "skylla_model", "change": "Replace only the cheap selector with a configured model selector"}
+  ],
+  "primary_metric": "Independently verified success at a fixed total budget",
+  "secondary_metrics": ["time_to_success_including_censoring", "total_inference_and_execution_cost", "unnecessary_edits", "invalid_or_redundant_probes", "incorrect_definitive_diagnoses"],
+  "claims": {
+    "within_harness": "Use paired tasks/configurations; isolate the addition of Skylla",
+    "cross_product": "System comparison; different native models prevent isolated harness-effect claims",
+    "superiority": "Require support against each preregistered tested baseline with uncertainty and multiplicity accounted for"
+  },
+  "execution_gate": "Authorized account access, explicit spending cap, pinned configurations, and isolated evaluators required before model runs"
+}

@@ -1,7 +1,9 @@
 # Pilot protocol
 
 October 13, 2026. Proposed feasibility study, not a preregistered confirmatory
-experiment. No bugs, probes, model runs, or outcomes have been collected yet.
+experiment. The [three-case development rehearsal](../experiments/rehearsal/REPORT.md)
+now records reproducibility checks and probe observations. Agent repair outcomes,
+selection improvements, and confirmatory results have not been measured.
 
 ## Question and estimand
 
@@ -34,6 +36,11 @@ do not claim inter-reviewer reliability. Disputed mechanisms can remain unresolv
 Deliverables: exact task IDs/commits, environment manifests, accepted/excluded cases,
 probe contracts, raw runs, reset checks, and a list of failures in the protocol.
 Concrete case selection follows execution checks; no IDs are being invented now.
+
+Stage-0 execution update: pinned tqdm-2, pysnooper-3, and youtube-dl-3 in
+[the rehearsal manifest](../experiments/rehearsal/cases.json). All three reproduce
+the targeted buggy/fixed discriminator; neighboring checks exposed additional
+failures. Candidate omissions and screening contamination are explicitly reported.
 
 ## Stage 1: provisional cohort
 
@@ -117,6 +124,12 @@ Compare an ordinary repair agent, the same agent with a scientific-debugging
 prompt and evidence notebook, equivalent runtime tooling without Skylla selection,
 and the full Skylla workflow. Hold capabilities and total budgets comparable.
 Measure voluntary tool use separately from any forced-use intervention.
+
+Include Cursor Debug Mode as a specialized incumbent and well-configured Claude
+Code, Codex, OpenHands, and mini-swe-agent configurations. See
+[HARNESSES.md](HARNESSES.md) and [the arm manifest](../experiments/baselines/arms.json).
+The primary contrast adds Skylla to the same harness/model. Cross-product results
+are system comparisons and cannot isolate selection from model differences.
 
 Use a provisional 20-minute total cap per run, including candidate generation,
 selection, probes, and repair. Record total inference usage and enforce a separately

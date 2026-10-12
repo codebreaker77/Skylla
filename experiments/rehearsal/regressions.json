@@ -1,0 +1,18 @@
+{
+  "tqdm-2": [
+    "tqdm/tests/tests_tqdm.py::test_format_interval",
+    "tqdm/tests/tests_tqdm.py::test_format_num",
+    "tqdm/tests/tests_tqdm.py::test_ansi_escape_codes"
+  ],
+  "pysnooper-3": [
+    "tests/test_pysnooper.py::test_string_io",
+    "tests/test_pysnooper.py::test_variables",
+    "tests/test_pysnooper.py::test_depth",
+    "tests/test_pysnooper.py::test_method_and_prefix"
+  ],
+  "youtube-dl-3": [
+    "test/test_utils.py::TestUtil::test_remove_start",
+    "test/test_utils.py::TestUtil::test_remove_end",
+    "test/test_utils.py::TestUtil::test_remove_quotes"
+  ]
+}

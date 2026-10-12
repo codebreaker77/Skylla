@@ -12,8 +12,10 @@ The core will work without a required model provider or agent harness.
 
 ## Status
 
-Research and design, started October 13, 2026. There is no runnable engine,
-installable CLI, published paper, or measured performance improvement yet.
+Research and design, started October 13, 2026. A local development rehearsal has
+recorded 48 executions across three historical bugs, with pinned sources and
+reproducible probe scripts. There is no installable developer CLI, published
+paper, or measured agent-repair improvement yet.
 
 The initial literature review points toward studying experiment selection under a
 fixed debugging budget. We will test that direction before investing in a broad
@@ -28,6 +30,11 @@ platform or training a selector.
 - [Pilot protocol](docs/PILOT.md): reproducibility, baselines, measurements,
   execution costs, and decision gates.
 - [Paper plan](docs/PAPER.md): research questions, required evidence, and artifacts.
+- [Harness comparison](docs/HARNESSES.md): Claude Code, Cursor Debug Mode, Codex,
+  OpenHands, and mini-swe-agent; documented capabilities and fair comparison arms.
+- [Focused prior-art audit](docs/PRIOR_ART_AUDIT.md): overlap and unresolved checks.
+- [Executed rehearsal](experiments/rehearsal/README.md): commands, artifacts,
+  measured findings, and limitations.
 
 ## Principles
 

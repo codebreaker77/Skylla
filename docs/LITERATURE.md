@@ -211,3 +211,18 @@ ReplayLens, POPPER, and ChatDBG. Search backward/forward citations and active
 diagnosis, delta debugging, cost-aware test selection, and repair planning.
 Specifically look for executed alternatives with matched repair continuations.
 If an existing method or dataset covers this, reuse it and narrow our claim.
+
+## Follow-up audit and measured progress
+
+[PRIOR_ART_AUDIT.md](PRIOR_ART_AUDIT.md) now inspects AutoSD's execution/evaluation
+method, Debug2Fix's setup/ablations/limitations, and ReplayLens's code-debugging
+protocol in PDF v2 (October 3, 2026). This updates the initial reading-depth notes;
+implementation/artifact verification and broader citation tracing remain open.
+The focused audit also records three 2026 citation leads: Causal Agent Replay,
+Credit Without Ground Truth, and REFLECT. Their abstracts explicitly constrain
+claims of novelty in replay-based outcome attribution.
+
+[HARNESSES.md](HARNESSES.md) adds current product overlap, especially Cursor Debug
+Mode. [The rehearsal report](../experiments/rehearsal/REPORT.md) records 48 local
+executions. Initial literature-review statements about absent execution describe
+the earlier stage, not the repository's current status.
