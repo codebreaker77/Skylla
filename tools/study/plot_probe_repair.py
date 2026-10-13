@@ -27,7 +27,14 @@ def digest(path):
 def save(fig, name):
     for extension in ("png", "svg"):
         metadata = {"Date": None} if extension == "svg" else None
-        fig.savefig(OUT / (name + "." + extension), dpi=180, facecolor="white", metadata=metadata)
+        path = OUT / (name + "." + extension)
+        fig.savefig(path, dpi=180, facecolor="white", metadata=metadata)
+        if extension == "svg":
+            # Matplotlib may write CRLF on Windows. Hash the same LF bytes Git
+            # stores, and remove insignificant line-ending path whitespace.
+            normalized = "\n".join(line.rstrip() for line in path.read_text(encoding="utf-8").splitlines()) + "\n"
+            with path.open("w", encoding="utf-8", newline="\n") as stream:
+                stream.write(normalized)
     plt.close(fig)
 
 
