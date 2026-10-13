@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "scope": "Post-hoc minimal contract replay; no inference, new cases, action execution or utility evaluation",
+  "source_sha256": "c4c06244d541753cd7c24f6d50d44d57e4554733733ec8a23e2206e3c6d8c612",
+  "implementation_sha256": "82bac103c29c63a4f9fa9aa4750b143df5556d24ef336e84f0f4b2c0e1f43aa7",
+  "records": [
+    {
+      "record_index": 0,
+      "state_id": "tornado-native-close",
+      "raw_action": "repair_setup",
+      "disposition": "rejected",
+      "admissible_action": null,
+      "reason": "no_explicit_failed_precondition"
+    },
+    {
+      "record_index": 1,
+      "state_id": "xarray-caught-method",
+      "raw_action": "inspect_failure",
+      "disposition": "allowed",
+      "admissible_action": "inspect_failure",
+      "reason": "passes_minimal_contract_checks"
+    },
+    {
+      "record_index": 2,
+      "state_id": "xarray-top-level",
+      "raw_action": "repair_setup",
+      "disposition": "rejected",
+      "admissible_action": null,
+      "reason": "no_explicit_failed_precondition"
+    },
+    {
+      "record_index": 3,
+      "state_id": "tornado-native-close",
+      "raw_action": "repair_setup",
+      "disposition": "rejected",
+      "admissible_action": null,
+      "reason": "no_explicit_failed_precondition"
+    },
+    {
+      "record_index": 4,
+      "state_id": "xarray-caught-method",
+      "raw_action": "inspect_failure",
+      "disposition": "allowed",
+      "admissible_action": "inspect_failure",
+      "reason": "passes_minimal_contract_checks"
+    },
+    {
+      "record_index": 5,
+      "state_id": "xarray-top-level",
+      "raw_action": "repair_setup",
+      "disposition": "rejected",
+      "admissible_action": null,
+      "reason": "no_explicit_failed_precondition"
+    },
+    {
+      "record_index": 6,
+      "state_id": "tornado-native-close",
+      "raw_action": "repair_setup",
+      "disposition": "rejected",
+      "admissible_action": null,
+      "reason": "no_explicit_failed_precondition"
+    },
+    {
+      "record_index": 7,
+      "state_id": "xarray-caught-method",
+      "raw_action": "inspect_failure",
+      "disposition": "allowed",
+      "admissible_action": "inspect_failure",
+      "reason": "passes_minimal_contract_checks"
+    },
+    {
+      "record_index": 8,
+      "state_id": "xarray-top-level",
+      "raw_action": "repair_setup",
+      "disposition": "rejected",
+      "admissible_action": null,
+      "reason": "no_explicit_failed_precondition"
+    },
+    {
+      "record_index": 9,
+      "state_id": "tornado-native-close",
+      "raw_action": "repair_setup",
+      "disposition": "rejected",
+      "admissible_action": null,
+      "reason": "no_explicit_failed_precondition"
+    },
+    {
+      "record_index": 10,
+      "state_id": "xarray-caught-method",
+      "raw_action": "inspect_failure",
+      "disposition": "allowed",
+      "admissible_action": "inspect_failure",
+      "reason": "passes_minimal_contract_checks"
+    },
+    {
+      "record_index": 11,
+      "state_id": "xarray-top-level",
+      "raw_action": "repair_setup",
+      "disposition": "rejected",
+      "admissible_action": null,
+      "reason": "no_explicit_failed_precondition"
+    }
+  ],
+  "counts": {
+    "allowed": 4,
+    "rejected": 8,
+    "defer": 0
+  },
+  "limitation": "Allowed means only these checks passed. Evidence may be incomplete or stale; deadline and execution costs require harness enforcement."
+}

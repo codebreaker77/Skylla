@@ -1,0 +1,656 @@
+{
+  "schema_version": 1,
+  "benchmark_commit": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+  "eligible_projects": [
+    "cookiecutter",
+    "luigi",
+    "tornado",
+    "tqdm",
+    "PySnooper"
+  ],
+  "eligibility_reason": "Small Python library projects from prior local apparatus experience; excludes heavy ML and network-dependent projects. No success filtering.",
+  "selection_seed": "skylla-matched-pilot-v1",
+  "selection": "Ascending SHA256(seed|id), exclude prior exposure, at most two per project, first six",
+  "scope": "Previously unexamined case IDs in this research, metadata-only development pilot; not confirmation or proof of model-unseen data",
+  "history_sha256": {
+    "experiments/rehearsal/cases.json": "1960c20f89c46c9a8472e955a4302123711673f3c264ddd40f60a40ac02ca146",
+    "experiments/expansion/screening/cases.json": "a42d90006a9e7aec39122a743ba88fefd1039aa283756ef4520996c86d8a790b",
+    "experiments/trajectory-audit/sample.json": "3d353099ba0ecb4520061bede514ca368dd092312bbfd85f2aad6e5aefecd564"
+  },
+  "excluded_ids": [
+    "bugsinpy:cookiecutter-1",
+    "bugsinpy:cookiecutter-2",
+    "bugsinpy:cookiecutter-3",
+    "bugsinpy:cookiecutter-4",
+    "bugsinpy:luigi-5",
+    "bugsinpy:luigi-7",
+    "bugsinpy:luigi-9",
+    "bugsinpy:pysnooper-1",
+    "bugsinpy:pysnooper-2",
+    "bugsinpy:pysnooper-3",
+    "bugsinpy:tornado-3",
+    "bugsinpy:tornado-5",
+    "bugsinpy:tornado-6",
+    "bugsinpy:tornado-7",
+    "bugsinpy:tqdm-1",
+    "bugsinpy:tqdm-2",
+    "bugsinpy:tqdm-6",
+    "bugsinpy:youtube-dl-2",
+    "bugsinpy:youtube-dl-3",
+    "swebench:astropy__astropy-13398",
+    "swebench:astropy__astropy-13579",
+    "swebench:django__django-11276",
+    "swebench:django__django-14787",
+    "swebench:django__django-15128",
+    "swebench:pydata__xarray-3677",
+    "swebench:pytest-dev__pytest-6197",
+    "swebench:pytest-dev__pytest-7982",
+    "swebench:scikit-learn__scikit-learn-14496",
+    "swebench:scikit-learn__scikit-learn-15100",
+    "swebench:sphinx-doc__sphinx-10449",
+    "swebench:sphinx-doc__sphinx-7590",
+    "swebench:sphinx-doc__sphinx-7757",
+    "swebench:sympy__sympy-18211",
+    "swebench:sympy__sympy-23824"
+  ],
+  "eligible_inventory_sha256": "0579b9f54f87f226f5d3f626e544df5bbc54144c73321041bdbd204bc71a7af2",
+  "eligible_inventory": [
+    {
+      "id": "bugsinpy:cookiecutter-1",
+      "project": "cookiecutter",
+      "bug": 1,
+      "buggy_commit": "c15633745df6abdb24e02746b82aadb20b8cdf8c",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "d2f49c7520a582158016615638637b6b84222fc7e6728fac9c08c1eeb75e06ae"
+    },
+    {
+      "id": "bugsinpy:cookiecutter-2",
+      "project": "cookiecutter",
+      "bug": 2,
+      "buggy_commit": "d7e7b28811e474e14d1bed747115e47dcdd15ba3",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "c4d503aa84adddc10871d9845a57e461eb76e84a38e8cc34055cb20a20f148f4"
+    },
+    {
+      "id": "bugsinpy:cookiecutter-3",
+      "project": "cookiecutter",
+      "bug": 3,
+      "buggy_commit": "5c282f020a8db7e5e7c4e7b51b010556ca31fb7f",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "a2cbdb5f836e74e04d652cc3bb0fc351b486fc2944db08ee5f3d06bd73635498"
+    },
+    {
+      "id": "bugsinpy:cookiecutter-4",
+      "project": "cookiecutter",
+      "bug": 4,
+      "buggy_commit": "9568ab6ecd2d6836646006c59473c4a4ac0dee04",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "f79d58f48853a8b23dada08097073d41cd198fc55e3179a4d3c40b86544218db"
+    },
+    {
+      "id": "bugsinpy:luigi-1",
+      "project": "luigi",
+      "bug": 1,
+      "buggy_commit": "1164eb6b85b8a70f596dbb99452bec513e72c12e",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "964d72a0574c24b7ccc6c205c22b945df0ea2c079cc9132300ae2731a9b31715"
+    },
+    {
+      "id": "bugsinpy:luigi-10",
+      "project": "luigi",
+      "bug": 10,
+      "buggy_commit": "f538d1b3d473d542a19d508e5f7e0809b1dfe5ef",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "eebbb739e350d33cb70a26e4bb841b44eda04d81cdc877a67e0781fb7635b519"
+    },
+    {
+      "id": "bugsinpy:luigi-11",
+      "project": "luigi",
+      "bug": 11,
+      "buggy_commit": "bf8b5cba573d5d6cd11f7f10a03b458aeaf955c1",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "c2503d1de6dded26568f67f17eb75ac56222aeef6b22d10eeb4f28eec738623b"
+    },
+    {
+      "id": "bugsinpy:luigi-12",
+      "project": "luigi",
+      "bug": 12,
+      "buggy_commit": "c3119757c9ad4141fb446554109fa09cbd31173c",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "5e969f77d47c7efe00748b7e828a942b5ab09ca27a7d7df6b2130998009e82c0"
+    },
+    {
+      "id": "bugsinpy:luigi-13",
+      "project": "luigi",
+      "bug": 13,
+      "buggy_commit": "3c90bcdac63d978dbdaeae408420e22b963c9863",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "80f0ac64a9fa11d234614fae8e4b57319474cf8aff2298a22741054caa99f114"
+    },
+    {
+      "id": "bugsinpy:luigi-14",
+      "project": "luigi",
+      "bug": 14,
+      "buggy_commit": "f7219c38121098d464011a094156d99b5b320362",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "aed116ff0abdf9473074c94bd69011c91f7bfb91f8f485b298ad6c1eb6599f9a"
+    },
+    {
+      "id": "bugsinpy:luigi-15",
+      "project": "luigi",
+      "bug": 15,
+      "buggy_commit": "a822f55d4d7c5adf5b9e3b64f23189d8305e9bf9",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "d7798b440a61d2794d71cd402c28ed82e156256f89654d3fe253272704e61e24"
+    },
+    {
+      "id": "bugsinpy:luigi-16",
+      "project": "luigi",
+      "bug": 16,
+      "buggy_commit": "e38392a1381dd8daee0f180f0ac7f651edb88e0c",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "b80aedf1026429f2d86fffd51be320a18673a9e8f390c7f8b84ae8760b5f1fcf"
+    },
+    {
+      "id": "bugsinpy:luigi-17",
+      "project": "luigi",
+      "bug": 17,
+      "buggy_commit": "c39922350cba3a93c96c2ed223283bf8cf315a7d",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "ceb278f546609206e4e6d170e989f1d6e34ee921b91f567d976159ef2fc7a338"
+    },
+    {
+      "id": "bugsinpy:luigi-18",
+      "project": "luigi",
+      "bug": 18,
+      "buggy_commit": "6cffbf438d023441f7f42c2019a51c62eecd9018",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "0652ba0a2c2691cb83063b0d6ae61b3a352f763ee65fdd6ffc8c74ecf9ad74c4"
+    },
+    {
+      "id": "bugsinpy:luigi-19",
+      "project": "luigi",
+      "bug": 19,
+      "buggy_commit": "3d2f75224c7649402927a5ef57558d8c3717cd94",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "795084a417013ae620c963cf0084bc5e4cc73a76cfa3b3921fd03560a5b3ab97"
+    },
+    {
+      "id": "bugsinpy:luigi-2",
+      "project": "luigi",
+      "bug": 2,
+      "buggy_commit": "baa54c9f4f809692d62d4c3e4497161717c76550",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "3a3fcd27b586b3eab22634751b4af73434a5a4b2eba39de887b0547f09aed8c2"
+    },
+    {
+      "id": "bugsinpy:luigi-20",
+      "project": "luigi",
+      "bug": 20,
+      "buggy_commit": "b958140c2ec838e590a5be02dbac7414d5d0bf17",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "02e8d994944ac5fd88ecbfa3b23809a279dec1bf8162ef0fcf70a9be9f784b4e"
+    },
+    {
+      "id": "bugsinpy:luigi-21",
+      "project": "luigi",
+      "bug": 21,
+      "buggy_commit": "b7768da963570bd2223d97c1035f811c2eaf30b4",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "8a2b3da36a6b49a0657ac62ea238d33a9b5a251a9b0d416b38b709cff30f2789"
+    },
+    {
+      "id": "bugsinpy:luigi-22",
+      "project": "luigi",
+      "bug": 22,
+      "buggy_commit": "9c4c47ae449593c55fb67ce51115d0be1fecb163",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "23c20cc64dc5d961641ee0510d77d976144161c476105b74b411204bb26bc824"
+    },
+    {
+      "id": "bugsinpy:luigi-23",
+      "project": "luigi",
+      "bug": 23,
+      "buggy_commit": "c707253572deb795a900c3e07d21eee591a55fca",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "bb94ac6f3f917056db708692343141a66a7ac7f4af66c4ac596369e1f8cfb8bb"
+    },
+    {
+      "id": "bugsinpy:luigi-24",
+      "project": "luigi",
+      "bug": 24,
+      "buggy_commit": "572fce617a3b8133983cdee2b2cc336a65af5abe",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "00c79de39fd219b0be83d21d5ae2f172dc361f2330d68f1ef5b5bca069595623"
+    },
+    {
+      "id": "bugsinpy:luigi-25",
+      "project": "luigi",
+      "bug": 25,
+      "buggy_commit": "d7ec31609c88503391d12d65b6037f397feff816",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "d0a6d9f5166902afb0f756c97ab2d086fac64b7fc2bd87861a2c1b99fe97c00b"
+    },
+    {
+      "id": "bugsinpy:luigi-26",
+      "project": "luigi",
+      "bug": 26,
+      "buggy_commit": "ed351ca3c3baf3657de584db08dfe0414fa000a3",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "913cd6baf8f6cdeb13601eb5033541306eac24d556da4f86c27fec05a0c15c80"
+    },
+    {
+      "id": "bugsinpy:luigi-27",
+      "project": "luigi",
+      "bug": 27,
+      "buggy_commit": "69dfec33dc7c34d551ddc71742fa9c847295b01f",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "035dd7156bab8432cae23e693dee86f144c95ac87b215d22c0d9a75f3c37fbdf"
+    },
+    {
+      "id": "bugsinpy:luigi-28",
+      "project": "luigi",
+      "bug": 28,
+      "buggy_commit": "e37cb0ea1d97e6340840128a68c8d59bd05c28c3",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "a40e12002e7bbc9385345ca907f62c4b675d28f3c346f219cba6bc058836f88d"
+    },
+    {
+      "id": "bugsinpy:luigi-29",
+      "project": "luigi",
+      "bug": 29,
+      "buggy_commit": "07efdd9136966ffe143ea57e15b1a57b5698fd5a",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "316e301fdc7361906991f7ee50df5fd9708204ecf19842b22d4d3a23d3a88bdf"
+    },
+    {
+      "id": "bugsinpy:luigi-3",
+      "project": "luigi",
+      "bug": 3,
+      "buggy_commit": "a0f1db01ddab5b4b2bda3fbe58bad09a6d94a7b4",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "2627ca5dafb67a9662079ef34f9e22d641b7995097caae646c355ef62ed494be"
+    },
+    {
+      "id": "bugsinpy:luigi-30",
+      "project": "luigi",
+      "bug": 30,
+      "buggy_commit": "97fa4afea3748f0d714482d2c97990bb467bc9d1",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "e38b7221c46614de8cf849f3fd641f71bab0f57731748deea4c05584a309b0c0"
+    },
+    {
+      "id": "bugsinpy:luigi-31",
+      "project": "luigi",
+      "bug": 31,
+      "buggy_commit": "554850f32784537796383db5ee188d0455863ca9",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "fe5cf5a106ef4ef90c9db22ca497ac460dbdfe33803fe4c0be44cc41e0c565a3"
+    },
+    {
+      "id": "bugsinpy:luigi-32",
+      "project": "luigi",
+      "bug": 32,
+      "buggy_commit": "7233a0cc3e34c7c14259b1fa046f66332914f410",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "1663a7f6102786085ce9b7ab7db3e694146bb082bbcb40348e43fda52117dd87"
+    },
+    {
+      "id": "bugsinpy:luigi-33",
+      "project": "luigi",
+      "bug": 33,
+      "buggy_commit": "a7c0662eab78fd226fd7ef6b4461d7199336cbb1",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "37ea034fec52d1b0bfec0a3e42ca9c18f57589db29179edbb875e98bad681220"
+    },
+    {
+      "id": "bugsinpy:luigi-4",
+      "project": "luigi",
+      "bug": 4,
+      "buggy_commit": "ffa51b50103a3adaf3c4d0569fdb037a7ba01e8e",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "8036c8279a8a17a25832db436e3abee2a22c1fc5f4b2099fdf8c79ede3105511"
+    },
+    {
+      "id": "bugsinpy:luigi-5",
+      "project": "luigi",
+      "bug": 5,
+      "buggy_commit": "45b5711d1900184ccd66c65216d28c0d69d10d4a",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "a81cd1550c8de2ea50414b11bfb5f094b28237f39103800c2d874cba28b7f445"
+    },
+    {
+      "id": "bugsinpy:luigi-6",
+      "project": "luigi",
+      "bug": 6,
+      "buggy_commit": "d9667b7c8ce75f17efa383e8f64e27e5852e6f89",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "bfea267e0be49b0d1e3585a2de24fc51ac901e87d49cae374359f7ff2f4179da"
+    },
+    {
+      "id": "bugsinpy:luigi-7",
+      "project": "luigi",
+      "bug": 7,
+      "buggy_commit": "dd1f2ce0061e7787166522a3c75339ba4755dd2c",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "c8a6f0f60518c800a8d67be51cb5f93a3dd04c6917933612644a3d8e6fe3a926"
+    },
+    {
+      "id": "bugsinpy:luigi-8",
+      "project": "luigi",
+      "bug": 8,
+      "buggy_commit": "61ee32e9968978c32be12a6af0affa3a5750e87e",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "8bbf88b6369d50a2f461ef8b53aa34bf03a591bd9433f7633ab7cf59dbbe6aee"
+    },
+    {
+      "id": "bugsinpy:luigi-9",
+      "project": "luigi",
+      "bug": 9,
+      "buggy_commit": "f7e0b7710fd8b12f27625b1efb62a8fde6e206c4",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "46145edf721cf4ee5e3951da038b9241a31f517ec73ec36259c24444317583d6"
+    },
+    {
+      "id": "bugsinpy:tornado-1",
+      "project": "tornado",
+      "bug": 1,
+      "buggy_commit": "6a5a0bfa370b6c0d3dbbf9589a560a98202d2baa",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "10b8b40bca579c0b2229db195e18c34d559cbadd93673fd9c17f7d067a4071d2"
+    },
+    {
+      "id": "bugsinpy:tornado-10",
+      "project": "tornado",
+      "bug": 10,
+      "buggy_commit": "ecd8968c5135b810cd607b5902dda2cd32122b39",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "68c67711865f69d27f503cfa741365960ce7c655d1a9db233dc08152a49af458"
+    },
+    {
+      "id": "bugsinpy:tornado-11",
+      "project": "tornado",
+      "bug": 11,
+      "buggy_commit": "79ef301eb05cac82c075198e502d94dad296f6aa",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "0a638040f6a1e62c9a967cf24fdfa34c575123bb5670aba9a16e273e852261dc"
+    },
+    {
+      "id": "bugsinpy:tornado-12",
+      "project": "tornado",
+      "bug": 12,
+      "buggy_commit": "4ee9ba94de11aaa4f932560fa2b3d8ceb8c61d2a",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "e966543e43cd03b0bdc87bd22745c7d749d90a3944fa0a7de0762b7f2e57eed4"
+    },
+    {
+      "id": "bugsinpy:tornado-13",
+      "project": "tornado",
+      "bug": 13,
+      "buggy_commit": "d7d9c467cda38f4c9352172ba7411edc29a85196",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "82376b509d6ea1fbfd19bdd534795535454550280032e0df424dc99768388a63"
+    },
+    {
+      "id": "bugsinpy:tornado-14",
+      "project": "tornado",
+      "bug": 14,
+      "buggy_commit": "81ee310adcd905fbdf7c98d9fb6ef0c5a46026c2",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "ff48411db4fc2bf5a8c82d2f735fb11ededa121a263601c7e7c11717455d1970"
+    },
+    {
+      "id": "bugsinpy:tornado-15",
+      "project": "tornado",
+      "bug": 15,
+      "buggy_commit": "fdfaf3dffa49479c7461050eacca07bc5ee8d207",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "55322eb17382ff5946a58c03a1c031e71f1363b9c93d8f7622213be4e2f2fc03"
+    },
+    {
+      "id": "bugsinpy:tornado-16",
+      "project": "tornado",
+      "bug": 16,
+      "buggy_commit": "b450ff270df0395ee80f4ee5896a92bfe7f9b6ae",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "85beb9d2e790ed27a72f1db8d6ae4dd369cc20c94d4a2744122431f4b28999d7"
+    },
+    {
+      "id": "bugsinpy:tornado-2",
+      "project": "tornado",
+      "bug": 2,
+      "buggy_commit": "2ca8821d006f6693f920a4b183a3a7c985a5c8ad",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "f1a4ca0cd96fbf8e23dcbdf0484e23ecec903da96c2a78bb22f38d22650285f4"
+    },
+    {
+      "id": "bugsinpy:tornado-3",
+      "project": "tornado",
+      "bug": 3,
+      "buggy_commit": "940fd87fe9145d1154c8457221f86d56ea063c65",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "df6bca654c43f09fad67081ca7a47214e14f61f92eb5efd79aaa7defebbec638"
+    },
+    {
+      "id": "bugsinpy:tornado-4",
+      "project": "tornado",
+      "bug": 4,
+      "buggy_commit": "a8420fc681c5423d072978f00eab4d0645057d16",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "7c36bd843364684b3a3f4e3354bc0fb159a529cb49f0bc2d86ae0847c4abb091"
+    },
+    {
+      "id": "bugsinpy:tornado-5",
+      "project": "tornado",
+      "bug": 5,
+      "buggy_commit": "2d4053daa56c609d642b214399e046671d4a593e",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "1ef390bf3c81e65f092f56b54ec93ab616f34bf7828b4c34584c0e18d529f5be"
+    },
+    {
+      "id": "bugsinpy:tornado-6",
+      "project": "tornado",
+      "bug": 6,
+      "buggy_commit": "fb74e4816ccfa7fc6a7abd8c8aab1f415cfc1b13",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "ff4122384a5b5295b37d3b80f33c5094ce3b069ad112b631f1bae4ba1f0f3246"
+    },
+    {
+      "id": "bugsinpy:tornado-7",
+      "project": "tornado",
+      "bug": 7,
+      "buggy_commit": "fa3409179588536f2f743d16e537f6f9827fa92f",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "7d204db1feccf459e5f5464acf8154b683d4759bbbfb684dda1f0c6a82463986"
+    },
+    {
+      "id": "bugsinpy:tornado-8",
+      "project": "tornado",
+      "bug": 8,
+      "buggy_commit": "34c43f4775971ab9b2b8ed43356f218add6387b2",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "475e9718d325e87c45d1e1ebdb3808779a3e7da44058000434929a6a5eb40b49"
+    },
+    {
+      "id": "bugsinpy:tornado-9",
+      "project": "tornado",
+      "bug": 9,
+      "buggy_commit": "c9d2a3fa573987629ad576e991c2f3b65f4daab4",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "902cb780eb1a00e9022e6161cb1eed57f4277244e6b517bccfdc083c404f1dd7"
+    },
+    {
+      "id": "bugsinpy:tqdm-1",
+      "project": "tqdm",
+      "bug": 1,
+      "buggy_commit": "8cc777fe8401a05d07f2c97e65d15e4460feab88",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "370f400fa317fbb6c57be5b701ec6357d1b0377732aa04dbd96216452a55845d"
+    },
+    {
+      "id": "bugsinpy:tqdm-2",
+      "project": "tqdm",
+      "bug": 2,
+      "buggy_commit": "bef86db56654d271838b145ad77f7040a73a7b4d",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "18afa3e39a16b116f8e8526a6e935ede0c480b0b228632755f32f70f26013bfe"
+    },
+    {
+      "id": "bugsinpy:tqdm-3",
+      "project": "tqdm",
+      "bug": 3,
+      "buggy_commit": "c2599e3cd6087429f48bae34347ec5d2473c8392",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "3ec18894223d1eed2470af4f66e8186e37ee0f7c6a2192cb6031686c4fa58d6c"
+    },
+    {
+      "id": "bugsinpy:tqdm-4",
+      "project": "tqdm",
+      "bug": 4,
+      "buggy_commit": "03b347646492131d889871939b40457d29147216",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "e031160af1432a2f12f1882875bdc3ab9d2676da11d288f55a53d93baa1d1b47"
+    },
+    {
+      "id": "bugsinpy:tqdm-5",
+      "project": "tqdm",
+      "bug": 5,
+      "buggy_commit": "19b08ab34fdbfa0275bc5cb2430436c724c7e759",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "9f69cee72745ff872c73f462dc20eabbb0283a53ee34166b165f4751410cdfc9"
+    },
+    {
+      "id": "bugsinpy:tqdm-6",
+      "project": "tqdm",
+      "bug": 6,
+      "buggy_commit": "a4b9c86db548b2d0dbb5af7a6bbdc26ab47e1eec",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "ca9109ad87153f398f67e16ddb3642bd9c299fa2c09f43a8a27a5baed9406485"
+    },
+    {
+      "id": "bugsinpy:tqdm-7",
+      "project": "tqdm",
+      "bug": 7,
+      "buggy_commit": "caefe02fd6f3165e5634460ab20caf4c60400120",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "2114e9d9418fb9a00055051eda8996bcf8c9c88d1cedd75f76ea0e552d210a9f"
+    },
+    {
+      "id": "bugsinpy:tqdm-8",
+      "project": "tqdm",
+      "bug": 8,
+      "buggy_commit": "08b8ad1ff3bd003ef8309faaa0cc108ffa40317d",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "a0cf22cc7e6e1a175d8e4e665b899ee7035ba2c6428b7e6896e5da355a53d87a"
+    },
+    {
+      "id": "bugsinpy:tqdm-9",
+      "project": "tqdm",
+      "bug": 9,
+      "buggy_commit": "9da1d5d116aec7a23d8f6dc22d5e23ecb1c40a7c",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "82f03615a83ac65b6ece324992927ac4f11d2d1c7dbc920edc69e9308463a26e"
+    },
+    {
+      "id": "bugsinpy:pysnooper-1",
+      "project": "PySnooper",
+      "bug": 1,
+      "buggy_commit": "e21a31162f4c54be693d8ca8260e42393b39abd3",
+      "benchmark_python": "3.8.1",
+      "benchmark_metadata_sha256": "f526381ea5dc370109926d95dd757d2278b91fdecc5d6ff266ee2cdf2775bd22"
+    },
+    {
+      "id": "bugsinpy:pysnooper-2",
+      "project": "PySnooper",
+      "bug": 2,
+      "buggy_commit": "e21a31162f4c54be693d8ca8260e42393b39abd3",
+      "benchmark_python": "3.8.1",
+      "benchmark_metadata_sha256": "0853b73f2900c3cb2703e8b0c4417aac3b998184994a032a66e584210cea9912"
+    },
+    {
+      "id": "bugsinpy:pysnooper-3",
+      "project": "PySnooper",
+      "bug": 3,
+      "buggy_commit": "6e3d797be3fa0a746fb5b1b7c7fea78eb926c208",
+      "benchmark_python": "3.8.1",
+      "benchmark_metadata_sha256": "3952cf9f680cffc8d4da456d064934696b9faea074b9d5305733b24b551b484d"
+    }
+  ],
+  "selected": [
+    {
+      "id": "bugsinpy:luigi-17",
+      "project": "luigi",
+      "bug": 17,
+      "buggy_commit": "c39922350cba3a93c96c2ed223283bf8cf315a7d",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "ceb278f546609206e4e6d170e989f1d6e34ee921b91f567d976159ef2fc7a338"
+    },
+    {
+      "id": "bugsinpy:luigi-4",
+      "project": "luigi",
+      "bug": 4,
+      "buggy_commit": "ffa51b50103a3adaf3c4d0569fdb037a7ba01e8e",
+      "benchmark_python": "3.8.3",
+      "benchmark_metadata_sha256": "8036c8279a8a17a25832db436e3abee2a22c1fc5f4b2099fdf8c79ede3105511"
+    },
+    {
+      "id": "bugsinpy:tornado-10",
+      "project": "tornado",
+      "bug": 10,
+      "buggy_commit": "ecd8968c5135b810cd607b5902dda2cd32122b39",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "68c67711865f69d27f503cfa741365960ce7c655d1a9db233dc08152a49af458"
+    },
+    {
+      "id": "bugsinpy:tornado-1",
+      "project": "tornado",
+      "bug": 1,
+      "buggy_commit": "6a5a0bfa370b6c0d3dbbf9589a560a98202d2baa",
+      "benchmark_python": "3.7.0",
+      "benchmark_metadata_sha256": "10b8b40bca579c0b2229db195e18c34d559cbadd93673fd9c17f7d067a4071d2"
+    },
+    {
+      "id": "bugsinpy:tqdm-7",
+      "project": "tqdm",
+      "bug": 7,
+      "buggy_commit": "caefe02fd6f3165e5634460ab20caf4c60400120",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "2114e9d9418fb9a00055051eda8996bcf8c9c88d1cedd75f76ea0e552d210a9f"
+    },
+    {
+      "id": "bugsinpy:tqdm-4",
+      "project": "tqdm",
+      "bug": 4,
+      "buggy_commit": "03b347646492131d889871939b40457d29147216",
+      "benchmark_python": "3.6.9",
+      "benchmark_metadata_sha256": "e031160af1432a2f12f1882875bdc3ab9d2676da11d288f55a53d93baa1d1b47"
+    }
+  ],
+  "implementation_sha256": "93318e48aee6a23e3ffca3b93f76ba7b68d3f4ae35b94802109b18169ddd93ca",
+  "dispositions": [
+    {
+      "id": "bugsinpy:luigi-17",
+      "status": "pending_screening"
+    },
+    {
+      "id": "bugsinpy:luigi-4",
+      "status": "pending_screening"
+    },
+    {
+      "id": "bugsinpy:tornado-10",
+      "status": "pending_screening"
+    },
+    {
+      "id": "bugsinpy:tornado-1",
+      "status": "pending_screening"
+    },
+    {
+      "id": "bugsinpy:tqdm-7",
+      "status": "pending_screening"
+    },
+    {
+      "id": "bugsinpy:tqdm-4",
+      "status": "pending_screening"
+    }
+  ]
+}

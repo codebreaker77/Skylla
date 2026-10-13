@@ -125,6 +125,9 @@ Skylla paper yet.
 
 Earlier development work is preserved separately:
 
+- [Matched repair pilot preparation](experiments/matched-pilot/REPORT.md): six
+  new development case IDs selected with prior exposure exclusions; a separate
+  Terra/medium Codex access check passed. Comparative repair results are pending.
 - [Receiver-filter replay](experiments/receiver-filter/REPORT.md): 24 fresh
   processes on the exposed Tornado case retain the distinguishing observation
   while reducing field accesses from 1,080 to 552. The number of probe processes

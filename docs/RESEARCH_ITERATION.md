@@ -102,7 +102,7 @@ normalization matches discovery, retain normalization. If blind generation match
 adaptive choice, do not claim an advantage for routing. No successful pilot
 guarantees novelty or a publishable superiority result.
 
-## Optional System-1 backend contract (design, not implemented)
+## Optional System-1 backend contract (shadow implementation available)
 
 The core keeps deterministic source/state, budget and execution checks. A
 replaceable backend receives only solver-visible state: issue, relevant source
@@ -144,6 +144,16 @@ model and is not part of the immediate apparatus work.
 Python 3.10.11 is available alongside the controller's Python 3.9.5. Docker CLI
 is installed, but its Linux engine was unavailable during this iteration. Local
 compatible environments can support apparatus development; they do not reproduce
-benchmark container results automatically. No inference backend or paid-run budget
-is configured. These constraints do not block local replay, protocol writing or
+benchmark container results automatically. The local Laya CUDA backend is
+implemented, and a separate Codex CLI instance using gpt-5.6-terra at medium
+reasoning has passed a minimal access check through existing ChatGPT authentication.
+Full repair budgets, tool accounting and a candidate-ranking adapter remain
+unresolved. These constraints do not block local replay, protocol writing or
 artifact verification; they remain prerequisites for the matched agent comparison.
+
+The [next matched pilot](../experiments/matched-pilot/REPORT.md) freezes six
+previously unexamined development case IDs and a draft four-arm schedule before
+target screening. It excludes earlier case exposures and will keep failed
+setups in the record. The separate minimal recommendation check preserves and
+rejects unsupported setup predictions; it does not improve measured accuracy
+or execute a repair. Laya inference continues to require the workstation GPU.

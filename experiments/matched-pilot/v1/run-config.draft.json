@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "status": "draft_not_execution_ready",
+  "cohort_sha256": "ae17fa473f5139d8ec91e49f5220cca1ca46b8e7da1846c4789fb31da0701ea8",
+  "coding_backend": null,
+  "coding_model_revision": null,
+  "harness_revision": null,
+  "budget": {
+    "total_seconds_per_episode": null,
+    "max_model_tokens_per_episode": null,
+    "max_tool_calls_per_episode": null,
+    "total_inference_spend_cap": null
+  },
+  "required_neural_device": "cuda",
+  "cpu_inference_fallback": false,
+  "arms": [
+    "native",
+    "normalization",
+    "structural_observations",
+    "structural_plus_laya"
+  ],
+  "schedule": [
+    {
+      "case_id": "bugsinpy:luigi-17",
+      "arm": "structural_plus_laya",
+      "order_in_case": 0
+    },
+    {
+      "case_id": "bugsinpy:luigi-17",
+      "arm": "normalization",
+      "order_in_case": 1
+    },
+    {
+      "case_id": "bugsinpy:luigi-17",
+      "arm": "native",
+      "order_in_case": 2
+    },
+    {
+      "case_id": "bugsinpy:luigi-17",
+      "arm": "structural_observations",
+      "order_in_case": 3
+    },
+    {
+      "case_id": "bugsinpy:luigi-4",
+      "arm": "native",
+      "order_in_case": 0
+    },
+    {
+      "case_id": "bugsinpy:luigi-4",
+      "arm": "normalization",
+      "order_in_case": 1
+    },
+    {
+      "case_id": "bugsinpy:luigi-4",
+      "arm": "structural_plus_laya",
+      "order_in_case": 2
+    },
+    {
+      "case_id": "bugsinpy:luigi-4",
+      "arm": "structural_observations",
+      "order_in_case": 3
+    },
+    {
+      "case_id": "bugsinpy:tornado-10",
+      "arm": "structural_plus_laya",
+      "order_in_case": 0
+    },
+    {
+      "case_id": "bugsinpy:tornado-10",
+      "arm": "native",
+      "order_in_case": 1
+    },
+    {
+      "case_id": "bugsinpy:tornado-10",
+      "arm": "structural_observations",
+      "order_in_case": 2
+    },
+    {
+      "case_id": "bugsinpy:tornado-10",
+      "arm": "normalization",
+      "order_in_case": 3
+    },
+    {
+      "case_id": "bugsinpy:tornado-1",
+      "arm": "native",
+      "order_in_case": 0
+    },
+    {
+      "case_id": "bugsinpy:tornado-1",
+      "arm": "normalization",
+      "order_in_case": 1
+    },
+    {
+      "case_id": "bugsinpy:tornado-1",
+      "arm": "structural_observations",
+      "order_in_case": 2
+    },
+    {
+      "case_id": "bugsinpy:tornado-1",
+      "arm": "structural_plus_laya",
+      "order_in_case": 3
+    },
+    {
+      "case_id": "bugsinpy:tqdm-7",
+      "arm": "structural_plus_laya",
+      "order_in_case": 0
+    },
+    {
+      "case_id": "bugsinpy:tqdm-7",
+      "arm": "native",
+      "order_in_case": 1
+    },
+    {
+      "case_id": "bugsinpy:tqdm-7",
+      "arm": "normalization",
+      "order_in_case": 2
+    },
+    {
+      "case_id": "bugsinpy:tqdm-7",
+      "arm": "structural_observations",
+      "order_in_case": 3
+    },
+    {
+      "case_id": "bugsinpy:tqdm-4",
+      "arm": "normalization",
+      "order_in_case": 0
+    },
+    {
+      "case_id": "bugsinpy:tqdm-4",
+      "arm": "native",
+      "order_in_case": 1
+    },
+    {
+      "case_id": "bugsinpy:tqdm-4",
+      "arm": "structural_plus_laya",
+      "order_in_case": 2
+    },
+    {
+      "case_id": "bugsinpy:tqdm-4",
+      "arm": "structural_observations",
+      "order_in_case": 3
+    }
+  ],
+  "missing_gates": [
+    "coding_backend_and_budget",
+    "per_case_runtime_and_bug_reproduction",
+    "independent_target_and_regression_checks",
+    "source_trace_localization_adapter",
+    "laya_candidate_ranking_contract_and_shadow_validation",
+    "full_process_logging_and_deadline_enforcement"
+  ],
+  "note": "Schedule is a proposal. Laya action classification is not candidate ranking; the final arm cannot run until its implementation is frozen."
+}
