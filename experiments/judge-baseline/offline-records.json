@@ -1,0 +1,241 @@
+{
+  "scope": "Three exposed development examples; rules outputs only",
+  "provenance": [
+    {
+      "state_id": "xarray-top-level",
+      "source": "experiments/evidence-pilot/results/run-002/observations.json",
+      "source_sha256": "2a1a9255ffc2ce4b065e4bd10259de939e844ddadbc9626ade368ae8c56d2908",
+      "selection": {
+        "mode": "top_level_only",
+        "repetition": 0
+      }
+    },
+    {
+      "state_id": "xarray-caught-method",
+      "source": "experiments/evidence-pilot/results/run-002/observations.json",
+      "source_sha256": "2a1a9255ffc2ce4b065e4bd10259de939e844ddadbc9626ade368ae8c56d2908",
+      "selection": {
+        "mode": "caught_method",
+        "repetition": 0
+      }
+    },
+    {
+      "state_id": "tornado-native-close",
+      "source": "experiments/observer-discovery/results/run-001/processes.json",
+      "source_sha256": "a3eebbd521ecb12a31d02d8769be239a0a3024602249b3dedee9bb4f6431936c",
+      "selection": {
+        "case": "tornado-6",
+        "variant": "buggy",
+        "kind": "probe",
+        "arm": "normalize",
+        "cycles": 10,
+        "repetition": 0
+      }
+    }
+  ],
+  "records": [
+    {
+      "schema_version": 1,
+      "created_at_utc": "2026-10-13T15:33:05.823888+00:00",
+      "mode": "shadow",
+      "backend": "rules",
+      "model": null,
+      "state": {
+        "schema_version": 1,
+        "state_id": "xarray-top-level",
+        "issue": "Dataset.merge should accept a named DataArray, as the top-level merge function does.",
+        "remaining_seconds": 30,
+        "evidence": {
+          "preconditions": [
+            "passed"
+          ],
+          "observations": [
+            {
+              "mode": "top_level_only",
+              "xarray_version": "0+untagged.1.gef6e6a7",
+              "top_level_variables": [
+                "a",
+                "b"
+              ],
+              "method_exercised": false
+            }
+          ],
+          "requirement_exercised": false
+        }
+      },
+      "state_sha256": "4953ff90e971eed66ea88205e8e27b74cc9224f527ee6e2c6c486941aa08dc0a",
+      "options": {
+        "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+        "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+        "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+        "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+        "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+      },
+      "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+      "script_sha256": "78de8a7d865caa62c6507c594e9de6e3a05d581b3e8a1e72905cf97ca5ee87be",
+      "recommendation": {
+        "action": "propose_probe",
+        "reported_cost_usd": 0
+      },
+      "status": "completed",
+      "package_versions": {},
+      "wall_seconds": 0.0009125999999999856,
+      "calls_attempted": 0
+    },
+    {
+      "schema_version": 1,
+      "created_at_utc": "2026-10-13T15:33:05.826892+00:00",
+      "mode": "shadow",
+      "backend": "rules",
+      "model": null,
+      "state": {
+        "schema_version": 1,
+        "state_id": "xarray-caught-method",
+        "issue": "Dataset.merge should accept a named DataArray, as the top-level merge function does.",
+        "remaining_seconds": 30,
+        "evidence": {
+          "preconditions": [
+            "passed"
+          ],
+          "observations": [
+            {
+              "mode": "caught_method",
+              "xarray_version": "0+untagged.1.gef6e6a7",
+              "top_level_variables": [
+                "a",
+                "b"
+              ],
+              "method_exercised": true,
+              "method_exception": {
+                "type": "AttributeError",
+                "message": "'DataArray' object has no attribute 'items'"
+              },
+              "relation_holds": false
+            }
+          ],
+          "requirement_exercised": true
+        }
+      },
+      "state_sha256": "14ba469da96595649bc1c530f7d0d21ef9ad8e3ba91226ae53c92723bc24522f",
+      "options": {
+        "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+        "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+        "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+        "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+        "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+      },
+      "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+      "script_sha256": "78de8a7d865caa62c6507c594e9de6e3a05d581b3e8a1e72905cf97ca5ee87be",
+      "recommendation": {
+        "action": "inspect_failure",
+        "reported_cost_usd": 0
+      },
+      "status": "completed",
+      "package_versions": {},
+      "wall_seconds": 0.0011568000000000134,
+      "calls_attempted": 0
+    },
+    {
+      "schema_version": 1,
+      "created_at_utc": "2026-10-13T15:33:05.831895+00:00",
+      "mode": "shadow",
+      "backend": "rules",
+      "model": null,
+      "state": {
+        "schema_version": 1,
+        "state_id": "tornado-native-close",
+        "issue": "Repeated creation and closure of IOLoops leaks resources.",
+        "remaining_seconds": 30,
+        "evidence": {
+          "preconditions": [
+            "passed"
+          ],
+          "observations": [
+            {
+              "cycles": 10,
+              "before": {},
+              "events": [
+                {
+                  "native_closed": true,
+                  "active": {},
+                  "closed": {}
+                },
+                {
+                  "native_closed": true,
+                  "active": {},
+                  "closed": {}
+                },
+                {
+                  "native_closed": true,
+                  "active": {},
+                  "closed": {}
+                },
+                {
+                  "native_closed": true,
+                  "active": {},
+                  "closed": {}
+                },
+                {
+                  "native_closed": true,
+                  "active": {},
+                  "closed": {}
+                },
+                {
+                  "native_closed": true,
+                  "active": {},
+                  "closed": {}
+                },
+                {
+                  "native_closed": true,
+                  "active": {},
+                  "closed": {}
+                },
+                {
+                  "native_closed": true,
+                  "active": {},
+                  "closed": {}
+                },
+                {
+                  "native_closed": true,
+                  "active": {},
+                  "closed": {}
+                },
+                {
+                  "native_closed": true,
+                  "active": {},
+                  "closed": {}
+                }
+              ],
+              "after": {}
+            }
+          ],
+          "requirement_exercised": null
+        }
+      },
+      "state_sha256": "5913c2296e37b6a95adf743d4939677b0e2d802c7696d607c0856090d17d0e54",
+      "options": {
+        "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+        "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+        "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+        "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+        "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+      },
+      "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+      "script_sha256": "78de8a7d865caa62c6507c594e9de6e3a05d581b3e8a1e72905cf97ca5ee87be",
+      "recommendation": {
+        "action": "continue_investigation",
+        "reported_cost_usd": 0
+      },
+      "status": "completed",
+      "package_versions": {},
+      "wall_seconds": 0.0010778000000000176,
+      "calls_attempted": 0
+    }
+  ],
+  "state_hashes": {
+    "xarray-top-level": "4953ff90e971eed66ea88205e8e27b74cc9224f527ee6e2c6c486941aa08dc0a",
+    "xarray-caught-method": "14ba469da96595649bc1c530f7d0d21ef9ad8e3ba91226ae53c92723bc24522f",
+    "tornado-native-close": "5913c2296e37b6a95adf743d4939677b0e2d802c7696d607c0856090d17d0e54"
+  },
+  "builder_sha256": "200645889162edfcbaf48b15bea203b312b69db72fd1e61adeb7584c7d354e20"
+}

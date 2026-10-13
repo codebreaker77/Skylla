@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "scope": "One exposed development bug; no repairs or models",
+  "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+  "processes": 24,
+  "pairs": [
+    {
+      "repetition": 0,
+      "arm": "unfiltered",
+      "cycles": 1,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "repetition": 0,
+      "arm": "unfiltered",
+      "cycles": 10,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "repetition": 0,
+      "arm": "receiver_filtered",
+      "cycles": 1,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "repetition": 0,
+      "arm": "receiver_filtered",
+      "cycles": 10,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "repetition": 1,
+      "arm": "unfiltered",
+      "cycles": 1,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "repetition": 1,
+      "arm": "unfiltered",
+      "cycles": 10,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "repetition": 1,
+      "arm": "receiver_filtered",
+      "cycles": 1,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "repetition": 1,
+      "arm": "receiver_filtered",
+      "cycles": 10,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "repetition": 2,
+      "arm": "unfiltered",
+      "cycles": 1,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "repetition": 2,
+      "arm": "unfiltered",
+      "cycles": 10,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "repetition": 2,
+      "arm": "receiver_filtered",
+      "cycles": 1,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "repetition": 2,
+      "arm": "receiver_filtered",
+      "cycles": 10,
+      "comparable": true,
+      "different": true
+    }
+  ],
+  "field_accesses": {
+    "unfiltered": {
+      "total": 1080,
+      "unavailable": 528
+    },
+    "receiver_filtered": {
+      "total": 552,
+      "unavailable": 0
+    }
+  },
+  "process_elapsed_seconds": 25.3623231,
+  "runner_elapsed_seconds": 56.2102894,
+  "protocol_sha256": "f47380c8cb01260a4787a3ca8ee694bca701efbca76f57170588fec4669fe508",
+  "processes_sha256": "0eb4afe8069414905d194927f9de514f60386a2d60ddf514f4917dacf5f8d770"
+}

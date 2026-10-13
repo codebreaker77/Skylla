@@ -38,6 +38,9 @@ and precondition checks depend on the integrating caller. See the
 Separate study tooling now generates container-observation candidates from source
 ASTs. It is a bounded research heuristic, with no learned ranking or automatic
 repair; see the [development replay](experiments/observer-discovery/REPORT.md).
+A receiver-aware filter and an optional local Laya/DeepEval shadow adapter are
+being evaluated separately. The adapter requires GPU support for the current
+study; the core CLI keeps its existing dependency-free interface.
 
 ## Quick start
 
@@ -122,6 +125,13 @@ Skylla paper yet.
 
 Earlier development work is preserved separately:
 
+- [Receiver-filter replay](experiments/receiver-filter/REPORT.md): 24 fresh
+  processes on the exposed Tornado case retain the distinguishing observation
+  while reducing field accesses from 1,080 to 552. The number of probe processes
+  is unchanged; there is no measured repair speedup.
+- [Local System-1 baseline apparatus](experiments/judge-baseline/METHODOLOGY.md):
+  shared development states, a rules baseline and optional DeepEval/Laya shadow
+  decisions. Local stub integration is verified; GPU model results are pending.
 - [Source-proposed observation study](experiments/observer-discovery/REPORT.md):
   44 processes across two exposed historical bugs. Eight AST proposals include
   one distinguishing Tornado observation; the Luigi normalized probe already
@@ -146,9 +156,9 @@ Earlier development work is preserved separately:
 
 ## Reproduce the work
 
-The standard-library suite contains 29 tests covering controller decisions,
+The standard-library suite contains 36 tests covering controller decisions,
 controlled-study apparatus, screening triage, trajectory extraction, AST proposal
-boundaries, and process/readiness failure handling.
+boundaries, process/readiness failure handling, shadow inputs and CUDA-only guards.
 
 ```sh
 python -m unittest discover -s tests -v

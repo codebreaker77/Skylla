@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "state_id": "xarray-caught-method",
+  "issue": "Dataset.merge should accept a named DataArray, as the top-level merge function does.",
+  "remaining_seconds": 30,
+  "evidence": {
+    "preconditions": [
+      "passed"
+    ],
+    "observations": [
+      {
+        "mode": "caught_method",
+        "xarray_version": "0+untagged.1.gef6e6a7",
+        "top_level_variables": [
+          "a",
+          "b"
+        ],
+        "method_exercised": true,
+        "method_exception": {
+          "type": "AttributeError",
+          "message": "'DataArray' object has no attribute 'items'"
+        },
+        "relation_holds": false
+      }
+    ],
+    "requirement_exercised": true
+  }
+}

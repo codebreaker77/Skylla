@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "state_id": "xarray-top-level",
+  "issue": "Dataset.merge should accept a named DataArray, as the top-level merge function does.",
+  "remaining_seconds": 30,
+  "evidence": {
+    "preconditions": [
+      "passed"
+    ],
+    "observations": [
+      {
+        "mode": "top_level_only",
+        "xarray_version": "0+untagged.1.gef6e6a7",
+        "top_level_variables": [
+          "a",
+          "b"
+        ],
+        "method_exercised": false
+      }
+    ],
+    "requirement_exercised": false
+  }
+}

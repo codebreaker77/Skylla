@@ -1,0 +1,9 @@
+{
+  "source_sha256": "56df00467743010416744489ffd4b4e07681d68cd5b1d14c5f17486592269dfd",
+  "script_sha256": "9d7834bc14360bf3dc9700f0bf0d604d576a92e83bbd6c779e57f80ee3637a4a",
+  "matplotlib": "3.9.4",
+  "assets_sha256": {
+    "receiver-filter.png": "df91932b4f9e44d0a64970296035754f3527119a78f34037c2afc6c7233971e2",
+    "receiver-filter.svg": "1eccfdc615143c4cd5496339702ba068e068d6e95a27b29533b2cd97f834ed75"
+  }
+}

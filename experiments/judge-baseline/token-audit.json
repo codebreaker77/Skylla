@@ -1,0 +1,33 @@
+{
+  "scope": "Pure tokenization using real SDK serialization and local stub; no neural forward",
+  "records": [
+    {
+      "state_id": "tornado-native-close",
+      "question": "label",
+      "input_tokens": 456,
+      "untruncated_tokens": 456,
+      "markers": 6,
+      "options": 6,
+      "identical_to_untruncated": true
+    },
+    {
+      "state_id": "xarray-caught-method",
+      "question": "label",
+      "input_tokens": 367,
+      "untruncated_tokens": 367,
+      "markers": 6,
+      "options": 6,
+      "identical_to_untruncated": true
+    },
+    {
+      "state_id": "xarray-top-level",
+      "question": "label",
+      "input_tokens": 329,
+      "untruncated_tokens": 329,
+      "markers": 6,
+      "options": 6,
+      "identical_to_untruncated": true
+    }
+  ],
+  "script_sha256": "43301e598783cb2b7ac3afdb4fc24dada17a0f7437e52c4948ba48c10337478a"
+}

@@ -1,0 +1,5 @@
+deepeval==4.2.8
+laya==0.3.20
+transformers==4.51.3
+numpy==1.26.4
+torch==2.6.0

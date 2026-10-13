@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "repo_id": "convaiinnovations/laya",
+  "revision": "7b928d828b7b0e022f929d9bd2e44165aa270148",
+  "subfolder": "typed-decisions",
+  "files": [
+    {
+      "path": "encoder/config.json",
+      "bytes": 2084,
+      "sha256": "5268d24ad3b77c8151de5dcb0762ba4391619aad9ab0bda33e36fb083cfeae6d",
+      "source_blob_oid": "d4be4829750fb04c0aa8b9897c3ea827f76c0109",
+      "lfs_sha256": null
+    },
+    {
+      "path": "model.safetensors",
+      "bytes": 842609220,
+      "sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+      "source_blob_oid": "3fb9c9678050815e76d0c847115919d7871ace3e",
+      "lfs_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e"
+    },
+    {
+      "path": "rl_agent_config.json",
+      "bytes": 847,
+      "sha256": "ebf0cd524d92342a6be5e48e9fca3d7c2babfb5a56ccd79d2171ef5d8c7f7be8",
+      "source_blob_oid": "5f0e1d5f2366fe8ba2ff330dffaeed53b469e97e",
+      "lfs_sha256": null
+    },
+    {
+      "path": "tokenizer/tokenizer.json",
+      "bytes": 3583228,
+      "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "source_blob_oid": "2f4d8583e507b7466d2490e2d6c045647a822698",
+      "lfs_sha256": null
+    },
+    {
+      "path": "tokenizer/tokenizer_config.json",
+      "bytes": 337,
+      "sha256": "08d4cf3ac4dca381759441b85b91a6d40e688471dcd33d15d6649eb0a9a854d1",
+      "source_blob_oid": "ed1ffabc2ce11120754705709569e365e46da71a",
+      "lfs_sha256": null
+    }
+  ],
+  "download_and_verify_seconds": 406.4576722,
+  "script_sha256": "b8127b14a67a4f52c880c8206b9a5fa128c9066aa2945d4018a757e5901744db"
+}

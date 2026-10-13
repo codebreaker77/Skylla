@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "state_id": "tornado-native-close",
+  "issue": "Repeated creation and closure of IOLoops leaks resources.",
+  "remaining_seconds": 30,
+  "evidence": {
+    "preconditions": [
+      "passed"
+    ],
+    "observations": [
+      {
+        "cycles": 10,
+        "before": {},
+        "events": [
+          {
+            "native_closed": true,
+            "active": {},
+            "closed": {}
+          },
+          {
+            "native_closed": true,
+            "active": {},
+            "closed": {}
+          },
+          {
+            "native_closed": true,
+            "active": {},
+            "closed": {}
+          },
+          {
+            "native_closed": true,
+            "active": {},
+            "closed": {}
+          },
+          {
+            "native_closed": true,
+            "active": {},
+            "closed": {}
+          },
+          {
+            "native_closed": true,
+            "active": {},
+            "closed": {}
+          },
+          {
+            "native_closed": true,
+            "active": {},
+            "closed": {}
+          },
+          {
+            "native_closed": true,
+            "active": {},
+            "closed": {}
+          },
+          {
+            "native_closed": true,
+            "active": {},
+            "closed": {}
+          },
+          {
+            "native_closed": true,
+            "active": {},
+            "closed": {}
+          }
+        ],
+        "after": {}
+      }
+    ],
+    "requirement_exercised": null
+  }
+}

@@ -10,6 +10,14 @@ generic fast judging/classification as differentiation. Before future matched
 agent runs, freeze a DeepEval/Jev-assisted baseline alongside native debugging
 and normalization. Existing frozen/executed protocols remain unchanged.
 
+Execution update: the user selected local Laya only, with no Jev API, and required
+GPU inference. The optional baseline now uses DeepEval's existing custom System-1
+interface with a local Laya bridge. Hosted Jev remains an unavailable comparative
+lead, not an executed arm. The [shadow apparatus](../experiments/judge-baseline/METHODOLOGY.md)
+has local-stub integration checks; actual GPU results are pending. The
+[receiver-filter replay](../experiments/receiver-filter/REPORT.md) preserves the
+known distinguishing field while removing unavailable accesses; no repair gain.
+
 ## Hypothesis
 
 Within a matched total budget, improving an uninformative debugging experiment
