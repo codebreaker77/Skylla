@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-10-13T10:39:44.279446+00:00",
+  "purpose": "Public development trajectory audit; not unseen confirmation data",
+  "registry_repo": "SWE-bench/experiments",
+  "registry_commit": "40f164d5b8f1d249bf95a6df8b74b577fd8e519d",
+  "submission": "20260901_mini-v2.4.2_gemini-3-5-flash",
+  "asset_repo": "SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash",
+  "asset_commit": "2f6637a2557da1f7b5f2b583ab7090a077bbeed2",
+  "asset_tree_sha1": "2f6637a2557da1f7b5f2b583ab7090a077bbeed2",
+  "inventory_trajectories": 441,
+  "inventory_sha256": "b69bcea334e4886c92760d8e49eeb1cce24049736be8836582d20daeec96228b",
+  "selection": "Ascending SHA256(seed|path); first 15 with at most three per repository; no outcome/content filtering",
+  "seed": "skylla-observation-audit-v1",
+  "repository_counts": {
+    "scikit-learn__scikit-learn": 2,
+    "django__django": 3,
+    "pytest-dev__pytest": 2,
+    "pydata__xarray": 1,
+    "astropy__astropy": 2,
+    "sphinx-doc__sphinx": 3,
+    "sympy__sympy": 2
+  },
+  "cases": [
+    {
+      "instance_id": "scikit-learn__scikit-learn-14496",
+      "repository_group": "scikit-learn__scikit-learn",
+      "path": "trajs/scikit-learn__scikit-learn-14496.traj.json",
+      "git_blob_sha1": "320616a7ff3d16aac24d1aca37edbf59b36ddbc3",
+      "bytes": 311522,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/scikit-learn__scikit-learn-14496.traj.json"
+    },
+    {
+      "instance_id": "django__django-15128",
+      "repository_group": "django__django",
+      "path": "trajs/django__django-15128.traj.json",
+      "git_blob_sha1": "e506416796c85371d53889c3f881b3d314bb3d89",
+      "bytes": 522444,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/django__django-15128.traj.json"
+    },
+    {
+      "instance_id": "django__django-11276",
+      "repository_group": "django__django",
+      "path": "trajs/django__django-11276.traj.json",
+      "git_blob_sha1": "b492a7a77db137dc8dfb16d905631248c22baf23",
+      "bytes": 534669,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/django__django-11276.traj.json"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7982",
+      "repository_group": "pytest-dev__pytest",
+      "path": "trajs/pytest-dev__pytest-7982.traj.json",
+      "git_blob_sha1": "6a373bb71f4d2a979edf44b51f86569d6d1df082",
+      "bytes": 225102,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/pytest-dev__pytest-7982.traj.json"
+    },
+    {
+      "instance_id": "django__django-14787",
+      "repository_group": "django__django",
+      "path": "trajs/django__django-14787.traj.json",
+      "git_blob_sha1": "6d1fe57b193a01a70186bc112fb4ad075c2d200d",
+      "bytes": 229010,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/django__django-14787.traj.json"
+    },
+    {
+      "instance_id": "pydata__xarray-3677",
+      "repository_group": "pydata__xarray",
+      "path": "trajs/pydata__xarray-3677.traj.json",
+      "git_blob_sha1": "478c60e813d27766a5d293037e3b186519811968",
+      "bytes": 279175,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/pydata__xarray-3677.traj.json"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-15100",
+      "repository_group": "scikit-learn__scikit-learn",
+      "path": "trajs/scikit-learn__scikit-learn-15100.traj.json",
+      "git_blob_sha1": "008aae9c5cd13495ab6cf07b30d6180767d24fb1",
+      "bytes": 333462,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/scikit-learn__scikit-learn-15100.traj.json"
+    },
+    {
+      "instance_id": "astropy__astropy-13398",
+      "repository_group": "astropy__astropy",
+      "path": "trajs/astropy__astropy-13398.traj.json",
+      "git_blob_sha1": "010c4781cdc7a67dcd24e263ee79af4e86145d71",
+      "bytes": 677393,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/astropy__astropy-13398.traj.json"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7757",
+      "repository_group": "sphinx-doc__sphinx",
+      "path": "trajs/sphinx-doc__sphinx-7757.traj.json",
+      "git_blob_sha1": "f3120312db77143a4ab5fe18b597f6da05315798",
+      "bytes": 310508,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/sphinx-doc__sphinx-7757.traj.json"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7590",
+      "repository_group": "sphinx-doc__sphinx",
+      "path": "trajs/sphinx-doc__sphinx-7590.traj.json",
+      "git_blob_sha1": "a36e02ee964c75d8cfd1263b8643879598f1637a",
+      "bytes": 684155,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/sphinx-doc__sphinx-7590.traj.json"
+    },
+    {
+      "instance_id": "sympy__sympy-18211",
+      "repository_group": "sympy__sympy",
+      "path": "trajs/sympy__sympy-18211.traj.json",
+      "git_blob_sha1": "2885368b767c013a1cef89c89a22919caa4a83a8",
+      "bytes": 396249,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/sympy__sympy-18211.traj.json"
+    },
+    {
+      "instance_id": "sympy__sympy-23824",
+      "repository_group": "sympy__sympy",
+      "path": "trajs/sympy__sympy-23824.traj.json",
+      "git_blob_sha1": "6c07f9c5a5ee2bdec30e7c3d44ba82f074547928",
+      "bytes": 152496,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/sympy__sympy-23824.traj.json"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10449",
+      "repository_group": "sphinx-doc__sphinx",
+      "path": "trajs/sphinx-doc__sphinx-10449.traj.json",
+      "git_blob_sha1": "891315ab05eda251bf9168173eec9b5ec5f6c9c8",
+      "bytes": 403612,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/sphinx-doc__sphinx-10449.traj.json"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-6197",
+      "repository_group": "pytest-dev__pytest",
+      "path": "trajs/pytest-dev__pytest-6197.traj.json",
+      "git_blob_sha1": "e35f888b5cd697b62f6f29cb897bf76d6f084fac",
+      "bytes": 486286,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/pytest-dev__pytest-6197.traj.json"
+    },
+    {
+      "instance_id": "astropy__astropy-13579",
+      "repository_group": "astropy__astropy",
+      "path": "trajs/astropy__astropy-13579.traj.json",
+      "git_blob_sha1": "e848970f7ec8de24f4831e940f168ff1e1984768",
+      "bytes": 360468,
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/astropy__astropy-13579.traj.json"
+    }
+  ],
+  "method_sha256": "8a8deacca415f4109b5d0c4611eda3692370650476b156c46da6a3c5b5698ee1",
+  "acquisition_script_sha256": "6236a4a77db2311f2abe2314ebccd617130a5536e50e3a617442c12f1995e767"
+}
