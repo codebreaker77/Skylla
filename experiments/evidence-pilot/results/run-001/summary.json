@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-13T11:32:47.200045+00:00",
+  "instance_id": "pydata__xarray-3677",
+  "source_commit": "ef6e6a7b86f8479b9a1fecf15ad5b88a2326b31e",
+  "source_tree": "1fdcd5db73f0c0a52a5567189e11c948f4304586",
+  "python": "Python 3.10.11",
+  "packages": [],
+  "script_sha256": "d052f06b2ff14e0b4df2255c7bc55c3a242b8ed77d90462c32a5be6d86821f74",
+  "method_sha256": "e202028a2c86e365fbd6fb66311b8c55c78955a06d417e2e5882da175be62c6b",
+  "processes": 9,
+  "infrastructure_failures": 9,
+  "probe_elapsed_seconds": 4.278695,
+  "scope": "One hand-authored development bug; no agent, classifier, reference fix or repair comparison",
+  "observations_sha256": "f5e89786b06308fb2bf6fdf8ffcf49a5126feaa2751634b974965b3aa0bd045a"
+}

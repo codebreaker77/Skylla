@@ -1,0 +1,257 @@
+[
+  {
+    "repetition": 0,
+    "mode": "top_level_only",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "top_level_only"
+    ],
+    "returncode": 0,
+    "observation": {
+      "mode": "top_level_only",
+      "origin": "D:\\labs\\skylla\\artifacts\\sources\\xarray-evidence\\xarray\\__init__.py",
+      "xarray_version": "0+untagged.1.gef6e6a7",
+      "top_level_variables": [
+        "a",
+        "b"
+      ],
+      "method_exercised": false
+    },
+    "stderr": "",
+    "infrastructure_failure": false,
+    "elapsed_seconds": 8.2737216
+  },
+  {
+    "repetition": 0,
+    "mode": "caught_method",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "caught_method"
+    ],
+    "returncode": 0,
+    "observation": {
+      "mode": "caught_method",
+      "origin": "D:\\labs\\skylla\\artifacts\\sources\\xarray-evidence\\xarray\\__init__.py",
+      "xarray_version": "0+untagged.1.gef6e6a7",
+      "top_level_variables": [
+        "a",
+        "b"
+      ],
+      "method_exercised": true,
+      "method_exception": {
+        "type": "AttributeError",
+        "message": "'DataArray' object has no attribute 'items'"
+      },
+      "relation_holds": false
+    },
+    "stderr": "",
+    "infrastructure_failure": false,
+    "elapsed_seconds": 1.8865447
+  },
+  {
+    "repetition": 0,
+    "mode": "assert_relation",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "assert_relation"
+    ],
+    "returncode": 1,
+    "observation": {
+      "mode": "assert_relation",
+      "origin": "D:\\labs\\skylla\\artifacts\\sources\\xarray-evidence\\xarray\\__init__.py",
+      "xarray_version": "0+untagged.1.gef6e6a7",
+      "top_level_variables": [
+        "a",
+        "b"
+      ],
+      "method_exercised": true,
+      "method_exception": {
+        "type": "AttributeError",
+        "message": "'DataArray' object has no attribute 'items'"
+      },
+      "relation_holds": false
+    },
+    "stderr": "",
+    "infrastructure_failure": false,
+    "elapsed_seconds": 1.3659946000000005
+  },
+  {
+    "repetition": 1,
+    "mode": "top_level_only",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "top_level_only"
+    ],
+    "returncode": 0,
+    "observation": {
+      "mode": "top_level_only",
+      "origin": "D:\\labs\\skylla\\artifacts\\sources\\xarray-evidence\\xarray\\__init__.py",
+      "xarray_version": "0+untagged.1.gef6e6a7",
+      "top_level_variables": [
+        "a",
+        "b"
+      ],
+      "method_exercised": false
+    },
+    "stderr": "",
+    "infrastructure_failure": false,
+    "elapsed_seconds": 1.4051416000000003
+  },
+  {
+    "repetition": 1,
+    "mode": "caught_method",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "caught_method"
+    ],
+    "returncode": 0,
+    "observation": {
+      "mode": "caught_method",
+      "origin": "D:\\labs\\skylla\\artifacts\\sources\\xarray-evidence\\xarray\\__init__.py",
+      "xarray_version": "0+untagged.1.gef6e6a7",
+      "top_level_variables": [
+        "a",
+        "b"
+      ],
+      "method_exercised": true,
+      "method_exception": {
+        "type": "AttributeError",
+        "message": "'DataArray' object has no attribute 'items'"
+      },
+      "relation_holds": false
+    },
+    "stderr": "",
+    "infrastructure_failure": false,
+    "elapsed_seconds": 1.534525200000001
+  },
+  {
+    "repetition": 1,
+    "mode": "assert_relation",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "assert_relation"
+    ],
+    "returncode": 1,
+    "observation": {
+      "mode": "assert_relation",
+      "origin": "D:\\labs\\skylla\\artifacts\\sources\\xarray-evidence\\xarray\\__init__.py",
+      "xarray_version": "0+untagged.1.gef6e6a7",
+      "top_level_variables": [
+        "a",
+        "b"
+      ],
+      "method_exercised": true,
+      "method_exception": {
+        "type": "AttributeError",
+        "message": "'DataArray' object has no attribute 'items'"
+      },
+      "relation_holds": false
+    },
+    "stderr": "",
+    "infrastructure_failure": false,
+    "elapsed_seconds": 1.3821573999999988
+  },
+  {
+    "repetition": 2,
+    "mode": "top_level_only",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "top_level_only"
+    ],
+    "returncode": 0,
+    "observation": {
+      "mode": "top_level_only",
+      "origin": "D:\\labs\\skylla\\artifacts\\sources\\xarray-evidence\\xarray\\__init__.py",
+      "xarray_version": "0+untagged.1.gef6e6a7",
+      "top_level_variables": [
+        "a",
+        "b"
+      ],
+      "method_exercised": false
+    },
+    "stderr": "",
+    "infrastructure_failure": false,
+    "elapsed_seconds": 1.367697800000002
+  },
+  {
+    "repetition": 2,
+    "mode": "caught_method",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "caught_method"
+    ],
+    "returncode": 0,
+    "observation": {
+      "mode": "caught_method",
+      "origin": "D:\\labs\\skylla\\artifacts\\sources\\xarray-evidence\\xarray\\__init__.py",
+      "xarray_version": "0+untagged.1.gef6e6a7",
+      "top_level_variables": [
+        "a",
+        "b"
+      ],
+      "method_exercised": true,
+      "method_exception": {
+        "type": "AttributeError",
+        "message": "'DataArray' object has no attribute 'items'"
+      },
+      "relation_holds": false
+    },
+    "stderr": "",
+    "infrastructure_failure": false,
+    "elapsed_seconds": 1.4021763000000007
+  },
+  {
+    "repetition": 2,
+    "mode": "assert_relation",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "assert_relation"
+    ],
+    "returncode": 1,
+    "observation": {
+      "mode": "assert_relation",
+      "origin": "D:\\labs\\skylla\\artifacts\\sources\\xarray-evidence\\xarray\\__init__.py",
+      "xarray_version": "0+untagged.1.gef6e6a7",
+      "top_level_variables": [
+        "a",
+        "b"
+      ],
+      "method_exercised": true,
+      "method_exception": {
+        "type": "AttributeError",
+        "message": "'DataArray' object has no attribute 'items'"
+      },
+      "relation_holds": false
+    },
+    "stderr": "",
+    "infrastructure_failure": false,
+    "elapsed_seconds": 1.4132475999999983
+  }
+]

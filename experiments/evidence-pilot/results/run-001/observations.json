@@ -1,0 +1,128 @@
+[
+  {
+    "repetition": 0,
+    "mode": "top_level_only",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "top_level_only"
+    ],
+    "infrastructure_failure": true,
+    "error": "JSONDecodeError",
+    "elapsed_seconds": 0.5436594000000001
+  },
+  {
+    "repetition": 0,
+    "mode": "caught_method",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "caught_method"
+    ],
+    "infrastructure_failure": true,
+    "error": "JSONDecodeError",
+    "elapsed_seconds": 0.5194453000000001
+  },
+  {
+    "repetition": 0,
+    "mode": "assert_relation",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "assert_relation"
+    ],
+    "infrastructure_failure": true,
+    "error": "JSONDecodeError",
+    "elapsed_seconds": 0.4643229
+  },
+  {
+    "repetition": 1,
+    "mode": "top_level_only",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "top_level_only"
+    ],
+    "infrastructure_failure": true,
+    "error": "JSONDecodeError",
+    "elapsed_seconds": 0.4631565999999996
+  },
+  {
+    "repetition": 1,
+    "mode": "caught_method",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "caught_method"
+    ],
+    "infrastructure_failure": true,
+    "error": "JSONDecodeError",
+    "elapsed_seconds": 0.4507266000000003
+  },
+  {
+    "repetition": 1,
+    "mode": "assert_relation",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "assert_relation"
+    ],
+    "infrastructure_failure": true,
+    "error": "JSONDecodeError",
+    "elapsed_seconds": 0.46271919999999955
+  },
+  {
+    "repetition": 2,
+    "mode": "top_level_only",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "top_level_only"
+    ],
+    "infrastructure_failure": true,
+    "error": "JSONDecodeError",
+    "elapsed_seconds": 0.4591909999999997
+  },
+  {
+    "repetition": 2,
+    "mode": "caught_method",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "caught_method"
+    ],
+    "infrastructure_failure": true,
+    "error": "JSONDecodeError",
+    "elapsed_seconds": 0.4566208999999999
+  },
+  {
+    "repetition": 2,
+    "mode": "assert_relation",
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\evidence-pilot\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\evidence_pilot.py",
+      "probe",
+      "--mode",
+      "assert_relation"
+    ],
+    "infrastructure_failure": true,
+    "error": "JSONDecodeError",
+    "elapsed_seconds": 0.4588531000000007
+  }
+]

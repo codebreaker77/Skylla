@@ -1,5 +1,9 @@
 # Next study and path to a defensible advantage
 
+Current execution plan: [evidence quality and optional System-1 routing](RESEARCH_ITERATION.md).
+The [issue-derived replay](../experiments/evidence-pilot/METHODOLOGY.md) begins
+apparatus development on an audited real bug. This adds no measured repair gain.
+
 October 13, 2026. Proposed plan. This document formulates a testable direction;
 it does not claim a new algorithm, established novelty, or an existing moat.
 

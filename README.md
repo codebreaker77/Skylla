@@ -110,6 +110,7 @@ Skylla paper yet.
 | [Research ideation](docs/IDEATION.md) | Experiment repair, prior-art pressure tests, and reproducible design counterexamples |
 | [Claim matrix](docs/CLAIM_MATRIX.md) | What is implemented, measured, and still unproven |
 | [Next study](docs/NEXT_STUDY.md) | Staged comparisons, decision gates, and a proposed route to a defensible advantage |
+| [Active research iteration](docs/RESEARCH_ITERATION.md) | Real-bug evidence replay, discovery controls, and optional System-1 evaluation gates |
 | [Literature](docs/LITERATURE.md) and [prior-art audit](docs/PRIOR_ART_AUDIT.md) | Related papers, overlap, reading depth, and evidence boundaries |
 | [Harness comparison](docs/HARNESSES.md) | Claude Code, Cursor, Codex, OpenHands, and mini-swe-agent comparison arms |
 | [Product direction](docs/DIRECTION.md) | Developer workflow, integration boundary, and model/harness independence |
@@ -117,6 +118,11 @@ Skylla paper yet.
 
 Earlier development work is preserved separately:
 
+- [Real-bug evidence replay](experiments/evidence-pilot/REPORT.md): on pinned
+  Xarray source, nine valid processes distinguish an unexercised method, a
+  caught method failure at zero exit, and an explicit failed requirement check.
+  Nine premature setup attempts are also preserved. This is an evidence-handling
+  control, with no classifier or repair advantage measured.
 - [Public trajectory audit](experiments/trajectory-audit/REPORT.md): 15 genuine
   coding-agent traces across seven repositories, sampled before inspecting content.
   Thirty-eight reviewed runtime events show setup and evidence-handling issues;
