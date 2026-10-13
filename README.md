@@ -1,90 +1,166 @@
 # Skylla
 
-An open-source debugging experiment tool for developers and AI coding agents.
+**Choose the next debugging experiment. Keep the evidence attached to its source.**
 
-Skylla's proposed job is to help answer: **What should I run next to understand
-this failure, and what did the result actually establish?**
+[![License: MIT](https://img.shields.io/badge/license-MIT-168575)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-587dab)](pyproject.toml)
+[![Version 0.0.1](https://img.shields.io/badge/version-0.0.1-1f3047)](pyproject.toml)
+[![Research prototype](https://img.shields.io/badge/stage-research%20prototype-d99045)](docs/CLAIM_MATRIX.md)
 
-Start from a failing command, compare plausible explanations, run a distinguishing
-experiment, and keep the evidence attached to the exact code and environment that
-produced it. Developers and agents should share the same workflow and artifacts.
-The core will work without a required model provider or agent harness.
+Skylla is an open-source debugging experiment tool being developed for developers
+and AI coding agents. Its local decision core works without a model provider or
+agent harness. The research asks when to run an existing probe, improve the
+experiment, or investigate another explanation under a fixed budget.
 
-## Status
+[Quick start](#quick-start) · [Capabilities](#current-capabilities) ·
+[Findings](#latest-findings) · [Research](#research-and-documentation) ·
+[Reproduce](#reproduce-the-work)
 
-An installable local decision CLI and development experiments, started October
-13, 2026. The controller recommends executing, expanding, revalidating, or
-stopping from caller-supplied experiment contracts; command execution and agent
-integration are still separate research scripts.
+## Current capabilities
 
-The original rehearsal preserves 48 executions. A new 12-case screen records
-96 test processes across setup attempts, with 10 cases reproducing the target
-buggy/fixed difference. Another 24 runtime probe executions cover three of those
-cases. These are development observations, not measured agent-repair improvement.
-There is no published paper yet.
+**An installable decision CLI and reproducible research tooling.**
 
-A subsequent [controlled probe-repair study](experiments/probe-repair/REPORT.md)
-ran 840 episodes over four original microprograms. Simple normalization matched
-calibration-based recovery while using fewer target calls. This is development
-mechanism evidence; the episodes are not independent historical bugs or agent
-repair evaluations.
+| Capability | Available today |
+| --- | --- |
+| Experiment selection | Choose supplied candidates using declared contrasts and estimated cost |
+| Menu expansion | Request bounded expansion when declared controls or distinctions are missing |
+| Evidence checks | Flag mismatched state IDs and unverified or failed preconditions |
+| Budget handling | Recommend unresolved when the declared budget or menu cannot support an action |
+| Developer and agent interface | Python API and JSON CLI, including stdin input |
+| Research artifacts | Pinned cases, executable probes, frozen protocols, observations, and verification scripts |
 
-The initial literature review points toward studying experiment selection under a
-fixed debugging budget. We will test that direction before investing in a broad
-platform or training a selector.
+The controller recommends actions from caller-supplied contracts. Command
+execution lives in separate study scripts; automatic experiment generation,
+production-code repair, and native harness adapters remain planned. State IDs
+and precondition checks depend on the integrating caller. See the
+[controller contract](docs/CONTROLLER.md) for complete behavior and limitations.
 
-## Try the controller
+## Quick start
 
-Requires Python 3.9 or newer; the controller has no runtime dependencies.
+Requires Python 3.9 or newer. The controller has no runtime dependencies.
 
 ```sh
+git clone https://github.com/codebreaker77/Skylla.git
+cd Skylla
 python -m pip install .
+
 skylla experiments/expansion/examples/missing-control.json --policy conditional
 ```
 
-This returns `expand`: the declared menu omits a required control even though
-its existing candidate predicts a distinction. `--policy fixed` selects that
-candidate instead. These examples do not execute commands or call a model.
-See the [controller contract](docs/CONTROLLER.md) for integration boundaries.
+The example returns `expand` because a declared required control is missing.
+Compare the fixed-menu policy:
 
-## Read the design
+```sh
+skylla experiments/expansion/examples/missing-control.json --policy fixed
+```
 
-- [Controlled experiment method](experiments/probe-repair/METHODOLOGY.md) and
-  [observations](experiments/probe-repair/REPORT.md): frozen protocol, full traces,
-  negative results for calibration overhead, and reproducible analysis.
-- [Latest research ideation](docs/IDEATION.md): experiment repair, new prior-art
-  overlap, reproducible design counterexamples, and the next falsification study.
-- [Expansion development report](experiments/expansion/REPORT.md): screening,
-  runtime observations, setup deviations, and the next evaluation gate.
-- [Claim matrix](docs/CLAIM_MATRIX.md): implemented behavior, prior-art overlap,
-  and the evidence still required for a research contribution.
-- [Next study and advantage plan](docs/NEXT_STUDY.md): the proposed expansion
-  decision, bounded research schedule, fair comparisons, and assets to build.
-- [Literature review](docs/LITERATURE.md): recent papers, evidence boundaries,
-  adjacent systems, and remaining novelty questions.
-- [Product direction](docs/DIRECTION.md): alternatives considered, recommended
-  first workflow, model/harness independence, and proposed contracts.
-- [Pilot protocol](docs/PILOT.md): reproducibility, baselines, measurements,
-  execution costs, and decision gates.
-- [Paper plan](docs/PAPER.md): research questions, required evidence, and artifacts.
-- [Harness comparison](docs/HARNESSES.md): Claude Code, Cursor Debug Mode, Codex,
-  OpenHands, and mini-swe-agent; documented capabilities and fair comparison arms.
-- [Focused prior-art audit](docs/PRIOR_ART_AUDIT.md): overlap and unresolved checks.
-- [Executed rehearsal](experiments/rehearsal/README.md): commands, artifacts,
-  measured findings, and limitations.
+That returns `execute` for the existing candidate. These commands make local
+decisions; the example's command vector is illustrative. Use `skylla -` to read a
+request from stdin, or import `decide` from `skylla` in Python.
 
-## Principles
+## Latest findings
 
-- Useful to an ordinary developer and to an existing coding agent.
-- Local evidence collection and deterministic selection need no remote inference.
-- Model choice, experiment generation, selection, and execution are separate.
-- Predictions precede results; observations stay separate from interpretation.
-- Correctness comes from independent checks, not a model's confidence.
-- Unresolved investigations and negative research findings are legitimate outcomes.
+![Controlled probe-repair results: recovery and target-call cost](experiments/probe-repair/figures/recovery-and-cost.png)
 
-Repository: [codebreaker77/Skylla](https://github.com/codebreaker77/Skylla).
+The first controlled probe-repair study ran **840 episodes** across four original
+fault families, seven probe conditions, two fault states, three menu orderings,
+and five deterministic policies. They are related development fixtures, not
+840 independent bugs or agent-repair attempts.
+
+**Simple normalization matched calibration-based recovery with fewer target calls.**
+
+| Policy | Verified recovery / 84 fault-present episodes | Mean calls across all 168 episodes |
+| --- | ---: | ---: |
+| Blind search | 36 / 84 | 7.14 |
+| Input-first sweep | 60 / 84 | 5.81 |
+| Normalize then sweep | **72 / 84** | **3.62** |
+| Always calibrate | 72 / 84 | 6.69 |
+| Conditional calibration | 72 / 84 | 6.26 |
+
+Every policy missed the deliberately masked-result cases. A collector-sensitivity
+control could pass while an upstream wrapper hid the actual faulty value.
+The result supports retaining a cheap baseline; calibration did not earn its
+extra call cost in this study. These are diagnostic results, with no measured
+agent-repair improvement or established breakthrough. There is no published
+Skylla paper yet.
+
+[Frozen methodology](experiments/probe-repair/METHODOLOGY.md) ·
+[Full report](experiments/probe-repair/REPORT.md) ·
+[Episode records](experiments/probe-repair/results/run-001/episodes.jsonl) ·
+[PNG and SVG figures](experiments/probe-repair/figures/README.md)
+
+<details>
+<summary><strong>See recovery by probe condition</strong></summary>
+
+![Recovery by condition, with 12 fault-present episodes per cell](experiments/probe-repair/figures/recovery-by-condition.png)
+
+</details>
+
+<details>
+<summary><strong>See the study workflow and calibration blind spot</strong></summary>
+
+![Workflow and calibration blind spot](experiments/probe-repair/figures/workflow-and-control-blind-spot.png)
+
+</details>
+
+## Research and documentation
+
+| Start here | What it covers |
+| --- | --- |
+| [Research ideation](docs/IDEATION.md) | Experiment repair, prior-art pressure tests, and reproducible design counterexamples |
+| [Claim matrix](docs/CLAIM_MATRIX.md) | What is implemented, measured, and still unproven |
+| [Next study](docs/NEXT_STUDY.md) | Staged comparisons, decision gates, and a proposed route to a defensible advantage |
+| [Literature](docs/LITERATURE.md) and [prior-art audit](docs/PRIOR_ART_AUDIT.md) | Related papers, overlap, reading depth, and evidence boundaries |
+| [Harness comparison](docs/HARNESSES.md) | Claude Code, Cursor, Codex, OpenHands, and mini-swe-agent comparison arms |
+| [Product direction](docs/DIRECTION.md) | Developer workflow, integration boundary, and model/harness independence |
+| [Pilot protocol](docs/PILOT.md) and [paper plan](docs/PAPER.md) | Evaluation requirements, resource accounting, and publication evidence |
+
+Earlier development work is preserved separately:
+
+- [Historical rehearsal](experiments/rehearsal/README.md): 48 recorded executions
+  across three historical bugs.
+- [Expansion study](experiments/expansion/REPORT.md): 12 screened cases, 96 test
+  processes across setup attempts, and 24 runtime probe executions. Ten cases
+  reproduced the target buggy/fixed difference.
+
+## Reproduce the work
+
+The standard-library suite contains 21 tests, including five controlled-study
+apparatus checks. All passed before the latest study freeze.
+
+```sh
+python -m unittest discover -s tests -v
+python tools/study/probe_repair/study.py verify --name run-001
+python tools/study/probe_repair/study.py run --name reproduction --workers 3
+```
+
+Use a new run name to preserve existing observations. Figure generation has
+optional plotting dependencies:
+
+```sh
+python -m pip install -r experiments/probe-repair/figures/requirements.txt
+python tools/study/plot_probe_repair.py
+```
+
+Historical-study environments and commands are in their respective reports.
+Raw logs and downloaded workspaces stay local under ignored directories;
+tracked records preserve their hashes. Verifiers report which local logs are
+available and check those alongside the committed artifacts.
+
+## Contributing
+
+Useful contributions include reproduced failures, portable probe execution,
+stronger simple baselines, and harness adapters. Open an
+[issue](https://github.com/codebreaker77/Skylla/issues) with the failing command,
+environment, expected behavior, and a minimal example. Experimental changes
+should record their method, full costs, and unresolved outcomes.
+
+## Topics
+
+`debugging` · `developer-tools` · `ai-agents` · `program-repair` ·
+`reproducible-research` · `python` · `model-agnostic` · `harness-agnostic`
 
 ## License
 
-Skylla's original files are available under the [MIT license](LICENSE).
-Third-party datasets, code, and papers retain their own licenses.
+Skylla's original code and artifacts use the [MIT license](LICENSE).
+Third-party datasets, source code, and papers retain their own licenses.

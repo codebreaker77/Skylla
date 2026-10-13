@@ -1,0 +1,16 @@
+{
+  "purpose": "Descriptive figures from run-001; no new target executions",
+  "source_summary_sha256": "7aa7fa6ed170c36aa983bad43498ff9fecb3ecbac4401bfa41eff9e994458927",
+  "source_episodes_sha256": "d35e679e5c346542817d16fd41b4e16d5579c309a95292561e2dfe2732c9be76",
+  "plot_script_sha256": "d6add7bc950e62e5250ded01ea396a45bfd121b2ccd07a3c7584fdf953a7cdc8",
+  "matplotlib": "3.9.4",
+  "numpy": "1.26.4",
+  "figures": {
+    "recovery-and-cost.png": "9161af60924febeffe669521a4637598b46ecaa9ffa85ae09dde57bd30a8af61",
+    "recovery-and-cost.svg": "1fa35ba7bb5c03b855df8be169b4dfbfb5d04056add66604a7e6fbc60e547246",
+    "recovery-by-condition.png": "e97556cf3536f3a5d3eb105a96003fd14c31735034cddf421fa8e12b269e20fe",
+    "recovery-by-condition.svg": "bdb752832f799e4ed960d7bb2c7bf38d0b8c17beafe2a88cb73f3d4238f742f1",
+    "workflow-and-control-blind-spot.png": "6a4c35b9413521d589b2929fa5b291b651256a9357844127dc62594534476c5f",
+    "workflow-and-control-blind-spot.svg": "8dadad8746501dc70bb2024b6277c47bd06779030380eb01a6eb9cc0aa367a47"
+  }
+}

@@ -28,6 +28,12 @@ to policy budget. Full records and the exact environment are in
 
 ## Primary outcome
 
+![Verified probe recovery and mean target-call cost across five policies](figures/recovery-and-cost.png)
+
+Left: recovery out of 84 fault-present episodes per policy. Right: mean target
+calls across all 168 episodes, including calibration and excluding offline
+reference replay. [SVG](figures/recovery-and-cost.svg).
+
 A recovered probe must show the specified failure in the current workspace and
 satisfy that specification on the separate reference implementation. This is a
 diagnostic discriminator, not a generated production repair.
@@ -70,6 +76,11 @@ cases; blind search varied strongly by ordering, recovering 24/28, 4/28, and 8/2
 positive episodes across the three seeds. This small order sample is not an
 estimate of general randomized-search performance.
 
+![Verified recovery by initial probe condition, with 12 episodes in each cell](figures/recovery-by-condition.png)
+
+Each cell combines four related fault families and three menu orderings.
+[SVG](figures/recovery-by-condition.svg).
+
 ## Observation 1: a useful route can still be unnecessarily expensive
 
 For configuration precedence with both wrong source and observer, the conditional
@@ -90,6 +101,11 @@ and observer together. The common interface already exposes these canonical
 choices, so calibration does not buy information needed for this decision.
 
 ## Observation 2: a passing control is local evidence
+
+![Study workflow and the masked-result calibration blind spot](figures/workflow-and-control-blind-spot.png)
+
+The lower row shows why the positive control can reach the collector while the
+original faulty value cannot. [SVG](figures/workflow-and-control-blind-spot.svg).
 
 Both calibration arms returned a sensitive control on all 12 positive masked
 cases per arm, yet none recovered the fault. The masking wrapper substitutes the
@@ -152,3 +168,6 @@ unique episode directories, budget accounting, complete case coverage, and
 aggregate consistency. All 21 repository tests passed before the freeze,
 including five apparatus checks. The analysis is descriptive and was written
 after the run under the outcomes specified in the frozen method.
+
+Export formats, data provenance, and regeneration instructions are in the
+[figure directory](figures/README.md). Plotting runs no new target experiments.
