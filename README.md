@@ -117,6 +117,12 @@ Skylla paper yet.
 
 Earlier development work is preserved separately:
 
+- [Public trajectory audit](experiments/trajectory-audit/REPORT.md): 15 genuine
+  coding-agent traces across seven repositories, sampled before inspecting content.
+  Thirty-eight reviewed runtime events show setup and evidence-handling issues;
+  a missing-observer advantage remains unestablished. The
+  [next comparison protocol](experiments/trajectory-audit/NEXT_COMPARISON.md)
+  defines the development comparison and its pending execution prerequisites.
 - [Historical rehearsal](experiments/rehearsal/README.md): 48 recorded executions
   across three historical bugs.
 - [Expansion study](experiments/expansion/REPORT.md): 12 screened cases, 96 test
@@ -125,8 +131,8 @@ Earlier development work is preserved separately:
 
 ## Reproduce the work
 
-The standard-library suite contains 21 tests, including five controlled-study
-apparatus checks. All passed before the latest study freeze.
+The standard-library suite contains 23 tests covering controller decisions,
+controlled-study apparatus, screening triage, and trajectory extraction.
 
 ```sh
 python -m unittest discover -s tests -v

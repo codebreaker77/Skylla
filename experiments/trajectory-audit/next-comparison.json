@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-10-13T10:51:52.179826+00:00",
+  "status": "Development comparison design frozen; run-specific configuration pending; not executed",
+  "protocol_sha256": "c1214504e30141e7dbfacdfcaa870c4ccb3832216bbc5d309b685c5301c4defc",
+  "audit_sha256": "6a279db05809d98f2b55052e7d60125e3e76abbd2196994db77da5234d6dbd4f",
+  "confirmation_exclusions": [
+    "scikit-learn__scikit-learn-14496",
+    "django__django-15128",
+    "django__django-11276",
+    "pytest-dev__pytest-7982",
+    "django__django-14787",
+    "pydata__xarray-3677",
+    "scikit-learn__scikit-learn-15100",
+    "astropy__astropy-13398",
+    "sphinx-doc__sphinx-7757",
+    "sphinx-doc__sphinx-7590",
+    "sympy__sympy-18211",
+    "sympy__sympy-23824",
+    "sphinx-doc__sphinx-10449",
+    "pytest-dev__pytest-6197",
+    "astropy__astropy-13579"
+  ],
+  "pending_prerequisites": [
+    "Executable pinned task environments",
+    "Configured model and harness",
+    "Explicit total inference budget and cost caps",
+    "Independent target/regression evaluator"
+  ],
+  "development_evidence_only": true
+}

@@ -13,6 +13,12 @@ deterministic probe-repair heuristics. Calibration adds no recovery over simple
 normalization on its supplied menus and costs more target calls. This is evidence
 against that added step for the tested fixtures, not a repair-agent result.
 
+A [public trajectory audit](../experiments/trajectory-audit/REPORT.md) now reviews
+early runtime events from 15 genuine agent traces. It documents setup obstacles,
+zero-exit exceptions, and native observation/repair behavior. Missing internal
+observers and causal usefulness remain unestablished without independent review
+or replay; these labels cannot justify a discovery-performance claim.
+
 | Proposed claim | Present evidence | Evidence still required |
 | --- | --- | --- |
 | Provider-independent local decisions | Python/JSON core, no inference dependency, CLI smoke check | Multiple real harness integrations |

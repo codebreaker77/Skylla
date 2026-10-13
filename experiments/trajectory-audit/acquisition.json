@@ -1,0 +1,216 @@
+{
+  "sample_sha256": "3d353099ba0ecb4520061bede514ca368dd092312bbfd85f2aad6e5aefecd564",
+  "downloaded_at_utc": "2026-10-13T10:40:02.671492+00:00",
+  "records": [
+    {
+      "instance_id": "scikit-learn__scikit-learn-14496",
+      "raw_path": "artifacts/trajectory-audit/raw/scikit-learn__scikit-learn-14496.traj.json",
+      "sha256": "e4993a0a88b6545ac2c01da07887b5ed70b743c9092e0024c8b406dc37e4a607",
+      "bytes": 311522,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 74,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "django__django-15128",
+      "raw_path": "artifacts/trajectory-audit/raw/django__django-15128.traj.json",
+      "sha256": "038f575cad0ee8a40a1668d0e43af4805e1db55f61412f9e3bffdf7db825c731",
+      "bytes": 522444,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 116,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "django__django-11276",
+      "raw_path": "artifacts/trajectory-audit/raw/django__django-11276.traj.json",
+      "sha256": "9318e5fd1e3c61669c8792df18502985365977ec189346c3ba061912258ec2e7",
+      "bytes": 534669,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 94,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7982",
+      "raw_path": "artifacts/trajectory-audit/raw/pytest-dev__pytest-7982.traj.json",
+      "sha256": "16d16af8e3dc47e7577472d433f1783c004564a8980daf30346b366cc1fea9b8",
+      "bytes": 225102,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 72,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "django__django-14787",
+      "raw_path": "artifacts/trajectory-audit/raw/django__django-14787.traj.json",
+      "sha256": "f1e8c200b80225585db7f173be08cf6395f62e09b11959b53c00697cd2ea4232",
+      "bytes": 229010,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 60,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "pydata__xarray-3677",
+      "raw_path": "artifacts/trajectory-audit/raw/pydata__xarray-3677.traj.json",
+      "sha256": "2bab6d23a34e482ff71161f66f13d86330ecf8f20ebf61557cf2db8c086ade5c",
+      "bytes": 279175,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 66,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-15100",
+      "raw_path": "artifacts/trajectory-audit/raw/scikit-learn__scikit-learn-15100.traj.json",
+      "sha256": "f80f011aef994b3335b687953720d5b79d607edf402eb3fc04bcd37bcb6abfad",
+      "bytes": 333462,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 76,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "astropy__astropy-13398",
+      "raw_path": "artifacts/trajectory-audit/raw/astropy__astropy-13398.traj.json",
+      "sha256": "357869ede8131567b9778b49daf22f814a0ce6c16cc31310752ef6a59dc4bd71",
+      "bytes": 677393,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 120,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7757",
+      "raw_path": "artifacts/trajectory-audit/raw/sphinx-doc__sphinx-7757.traj.json",
+      "sha256": "5876c771a5bc28a5694740fced7d8cd8eb2ffadff15febc3b1a2912c8f3977e0",
+      "bytes": 310508,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 62,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7590",
+      "raw_path": "artifacts/trajectory-audit/raw/sphinx-doc__sphinx-7590.traj.json",
+      "sha256": "a843de12d3b90e8cd1b772f6d8f60584b36c340d1465b51e65708448988cf085",
+      "bytes": 684155,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 112,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "sympy__sympy-18211",
+      "raw_path": "artifacts/trajectory-audit/raw/sympy__sympy-18211.traj.json",
+      "sha256": "07bf6af4313466924c5b61862a32e61a0385b4f8dc11fbe436e7a897264e4f68",
+      "bytes": 396249,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 118,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "sympy__sympy-23824",
+      "raw_path": "artifacts/trajectory-audit/raw/sympy__sympy-23824.traj.json",
+      "sha256": "bd160bc5ae149927ce2fae788dc91da0aca3708fe44fb77f118872b44c49bb48",
+      "bytes": 152496,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 42,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10449",
+      "raw_path": "artifacts/trajectory-audit/raw/sphinx-doc__sphinx-10449.traj.json",
+      "sha256": "0abaf20fd4845626d62ed7ba406e542f30b840ce29a78b23eebba248abe406b9",
+      "bytes": 403612,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 94,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "pytest-dev__pytest-6197",
+      "raw_path": "artifacts/trajectory-audit/raw/pytest-dev__pytest-6197.traj.json",
+      "sha256": "5a3087ab85bf59befef05d6207dea5a0b3182018b2140500334225ac3f6f51df",
+      "bytes": 486286,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 110,
+      "status": "downloaded"
+    },
+    {
+      "instance_id": "astropy__astropy-13579",
+      "raw_path": "artifacts/trajectory-audit/raw/astropy__astropy-13579.traj.json",
+      "sha256": "54b5f074ef1728c26df8628aec4087da76b8cd60e401ad898578f9f4727543c1",
+      "bytes": 360468,
+      "top_level_fields": [
+        "info",
+        "instance_id",
+        "messages",
+        "trajectory_format"
+      ],
+      "messages": 54,
+      "status": "downloaded"
+    }
+  ]
+}

@@ -1,0 +1,698 @@
+{
+  "schema_version": 1,
+  "purpose": "Candidate extraction, not automatic evidence-quality labels",
+  "sample_sha256": "3d353099ba0ecb4520061bede514ca368dd092312bbfd85f2aad6e5aefecd564",
+  "extractor_sha256": "ed430a738f9771029c2b90b450d7c6fb97402d0f7193966ed1327d02c071d80a",
+  "traces": [
+    {
+      "instance_id": "scikit-learn__scikit-learn-14496",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/scikit-learn__scikit-learn-14496.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 74,
+      "task_description_sha256": "f255f95726bad3c8287bc65bbc30accf54a218bc97b2e9833ffc52d71fdaaceb",
+      "all_candidate_count": 10,
+      "selected_candidates": [
+        {
+          "event_id": "scikit-learn__scikit-learn-14496:m20:c0",
+          "assistant_message_index": 20,
+          "call_index": 0,
+          "tool_call_id": "call_3398925",
+          "observation_message_index": 21,
+          "command_sha256": "76fac37b380973105c50ffe1482454418839ef5cd2f673a9ad987dd8aa7681d5",
+          "observation_sha256": "352c5bc3b9bab54c3eda1dfa6ecc65289dfb90d79ed8c30f553adcc9ac5faa0e",
+          "return_code": 0,
+          "observation_characters": 456,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "scikit-learn__scikit-learn-14496:m22:c0",
+          "assistant_message_index": 22,
+          "call_index": 0,
+          "tool_call_id": "call_2406084",
+          "observation_message_index": 23,
+          "command_sha256": "34ec067cfe0b26bcd05898d3e2c540cd54aebf6feb6bca9432d0bb655606ac0b",
+          "observation_sha256": "80ba00e8a922e62b869ddcd4835bee59dc69768c110115e6626764bc7f7b8c02",
+          "return_code": 1,
+          "observation_characters": 516,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "scikit-learn__scikit-learn-14496:m46:c0",
+          "assistant_message_index": 46,
+          "call_index": 0,
+          "tool_call_id": "call_1376302",
+          "observation_message_index": 47,
+          "command_sha256": "24b95f5d3bfb223bcc2c1c756eb04af83c3f3775f038f89d91472debe72c1243",
+          "observation_sha256": "8466556565987a23b091929026538173f922626d708be63da4632a02d65e7e3a",
+          "return_code": 1,
+          "observation_characters": 320,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-15128",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/django__django-15128.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 116,
+      "task_description_sha256": "77fa1b1fe11783fc78e3e22361cb8ae2bcd6afc79f6f07861309cc03d68caaaa",
+      "all_candidate_count": 11,
+      "selected_candidates": [
+        {
+          "event_id": "django__django-15128:m40:c0",
+          "assistant_message_index": 40,
+          "call_index": 0,
+          "tool_call_id": "call_2455210",
+          "observation_message_index": 41,
+          "command_sha256": "3ffbd7de46314f9e12af4a88767a4157cdb435b093f38b8c2d195205b9bf54e8",
+          "observation_sha256": "f99fabec29e5a04ccdbbca5b628b546f744dc8a99cc414299e1c303d27bdd995",
+          "return_code": 0,
+          "observation_characters": 22,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "django__django-15128:m42:c0",
+          "assistant_message_index": 42,
+          "call_index": 0,
+          "tool_call_id": "call_2576880",
+          "observation_message_index": 43,
+          "command_sha256": "feadfe139e6f3315a60c8b52eae1daa65c2bb4bb592cf8f7865dd81e888f31a2",
+          "observation_sha256": "6b0efb495308780c49724f92f2fe8b86b78d2d1f29368ae3907f53c1f6a65aab",
+          "return_code": 0,
+          "observation_characters": 1059,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "django__django-15128:m48:c0",
+          "assistant_message_index": 48,
+          "call_index": 0,
+          "tool_call_id": "call_1349474",
+          "observation_message_index": 49,
+          "command_sha256": "7d48944c15248f8de212678a33e46085df7c86a88a892ff34e9b4c923084356f",
+          "observation_sha256": "640a8e0d0fc559c72ed0d62698801807f78267d6053c86dbf03349525f7eaf7e",
+          "return_code": 0,
+          "observation_characters": 258,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-11276",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/django__django-11276.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 94,
+      "task_description_sha256": "24ef0924cd07e681665210ee45ef0da854790be79d6cf0add12127ad194e73f1",
+      "all_candidate_count": 14,
+      "selected_candidates": [
+        {
+          "event_id": "django__django-11276:m6:c0",
+          "assistant_message_index": 6,
+          "call_index": 0,
+          "tool_call_id": "call_2322975",
+          "observation_message_index": 7,
+          "command_sha256": "385dfb92795a94f340b086b161b5b259b2dc2a9ec4458fd64d63c423e93d69c8",
+          "observation_sha256": "89d86debb6540a067e65d1d76bc1b92db42d3e147c9344ed1e860c3d95a7d574",
+          "return_code": 0,
+          "observation_characters": 58,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "django__django-11276:m10:c0",
+          "assistant_message_index": 10,
+          "call_index": 0,
+          "tool_call_id": "call_1442952",
+          "observation_message_index": 11,
+          "command_sha256": "ca5445c117861d547874416c4eec12088d84370cd19bf78b69b62528935335ff",
+          "observation_sha256": "b6fe94a4971280b69606b3ad6039ae9ed0e48557776ea68f678174b6c8da879a",
+          "return_code": 127,
+          "observation_characters": 40,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "django__django-11276:m12:c0",
+          "assistant_message_index": 12,
+          "call_index": 0,
+          "tool_call_id": "call_3314778",
+          "observation_message_index": 13,
+          "command_sha256": "373097a3a9dca3bb3810b84aaa05d0131fcb7922947299a8091cefe22096663f",
+          "observation_sha256": "d4969ae5b880bc2af84a73bc5c436920679a243bf0ea54dbe5b61a8d922f0956",
+          "return_code": 1,
+          "observation_characters": 7726,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "pytest-dev__pytest-7982",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/pytest-dev__pytest-7982.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 72,
+      "task_description_sha256": "c24f1ae2ec632570479e7ac898f00260c36298a21edf3bbc9b3cde2e1c8e9105",
+      "all_candidate_count": 8,
+      "selected_candidates": [
+        {
+          "event_id": "pytest-dev__pytest-7982:m10:c0",
+          "assistant_message_index": 10,
+          "call_index": 0,
+          "tool_call_id": "call_2444106",
+          "observation_message_index": 11,
+          "command_sha256": "a76316f0d85ff912519d60f0e60f8c4806151e7eb4ef2b28f9eb925f2337fe64",
+          "observation_sha256": "fa4f76b2eff1f31444d634bdebca5c601699d9231bfd35f46c5e18c286a16ef8",
+          "return_code": 0,
+          "observation_characters": 59,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "pytest-dev__pytest-7982:m32:c0",
+          "assistant_message_index": 32,
+          "call_index": 0,
+          "tool_call_id": "call_920260",
+          "observation_message_index": 33,
+          "command_sha256": "44896862328fd0bbb5ecdf7ef193bdb239b980916d9299e077fa089cdd9fef58",
+          "observation_sha256": "e3430e3ac2e8326db4d599ca5699283d110a7f2dd16b39c169503af8f298d9c0",
+          "return_code": 0,
+          "observation_characters": 479,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "pytest-dev__pytest-7982:m40:c0",
+          "assistant_message_index": 40,
+          "call_index": 0,
+          "tool_call_id": "call_1382520",
+          "observation_message_index": 41,
+          "command_sha256": "e65ab7c01dfaaa125437cbdb60580c196faf91552e431c0da8c762c22983bed7",
+          "observation_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "return_code": 0,
+          "observation_characters": 0,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "django__django-14787",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/django__django-14787.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 60,
+      "task_description_sha256": "b5ba8ef39fe4e0a28d4f37dd97c28b2952d7efa980fdaadb948bdbd84197106c",
+      "all_candidate_count": 13,
+      "selected_candidates": [
+        {
+          "event_id": "django__django-14787:m10:c0",
+          "assistant_message_index": 10,
+          "call_index": 0,
+          "tool_call_id": "call_1352133",
+          "observation_message_index": 11,
+          "command_sha256": "1cea9bbf3f53aff94c217319920b959d87b2704640752148a29265cc0280730d",
+          "observation_sha256": "da8a570440b3cd6f47abcab379bd95bb7deee5b6f35b0ecb62c3d9930e591c47",
+          "return_code": 0,
+          "observation_characters": 7,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "django__django-14787:m12:c0",
+          "assistant_message_index": 12,
+          "call_index": 0,
+          "tool_call_id": "call_1737677",
+          "observation_message_index": 13,
+          "command_sha256": "c9510a08fb547bec6a6d3e7311cf9b40f6ef1ed2c52f4b7efebf01e84aa5ba35",
+          "observation_sha256": "b6fe94a4971280b69606b3ad6039ae9ed0e48557776ea68f678174b6c8da879a",
+          "return_code": 127,
+          "observation_characters": 40,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "django__django-14787:m16:c0",
+          "assistant_message_index": 16,
+          "call_index": 0,
+          "tool_call_id": "call_894807",
+          "observation_message_index": 17,
+          "command_sha256": "5868ca2dcc8aab7089e637fd139e779481ef772669db3105a9d3613241c4e819",
+          "observation_sha256": "bb9085b2f7990d2a5232d399023ff90a6831dc8a089a0a6b5c13d6fcde678f09",
+          "return_code": 0,
+          "observation_characters": 263,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "pydata__xarray-3677",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/pydata__xarray-3677.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 66,
+      "task_description_sha256": "618c826a5b52fa3e19da4eb0b61f055a41b3f639e5e328a577f07e3be740fe6f",
+      "all_candidate_count": 11,
+      "selected_candidates": [
+        {
+          "event_id": "pydata__xarray-3677:m4:c0",
+          "assistant_message_index": 4,
+          "call_index": 0,
+          "tool_call_id": "call_2357552",
+          "observation_message_index": 5,
+          "command_sha256": "5294e0a2e4ec692a54c96db48fd858e5e71ddcf97e66a73c048ae58340639868",
+          "observation_sha256": "4758ef8f44739e64f46b6440c7f496d05b27b6c64050881cad01dfb0c1987ed9",
+          "return_code": 0,
+          "observation_characters": 810,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "pydata__xarray-3677:m20:c0",
+          "assistant_message_index": 20,
+          "call_index": 0,
+          "tool_call_id": "call_3377299",
+          "observation_message_index": 21,
+          "command_sha256": "265ec710884e875ffe101c2bda21f0283266162eaa52a217f5950e4d876477dd",
+          "observation_sha256": "6fa5c0c4b0debe6587486639092c5ea53550c803fd9123ecdf8e82efbbd7ff0a",
+          "return_code": 0,
+          "observation_characters": 105,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "pydata__xarray-3677:m22:c0",
+          "assistant_message_index": 22,
+          "call_index": 0,
+          "tool_call_id": "call_913385",
+          "observation_message_index": 23,
+          "command_sha256": "732be3debb7c17892ea7157e3fdda0c57bfd4de80b09731f0c3ca491d8de528c",
+          "observation_sha256": "5493d984990774c05b6964bb6fb767e2f8a08c78ab5122c98912fabf9cbc9b5e",
+          "return_code": 1,
+          "observation_characters": 245,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-15100",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/scikit-learn__scikit-learn-15100.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 76,
+      "task_description_sha256": "c08f8f9c0b2be925d65863856e90dbaac613118d60f0352dd99cef3ee0183c51",
+      "all_candidate_count": 16,
+      "selected_candidates": [
+        {
+          "event_id": "scikit-learn__scikit-learn-15100:m10:c0",
+          "assistant_message_index": 10,
+          "call_index": 0,
+          "tool_call_id": "call_2231932",
+          "observation_message_index": 11,
+          "command_sha256": "aba45794718a7bade6bd54c27e4088c074c638e9920c984a11a0f02b13b2898b",
+          "observation_sha256": "4a73bcc36f98a43d0e03e5930e96ed3aa99a64c216b50400eec385020f44b6f3",
+          "return_code": 0,
+          "observation_characters": 537,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "scikit-learn__scikit-learn-15100:m14:c0",
+          "assistant_message_index": 14,
+          "call_index": 0,
+          "tool_call_id": "call_1498027",
+          "observation_message_index": 15,
+          "command_sha256": "aafc41bf8e1e78420cb28b912d7529afbccf8306a452a62514cbdd20a72e1dcf",
+          "observation_sha256": "a8ef93e6e3f5eb2902c4422a440a382f6c422f37c2f6bd073c98f741cd55ebe5",
+          "return_code": 1,
+          "observation_characters": 276,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "scikit-learn__scikit-learn-15100:m16:c0",
+          "assistant_message_index": 16,
+          "call_index": 0,
+          "tool_call_id": "call_2241957",
+          "observation_message_index": 17,
+          "command_sha256": "edf48cb3b4b992d92dceef364bfecdcd69291cf653a5155080b114879bfc3730",
+          "observation_sha256": "51b8a2ff3ce21de1337ad32200d9e24d2e0ec89bd2f0535b5bc93df0cf7dd8b6",
+          "return_code": 1,
+          "observation_characters": 284,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "astropy__astropy-13398",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/astropy__astropy-13398.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 120,
+      "task_description_sha256": "7129ca943321b57807188a066e5b340f7a2e578a439fdb85fb6819fb6788dfee",
+      "all_candidate_count": 17,
+      "selected_candidates": [
+        {
+          "event_id": "astropy__astropy-13398:m34:c0",
+          "assistant_message_index": 34,
+          "call_index": 0,
+          "tool_call_id": "call_1483080",
+          "observation_message_index": 35,
+          "command_sha256": "be5b78926bc5b025d32c88da2fb2247b1fbbe28a5ffbae3eb276419f06e260d3",
+          "observation_sha256": "1a9e1a1f01bdea404bc2cb2d46b04a64482b779598d8e829d0162e68a229cb62",
+          "return_code": 0,
+          "observation_characters": 68,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "astropy__astropy-13398:m46:c0",
+          "assistant_message_index": 46,
+          "call_index": 0,
+          "tool_call_id": "call_1702568",
+          "observation_message_index": 47,
+          "command_sha256": "7b5fdd521e6b7f61854600431b5f9aafcc506a25c645a8733bab187eabcd1efb",
+          "observation_sha256": "317e6cd75ae07480e3ded1a3f15b86408678cf6d8118db5fb71c1bbda747623f",
+          "return_code": 1,
+          "observation_characters": 2044,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "astropy__astropy-13398:m48:c0",
+          "assistant_message_index": 48,
+          "call_index": 0,
+          "tool_call_id": "call_2437172",
+          "observation_message_index": 49,
+          "command_sha256": "d3e98bcb83ce697bf4391b2d6d92c78ec57aa735e0ff97c323f4fd14eb2b1d62",
+          "observation_sha256": "d74f977b14e82d3c70d0dae75a57e2d4449192a027a0e90ae407e3b490b38126",
+          "return_code": 1,
+          "observation_characters": 900,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7757",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/sphinx-doc__sphinx-7757.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 62,
+      "task_description_sha256": "512e31c8a178d63ede146cabeb5acfaf8793ef64ca1ae9f22fafb5faaffcc88b",
+      "all_candidate_count": 8,
+      "selected_candidates": [
+        {
+          "event_id": "sphinx-doc__sphinx-7757:m16:c0",
+          "assistant_message_index": 16,
+          "call_index": 0,
+          "tool_call_id": "call_2206965",
+          "observation_message_index": 17,
+          "command_sha256": "4ec9474fdc027926cb44d25c9c285ab4b31db7196b2b935ba33d1fabbaf153f3",
+          "observation_sha256": "31b4cc32058412388b7f1f847cca1a32eac7a029302c4e2a58ddee556da24e8b",
+          "return_code": 0,
+          "observation_characters": 57,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "sphinx-doc__sphinx-7757:m18:c0",
+          "assistant_message_index": 18,
+          "call_index": 0,
+          "tool_call_id": "call_2421575",
+          "observation_message_index": 19,
+          "command_sha256": "257e5c9cb01b6397674298af8099393ba891718c6ca21780bb20ecde34171d6f",
+          "observation_sha256": "124961aa6c7e4de324c0760fb11717035503d17cb98ba4a2a116c7a3a9fc826b",
+          "return_code": 0,
+          "observation_characters": 72,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "sphinx-doc__sphinx-7757:m22:c0",
+          "assistant_message_index": 22,
+          "call_index": 0,
+          "tool_call_id": "call_1491795",
+          "observation_message_index": 23,
+          "command_sha256": "09cc34c7c1a026fd049a04986edf2be4cb556b8f5e6456861109f0923d78d3c7",
+          "observation_sha256": "14000db818db231a756fbc25bad9b79e4aba793f9c5b76a7652caf9b929204c0",
+          "return_code": 0,
+          "observation_characters": 18329,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7590",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/sphinx-doc__sphinx-7590.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 112,
+      "task_description_sha256": "c9e6d564ac6c0c71e4a964bde3fa49337bbfe4fba72090df2f424e5b7eff9921",
+      "all_candidate_count": 16,
+      "selected_candidates": [
+        {
+          "event_id": "sphinx-doc__sphinx-7590:m54:c0",
+          "assistant_message_index": 54,
+          "call_index": 0,
+          "tool_call_id": "call_2285271",
+          "observation_message_index": 55,
+          "command_sha256": "648578c00c59842bf8773a24f80813eed3ae2fef3f2176d6c5d5f1bc7903669c",
+          "observation_sha256": "76477278a228f40483b208d4a66725b9ab046c05752f03cec120d4e6c626439d",
+          "return_code": 0,
+          "observation_characters": 20290,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "sphinx-doc__sphinx-7590:m72:c0",
+          "assistant_message_index": 72,
+          "call_index": 0,
+          "tool_call_id": "call_1323142",
+          "observation_message_index": 73,
+          "command_sha256": "a919a51ce2cfa4bda9f7d0fb1b4552596641f7f6135f079bb7f603850d56c9d6",
+          "observation_sha256": "cd44022f610910c95f1ac568ca968963b319fc68f0d519e3913b489dd7c51c6a",
+          "return_code": 2,
+          "observation_characters": 140,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "sphinx-doc__sphinx-7590:m74:c0",
+          "assistant_message_index": 74,
+          "call_index": 0,
+          "tool_call_id": "call_1752482",
+          "observation_message_index": 75,
+          "command_sha256": "5265e7bd8cd8c2f280c1fab1e708de1232665937e7e75cd7757ddb6a11485aca",
+          "observation_sha256": "ebd17218747a08f47f6c099ac3d94935685cf2286d6d339bfaf3e47201c4c591",
+          "return_code": 0,
+          "observation_characters": 112,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "sympy__sympy-18211",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/sympy__sympy-18211.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 118,
+      "task_description_sha256": "72c632eb2c8b15094e12b785498c81a01039dbecd4643155b076038437b9d80c",
+      "all_candidate_count": 15,
+      "selected_candidates": [
+        {
+          "event_id": "sympy__sympy-18211:m24:c0",
+          "assistant_message_index": 24,
+          "call_index": 0,
+          "tool_call_id": "call_1030949",
+          "observation_message_index": 25,
+          "command_sha256": "299abfcd7644283a041d7a560dd667648a8877cab8318283c61b2de18f1e6acc",
+          "observation_sha256": "3369ce1dcf8403da37e0b457b3ea56a44abdcf3aedfe67e14d004cd1a90e4f6c",
+          "return_code": 1,
+          "observation_characters": 1005,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "sympy__sympy-18211:m26:c0",
+          "assistant_message_index": 26,
+          "call_index": 0,
+          "tool_call_id": "call_2464049",
+          "observation_message_index": 27,
+          "command_sha256": "11f06d236baf842d015f978116a62d8029405d8c68787aaf2ba15a97894085f2",
+          "observation_sha256": "af5d8a21858f42808c9bcc17012b77bcc2fd6ab3b071dbd4a05f13f410470541",
+          "return_code": 0,
+          "observation_characters": 5,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "sympy__sympy-18211:m30:c0",
+          "assistant_message_index": 30,
+          "call_index": 0,
+          "tool_call_id": "call_944003",
+          "observation_message_index": 31,
+          "command_sha256": "aefe972e9a96c0c343d8d82689e8da575029f69aa65eb386892d4a80560e7c2e",
+          "observation_sha256": "688439a4cc2d73e62043c5b3b583aa50a8e299fe0b872f30f736ba0c9dd003a7",
+          "return_code": 0,
+          "observation_characters": 51,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "sympy__sympy-23824",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/sympy__sympy-23824.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 42,
+      "task_description_sha256": "5ec3fdf67a145f33f88ca34cfb5ce57c1a396b8d0f147274e0eb8db04290dacb",
+      "all_candidate_count": 7,
+      "selected_candidates": [
+        {
+          "event_id": "sympy__sympy-23824:m14:c0",
+          "assistant_message_index": 14,
+          "call_index": 0,
+          "tool_call_id": "call_946210",
+          "observation_message_index": 15,
+          "command_sha256": "4e9c23c109d71f52ea1679841dbc0bece09bc44bbbf54b81330d856306f0ea2d",
+          "observation_sha256": "02f33f9bd725fa215b39f5971c204cfc0bf030de3021e69f5142b8a45e9c4403",
+          "return_code": 1,
+          "observation_characters": 174,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "sympy__sympy-23824:m16:c0",
+          "assistant_message_index": 16,
+          "call_index": 0,
+          "tool_call_id": "call_2220894",
+          "observation_message_index": 17,
+          "command_sha256": "e3c74d6a7d85702a7359ce82d1a7e14ee42a8bc81cd2c611968cd8cdd81f1adc",
+          "observation_sha256": "b6fe94a4971280b69606b3ad6039ae9ed0e48557776ea68f678174b6c8da879a",
+          "return_code": 127,
+          "observation_characters": 40,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "sympy__sympy-23824:m18:c0",
+          "assistant_message_index": 18,
+          "call_index": 0,
+          "tool_call_id": "call_2454753",
+          "observation_message_index": 19,
+          "command_sha256": "9391188c792a3349c3df747b4cfe29e5a991a67a7cdafe6db57edefba96c776c",
+          "observation_sha256": "9eb632f97a9ecdcef0c6b1702d3f354528831b83d01eb0d2367e2180e6d2e611",
+          "return_code": 0,
+          "observation_characters": 517,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10449",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/sphinx-doc__sphinx-10449.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 94,
+      "task_description_sha256": "835d678601b5171346d94947bee82feae3244e38da7412557fd67380c17177fa",
+      "all_candidate_count": 15,
+      "selected_candidates": [
+        {
+          "event_id": "sphinx-doc__sphinx-10449:m20:c0",
+          "assistant_message_index": 20,
+          "call_index": 0,
+          "tool_call_id": "call_1494750",
+          "observation_message_index": 21,
+          "command_sha256": "ae108f8a7fecb1d7ff5567427d5b66f45e8dda8efcdab58244ca4ca768adf5f5",
+          "observation_sha256": "5e017d92e45dc10d51889749e81faab7f4b3e4b8136daa4d910326b26e948689",
+          "return_code": 0,
+          "observation_characters": 70,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "sphinx-doc__sphinx-10449:m22:c0",
+          "assistant_message_index": 22,
+          "call_index": 0,
+          "tool_call_id": "call_925973",
+          "observation_message_index": 23,
+          "command_sha256": "cc8a275758f62ad208ef94b7af919da552858846eff08b985dd3c72c571f4369",
+          "observation_sha256": "6e2d640987e557e50a20ee5ea7763c0995ad3cad7acd28401a31a0a850a02b15",
+          "return_code": 0,
+          "observation_characters": 34,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "sphinx-doc__sphinx-10449:m26:c0",
+          "assistant_message_index": 26,
+          "call_index": 0,
+          "tool_call_id": "call_1763158",
+          "observation_message_index": 27,
+          "command_sha256": "e274cc4bd8be419318be5ce04621be106ed13c090585a15336a63d3ff174d68a",
+          "observation_sha256": "8fd452b9d7d2f043465b7cf4234c08d07428e5cbc228e7968a26d819a3f32719",
+          "return_code": 0,
+          "observation_characters": 10,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "pytest-dev__pytest-6197",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/pytest-dev__pytest-6197.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 110,
+      "task_description_sha256": "79eea9cac88b9c5cdae45d64db6b1bfac5ab77cc193d9c84ce0cb6f304490819",
+      "all_candidate_count": 11,
+      "selected_candidates": [
+        {
+          "event_id": "pytest-dev__pytest-6197:m22:c0",
+          "assistant_message_index": 22,
+          "call_index": 0,
+          "tool_call_id": "call_1941739",
+          "observation_message_index": 23,
+          "command_sha256": "7c5aff35165a77bd0d60f61f684ea232dfc26d72dcd4ff0a432d48fbc23b7ba3",
+          "observation_sha256": "4d538b04bf178a00bf5df334ff428a1e0fd26cb17e3cecb03263b865eb509678",
+          "return_code": 0,
+          "observation_characters": 83,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "pytest-dev__pytest-6197:m24:c0",
+          "assistant_message_index": 24,
+          "call_index": 0,
+          "tool_call_id": "call_1756418",
+          "observation_message_index": 25,
+          "command_sha256": "b5ffb4f46b931ed8ded575786f6ba0cb95db32468cea043534ff8c53c5283585",
+          "observation_sha256": "ff2dcbd7c28f75a8c74650a989cc642f103ebeb66c61f0cd8bac6eb4fe58a81b",
+          "return_code": 0,
+          "observation_characters": 416,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "pytest-dev__pytest-6197:m28:c0",
+          "assistant_message_index": 28,
+          "call_index": 0,
+          "tool_call_id": "call_1741499",
+          "observation_message_index": 29,
+          "command_sha256": "ae03bbd9b02dd3df70aa59a181817fa8dbe1d31fb711ad938263ded3d741c97a",
+          "observation_sha256": "e594d9f98326361538d3971fdb4198ae4cc24484c09038e43e8b2d7061b488c9",
+          "return_code": 2,
+          "observation_characters": 784,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    },
+    {
+      "instance_id": "astropy__astropy-13579",
+      "source_url": "https://github.com/SWE-bench/20260901_mini-v2.4.2_gemini-3-5-flash/blob/2f6637a2557da1f7b5f2b583ab7090a077bbeed2/trajs/astropy__astropy-13579.traj.json",
+      "trajectory_format": "mini-swe-agent-1.1",
+      "message_count": 54,
+      "task_description_sha256": "b3965c2f56510da291d9574982459e27493a9c7acd4777f44e143d7e3f430cc0",
+      "all_candidate_count": 10,
+      "selected_candidates": [
+        {
+          "event_id": "astropy__astropy-13579:m12:c0",
+          "assistant_message_index": 12,
+          "call_index": 0,
+          "tool_call_id": "call_2089251",
+          "observation_message_index": 13,
+          "command_sha256": "14add0e09981dd7bb7d639db618b6b56e61507035caa06ae3f6a2e27d2d2e44c",
+          "observation_sha256": "f5b27938c728e93c66ce80c1660a76d7e15b76fceaebdf71d0bada4e96fcd1da",
+          "return_code": 1,
+          "observation_characters": 437,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "astropy__astropy-13579:m14:c0",
+          "assistant_message_index": 14,
+          "call_index": 0,
+          "tool_call_id": "call_436717",
+          "observation_message_index": 15,
+          "command_sha256": "9edf073faa2f2b82c8bca1e64e6b184c0a3a70da174b276c0f5fed8f267c5c70",
+          "observation_sha256": "896474a16d166a93c7e274d6d3a30174041c4abcbb06919db5b31a35bccf0f0d",
+          "return_code": 0,
+          "observation_characters": 328,
+          "selection": "Regex candidate, requires semantic review"
+        },
+        {
+          "event_id": "astropy__astropy-13579:m16:c0",
+          "assistant_message_index": 16,
+          "call_index": 0,
+          "tool_call_id": "call_2433582",
+          "observation_message_index": 17,
+          "command_sha256": "62db24bcdf6e1bf4c2f39340e22e3523f19520d4d3e0b1517c7cd077fda89c7c",
+          "observation_sha256": "96951029139133746375ec1b212895057d872f3dd3e4421ac6a633a416af8923",
+          "return_code": 0,
+          "observation_characters": 194,
+          "selection": "Regex candidate, requires semantic review"
+        }
+      ]
+    }
+  ]
+}

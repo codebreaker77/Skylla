@@ -15,6 +15,13 @@ compared on four constructed fault families. Normalization matches calibration
 at lower invocation cost. Agent repair and automatic observer discovery remain
 pending; the original broader plan below has not been completed.
 
+A subsequent [15-trace public audit](../experiments/trajectory-audit/REPORT.md)
+replaces speculation about native behavior with limited log evidence. The
+[observer-discovery development protocol](../experiments/trajectory-audit/NEXT_COMPARISON.md)
+now requires comparison against normalization and attention controls, preserving
+native tools and independently verifying production repairs. Model access,
+executable environments, and run-specific cost caps remain unresolved.
+
 ## Decision
 
 Time-box the next research iteration to two focused weeks. Investigate whether
