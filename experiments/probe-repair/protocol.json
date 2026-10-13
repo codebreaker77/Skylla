@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-10-13T05:23:55.276750+00:00",
+  "study": "Controlled probe-repair development study, v1",
+  "families": [
+    "omitted_option",
+    "retained_state",
+    "execution_order",
+    "configuration"
+  ],
+  "conditions": [
+    "adequate",
+    "wrong_input",
+    "wrong_observer",
+    "wrong_source",
+    "input_and_observer",
+    "source_and_observer",
+    "masked_result"
+  ],
+  "fault_states": [
+    true,
+    false
+  ],
+  "arms": [
+    "blind_search",
+    "input_sweep",
+    "normalize_then_sweep",
+    "always_calibrate",
+    "conditional_calibrate"
+  ],
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "target_invocation_budget": 8,
+  "calibration_cost": 3,
+  "episode_timeout_seconds": 15,
+  "schedule_seed": 417,
+  "expected_episodes": 840,
+  "source_hashes": {
+    "experiments/probe-repair/METHODOLOGY.md": "9e10bbd2ff53afed55862630721ba4208083b33a79939c14127ce8a50190de6a",
+    "tests/test_probe_repair_apparatus.py": "3d9e742597ce2eba5f65ea099cac8764538d6e5046d45613dabaa3a67ffad897",
+    "experiments/probe-repair/programs/buggy.py": "a4b30bcae9eceb51bc8344a768eef85747d99420f0c3c9358e79f48c6cf9d08c",
+    "experiments/probe-repair/programs/fallback.py": "e4fe384a791cfebe12aeea4dd0d2d40f0d223e70dcaefe662203aa960361e870",
+    "experiments/probe-repair/programs/reference.py": "e904be45b4aae6bf242cea044f01b33dfe0d2341aa36f7d5b295fb45ec5002f6",
+    "tools/study/probe_repair/episode.py": "3f44807a23b0ba62feb515bcb87e4de57045a3daf67df81c042e0b8c29eafc4d",
+    "tools/study/probe_repair/fixtures.py": "f4f6ddb8d198c2773db2f30d800af5b2a47aef7c105c8e9b64c25781b3fbbb15",
+    "tools/study/probe_repair/policies.py": "ae6ba7456e9c6f7ec71cef0122ba2f909c175155cbf393c57d4264eb43657a19",
+    "tools/study/probe_repair/study.py": "54d96fbda778894126f1d8085b7b49a0d7a8ba3330fbde5b4964d5e32db12328"
+  }
+}
