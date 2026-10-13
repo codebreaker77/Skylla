@@ -1,0 +1,92 @@
+{
+  "receiver_inspection": {
+    "argv": [
+      "D:\\labs\\skylla\\artifacts\\venvs\\study\\Scripts\\python.exe",
+      "D:\\labs\\skylla\\tools\\study\\receiver_filter.py",
+      "--source",
+      "D:\\labs\\skylla\\artifacts\\sources\\tornado-6-buggy",
+      "--module",
+      "tornado.platform.asyncio",
+      "--class-name",
+      "AsyncIOLoop"
+    ],
+    "cwd": null,
+    "returncode": 0,
+    "stdout": "{\"case\": \"tornado-6\", \"ready\": true, \"imported_pinned_source\": true, \"mro\": [{\"module\": \"tornado.platform.asyncio\", \"class\": \"AsyncIOLoop\"}, {\"module\": \"tornado.platform.asyncio\", \"class\": \"BaseAsyncIOLoop\"}, {\"module\": \"tornado.ioloop\", \"class\": \"IOLoop\"}, {\"module\": \"tornado.util\", \"class\": \"Configurable\"}, {\"module\": \"builtins\", \"class\": \"object\"}]}\n",
+    "stderr": "",
+    "timed_out": false,
+    "launch_error": null,
+    "elapsed_seconds": 1.0413922,
+    "payload": {
+      "case": "tornado-6",
+      "ready": true,
+      "imported_pinned_source": true,
+      "mro": [
+        {
+          "module": "tornado.platform.asyncio",
+          "class": "AsyncIOLoop"
+        },
+        {
+          "module": "tornado.platform.asyncio",
+          "class": "BaseAsyncIOLoop"
+        },
+        {
+          "module": "tornado.ioloop",
+          "class": "IOLoop"
+        },
+        {
+          "module": "tornado.util",
+          "class": "Configurable"
+        },
+        {
+          "module": "builtins",
+          "class": "object"
+        }
+      ]
+    },
+    "payload_error": null
+  },
+  "decisions": [
+    {
+      "candidate_id": "candidate-000",
+      "keep": true,
+      "reason": "shared_class_container_retained"
+    },
+    {
+      "candidate_id": "candidate-001",
+      "keep": false,
+      "reason": "unrelated_instance_declaration"
+    },
+    {
+      "candidate_id": "candidate-002",
+      "keep": false,
+      "reason": "unrelated_instance_declaration"
+    },
+    {
+      "candidate_id": "candidate-003",
+      "keep": false,
+      "reason": "unrelated_instance_declaration"
+    },
+    {
+      "candidate_id": "candidate-004",
+      "keep": false,
+      "reason": "unrelated_instance_declaration"
+    },
+    {
+      "candidate_id": "candidate-005",
+      "keep": true,
+      "reason": "declaring_class_in_receiver_mro"
+    },
+    {
+      "candidate_id": "candidate-006",
+      "keep": true,
+      "reason": "declaring_class_in_receiver_mro"
+    },
+    {
+      "candidate_id": "candidate-007",
+      "keep": true,
+      "reason": "declaring_class_in_receiver_mro"
+    }
+  ],
+  "filter_and_receiver_seconds": 1.1171087
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "candidates": [
+    {
+      "id": "candidate-000",
+      "scope": "class",
+      "module": "tornado.ioloop",
+      "declaring_class": "IOLoop",
+      "attribute": "_ioloop_for_asyncio",
+      "source_file": "tornado/ioloop.py",
+      "source_line": 188,
+      "source_sha256": "4833cc1046913a19673db6ee37c5e41e4ce7ad3a4bacdfc8a976da44623c000f",
+      "extractor": "length",
+      "reason": "Container initializer found in source AST"
+    },
+    {
+      "id": "candidate-005",
+      "scope": "instance",
+      "module": "tornado.platform.asyncio",
+      "declaring_class": "BaseAsyncIOLoop",
+      "attribute": "handlers",
+      "source_file": "tornado/platform/asyncio.py",
+      "source_line": 36,
+      "source_sha256": "86926d863f248fca5a752c1740536a868efc4eea124571cd08648c3ca7437ccb",
+      "extractor": "length",
+      "reason": "Container initializer found in source AST"
+    },
+    {
+      "id": "candidate-006",
+      "scope": "instance",
+      "module": "tornado.platform.asyncio",
+      "declaring_class": "BaseAsyncIOLoop",
+      "attribute": "readers",
+      "source_file": "tornado/platform/asyncio.py",
+      "source_line": 38,
+      "source_sha256": "86926d863f248fca5a752c1740536a868efc4eea124571cd08648c3ca7437ccb",
+      "extractor": "length",
+      "reason": "Container initializer found in source AST"
+    },
+    {
+      "id": "candidate-007",
+      "scope": "instance",
+      "module": "tornado.platform.asyncio",
+      "declaring_class": "BaseAsyncIOLoop",
+      "attribute": "writers",
+      "source_file": "tornado/platform/asyncio.py",
+      "source_line": 39,
+      "source_sha256": "86926d863f248fca5a752c1740536a868efc4eea124571cd08648c3ca7437ccb",
+      "extractor": "length",
+      "reason": "Container initializer found in source AST"
+    }
+  ]
+}

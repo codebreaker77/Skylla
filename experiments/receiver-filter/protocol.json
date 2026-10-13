@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-10-13T15:33:08.362021+00:00",
+  "case": {
+    "id": "tornado-6",
+    "repository": "https://github.com/tornadoweb/tornado",
+    "buggy_commit": "fb74e4816ccfa7fc6a7abd8c8aab1f415cfc1b13",
+    "fixed_commit": "2905ee4fb3c283d40b10f609359e189c83a0dc06",
+    "benchmark_python": "3.7.0",
+    "test_file": "tornado/test/asyncio_test.py",
+    "test_mode": "unittest",
+    "targets": [
+      "tornado.test.asyncio_test.LeakTest.test_ioloop_close_leak",
+      "tornado.test.asyncio_test.LeakTest.test_asyncio_close_leak"
+    ],
+    "original_commands": [
+      "python -m unittest -q tornado.test.asyncio_test.LeakTest.test_ioloop_close_leak",
+      "python -m unittest -q tornado.test.asyncio_test.LeakTest.test_asyncio_close_leak"
+    ],
+    "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+  },
+  "source_identities": {
+    "buggy": "ddbd0fa35fa6da2264dc5b91da5a472bffe9da13ff6386af17c74bb10c28c529",
+    "fixed": "92a87768973445727616e21c5797545fdb762fa35fad82f17ea614baeb51a477"
+  },
+  "repetitions": 3,
+  "cycles": [
+    1,
+    10
+  ],
+  "arms": [
+    "unfiltered",
+    "receiver_filtered"
+  ],
+  "implementation_sha256": {
+    "tools/study/receiver_filter.py": "69a72975b845f16a533634ccebba3de3461d08a8c298b55e90d6d9fcb36a4e9c",
+    "tools/study/receiver_study.py": "8d1eb704b0ea16c3199d5832aed0d3c58d255e8c955a9ba3a70ca369c759dc0d",
+    "tools/study/observer_probe.py": "eae0c2d4dd280889d110f9d80ad2510a4cc96c47189ccda37680412ed0fd5845",
+    "tools/study/observer_study.py": "da02ef7c07ba27a9a2c3e67060f49cfa405d5a28950099cc57ecfca39035ef59",
+    "tools/study/process_record.py": "22eff277ebc1842c4d355c2e86601fe72bc5267a33e9737c0de87076e72086b2",
+    "tools/pilot/prepare.py": "497441a69253bf2f74408ec25ff81ca91dbde415e4d138fd0ea323dfc041df08",
+    "tools/pilot/run.py": "5db9b103dc1508b2e406e7274b65ffd971597c4b957ca67c6c357b5623d28ca1"
+  },
+  "inputs_sha256": {
+    "METHODOLOGY.md": "11b300ef4bff419b8443948ba2e9bad12fee76b2b30a3c6bfabf24d7506951ce",
+    "unfiltered.json": "c703e23ec2afa31c5b23f54c4c9ebe385057765f279e0600569564ce892aa310",
+    "receiver_filtered.json": "0ff23a7be5697322835991cfb7a7c906db002bfcb29bf52ee0b4a9abc962553d",
+    "filter-decisions.json": "4ffd89bec23b3850e560c4a770e96f72ca4b49747ecbf520f7333d7eb27de959"
+  },
+  "prior_proposals_sha256": "5faf1e43d49fc18a73237619de4fac915b65eb3228be183c62f78eb714888e1c"
+}
