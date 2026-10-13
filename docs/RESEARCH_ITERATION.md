@@ -5,6 +5,11 @@ has been demonstrated. The frozen [agent comparison](../experiments/trajectory-a
 remains the governing evaluation design. This memo adds development tasks and
 classifier-specific checks, without changing its confirmation exclusions.
 
+Competitive update: the [DeepEval/Jev audit](DEEPEVAL_JEV_AUDIT.md) rules out
+generic fast judging/classification as differentiation. Before future matched
+agent runs, freeze a DeepEval/Jev-assisted baseline alongside native debugging
+and normalization. Existing frozen/executed protocols remain unchanged.
+
 ## Hypothesis
 
 Within a matched total budget, improving an uninformative debugging experiment

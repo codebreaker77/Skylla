@@ -3,6 +3,10 @@
 October 13, 2026. Method-level reading supplements [LITERATURE.md](LITERATURE.md).
 Published findings are the authors' results, not Skylla replications.
 
+New product overlap: [DeepEval/Jev](DEEPEVAL_JEV_AUDIT.md) already supplies
+custom System-1 evaluation/classification and a coding-agent evaluation workflow.
+The audit records inspected scope, untested capabilities and comparison changes.
+
 ## AutoSD
 
 [Published article](https://link.springer.com/article/10.1007/s10664-024-10594-x),

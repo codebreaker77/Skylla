@@ -3,6 +3,11 @@
 October 13, 2026. Skylla's current contribution is an inspectable prototype and
 development artifacts. A defensible advantage remains a hypothesis.
 
+The [DeepEval/Jev audit](DEEPEVAL_JEV_AUDIT.md) establishes direct product overlap
+with generic System-1 judgments, custom classifiers, trace evaluation and coding-
+agent iteration. None of these is a Skylla novelty claim. A DeepEval/Jev-assisted
+baseline must be configured before future matched repair comparisons.
+
 The [latest ideation memo](IDEATION.md) adds closer prior art and proposes checking
 and repairing experiments before expanding explanations. It also reproduces a
 hypothesis-alias sensitivity in the current pair-count heuristic. Neither finding
