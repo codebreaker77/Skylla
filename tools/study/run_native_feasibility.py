@@ -93,7 +93,8 @@ def main(name):
                 "model": "gpt-5.6-terra", "reasoning_effort": "medium", "cli_version": version,
                 "auth": "Existing ChatGPT login; no supplied API key", "wall_cap_seconds_per_episode": 120,
                 "token_cap": None, "token_note": "CLI usage measured after completion; no hard token quota or dollar estimate established",
-                "method_sha256": sha(ROOT / "experiments/matched-pilot/NATIVE_FEASIBILITY.md"),
+                "method_sha256": sha(ROOT / "experiments/matched-pilot/NATIVE_FEASIBILITY_V2.md"),
+                "launcher_revision": 2, "permission_profile": ":workspace", "windows_sandbox": "elevated",
                 "script_sha256": sha(Path(__file__)), "cases": CASES,
                 "runtime_python": sys.version, "host": sys.platform,
                 "cohort_sha256": sha(ROOT / "experiments/matched-pilot/v1/cohort.json")}
@@ -114,7 +115,8 @@ def main(name):
                   "Leave the smallest production repair in this workspace, and report what you tested. No commit or push.")
         argv = [executable, "-a", "never", "exec", "--ignore-user-config", "--ephemeral", "--skip-git-repo-check",
                 "-C", str(work), "-s", "workspace-write", "-m", "gpt-5.6-terra", "-c", 'model_reasoning_effort="medium"',
-                "--json", "-"]
+                "-c", 'windows.sandbox="elevated"', "-c", 'default_permissions=":workspace"',
+                "-c", 'web_search="disabled"', "--json", "-"]
         write(output / (case["id"] + "-request.json"), {"prompt": prompt, "argv": argv,
                                                        "source_metadata": read(source / ".skylla-source.json"),
                                                        "production_before_sha256": {p: __import__("hashlib").sha256(b).hexdigest() for p, b in original.items()}})
