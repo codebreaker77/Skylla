@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-10-13T16:38:12.752804+00:00",
+  "scope": "Three exposed development states; no gold action labels, repair outcomes or accuracy estimate",
+  "state_files_sha256": {
+    "tornado-native-close.json": "d72c0da4ee51a748a564b4d6ce6ad7bf1988990739ec8e25fd68235fa406579f",
+    "xarray-caught-method.json": "3c7f00d7ed6651eee9aa52009d3d9c54b641182630342254f9a7b4cc42007532",
+    "xarray-top-level.json": "2a35970b152b3129775c572cebffe0009abe0823b3b7666863a784e85bd113d6"
+  },
+  "orders": {
+    "original": [
+      "inspect_failure",
+      "repair_setup",
+      "propose_probe",
+      "continue_investigation",
+      "defer"
+    ],
+    "reversed": [
+      "defer",
+      "continue_investigation",
+      "propose_probe",
+      "repair_setup",
+      "inspect_failure"
+    ]
+  },
+  "repetitions": 2,
+  "warmup_calls": 1,
+  "required_device": "cuda",
+  "dtype": "float16",
+  "max_len": 1024,
+  "head_max_len": 256,
+  "method_sha256": "dc8228eced189615f90fca7d80664b2512936a667e6b2af2802efb1af805bf5c",
+  "checkpoint_sha256": "e6005e8ca2716984fd781dc5cb2ee40bb99cd0c93fa4d2ba8a94bbbbd91d9562",
+  "implementation_sha256": {
+    "tools/study/judge_baseline.py": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+    "tools/study/laya_backend.py": "a33cb99e5473cd473f55c039077e487fbb7296585998e3c850b15a10614f427b",
+    "tools/study/run_laya_shadow.py": "7989d7cf307dc42a32c35233709b1f6537772f98b88bbfe617e9d164ef80b90d"
+  }
+}

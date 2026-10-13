@@ -14,7 +14,9 @@ Execution update: the user selected local Laya only, with no Jev API, and requir
 GPU inference. The optional baseline now uses DeepEval's existing custom System-1
 interface with a local Laya bridge. Hosted Jev remains an unavailable comparative
 lead, not an executed arm. The [shadow apparatus](../experiments/judge-baseline/METHODOLOGY.md)
-has local-stub integration checks; actual GPU results are pending. The
+has local-stub integration checks and [twelve completed GPU shadow decisions](../experiments/judge-baseline/REPORT.md).
+The model repeatedly requests unsupported setup repair on two exposed states;
+decision quality needs validation before execution. The
 [receiver-filter replay](../experiments/receiver-filter/REPORT.md) preserves the
 known distinguishing field while removing unavailable accesses; no repair gain.
 

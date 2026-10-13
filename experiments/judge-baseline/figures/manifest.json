@@ -1,0 +1,10 @@
+{
+  "script_sha256": "b2a06d35c4b4dc0eae4914714528690b6256156296c06c29588861e820281ce3",
+  "analysis_sha256": "799f4e5a0c7dcfdcb7ebfcd9ceb1c290735e477c3fdd96c18c9de676a87b0451",
+  "decisions_sha256": "c4c06244d541753cd7c24f6d50d44d57e4554733733ec8a23e2206e3c6d8c612",
+  "matplotlib": "3.9.4",
+  "assets_sha256": {
+    "laya-gpu-shadow.png": "d2435c47f9cedcd9db9445bcd5c380288302fc6903e58b42b5b8a2b17b60f5d5",
+    "laya-gpu-shadow.svg": "0fe8e75b48debfd4fe678af2e0ed8352ea0c8d0350dab2063f4c72a84b3cb075"
+  }
+}

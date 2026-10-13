@@ -1,8 +1,10 @@
 # Local System-1 shadow apparatus
 
 October 13, 2026. The user selected local Laya only, without a Jev API, and
-required GPU inference. No hosted Jev request was made. Actual Laya GPU predictions
-are pending CUDA setup; this report describes completed apparatus validation.
+required GPU inference. No hosted Jev request was made. The first local CUDA
+shadow run is complete: twelve decisions plus one separately recorded warmup.
+
+![GPU shadow timing and probability vectors](figures/laya-gpu-shadow.png)
 
 ## Available implementation
 
@@ -46,7 +48,7 @@ identifies that earlier unarchived implementation; they do not certify the curre
 code. Use `integration-v2.json` for current-code integration verification. Original
 state/probe provenance is checked separately. No historical artifact was overwritten.
 
-## GPU configuration and pending measurement
+## GPU configuration and measured results
 
 Use PyTorch 2.6.0 CUDA 11.8, Laya 0.3.20 and Transformers 4.51.3 with checkpoint
 revision `7b928d828b7b0e022f929d9bd2e44165aa270148`, typed-decisions only. Require the
@@ -55,16 +57,51 @@ The bridge disables the pinned SDK's CPU retry path through its private inferenc
 method; this integration must be revalidated before upgrading the SDK. CPU data
 preparation/serialization is distinct from neural inference.
 
-The upcoming run freezes three states, original/reversed action order, two
-repetitions and one separately recorded warmup: twelve scored shadow decisions
-plus warmup. It measures inference execution and ordering/repeat stability, not
-repair success or calibrated action correctness. File hashes/configuration are
-written before model loading. If loading or prediction fails, retain the attempt
-and use a new run name; do not silently fall back to another model/device.
+The run froze three states, original/reversed action order, two repetitions and
+one separately recorded warmup before model loading. All twelve decisions and
+warmup completed on `cuda:0`, with fp16 and CPU inference fallback disabled. A
+separate CUDA float16 matrix-operation check also passed on the GTX 1050.
 
-CUDA installation is the outstanding prerequisite. The ordinary full-file wheel
-transfer stalled; a resumable byte-range download is in progress and must match
-PyTorch's published SHA-256 before installation. No GPU inference has run yet.
+| Development state | Rules export | Laya, both action orders | Largest original probability |
+| --- | --- | --- | ---: |
+| Tornado native-close | Continue investigation | Repair setup | 0.3059 |
+| Xarray caught-method | Inspect failure | Inspect failure | 0.4368 |
+| Xarray top-level-only | Propose probe | Repair setup | 0.3393 |
+
+Repetitions gave identical chosen actions; none of the six paired action-order
+comparisons flipped the chosen action. This is three exposed states from two
+bugs, not twelve independent tasks or evidence of general ordering robustness.
+Full probability differences are retained in the post-run analysis.
+
+Eight of twelve recommendations request setup repair with no failed precondition
+in the supplied state. This violates the declared setup-action requirement on
+two distinct examples; it is a contract observation, not an independent diagnosis
+accuracy estimate. Rules agreement also is not ground-truth action utility.
+Peak probabilities and SDK confidence measures were low. No confidence threshold
+is fitted or promoted from these examples. Keep the model in shadow mode, review
+the question/action taxonomy, and validate admissibility before executing any
+future recommendation. No repairs were attempted or verified by this run.
+
+The median warm classification-call time is **223.280 ms**, range 210.030-289.467
+ms across twelve calls. It includes SDK classification/tokenization/inference/
+postprocessing, excludes model load and classifier construction. Recorded model
+load/verification time is **38.748 seconds**; complete timed runner interval is
+**54.078 seconds** including imports, load, warmup and decisions. Package inventory,
+dependency/model downloads, installation and report/plot generation are outside
+that interval. Fixed ordering and repeated states prevent comparative speed claims.
+
+The loader emitted a temperature warning: stored `choice:11+` temperature
+0.10058 is outside its accepted range and was clipped to 0.5. That bucket is not
+used by this six-option run, which uses `choice:6-10` temperature approximately
+1.00002. Debugging-domain calibration remains unestablished regardless. The warning
+was captured by the execution tool and annotated after inspecting the config;
+the frozen script did not serialize loader stderr into its decision artifacts.
+
+CUDA's ordinary full-file wheel transfer stalled. Byte-range download retries
+completed and the wheel matched PyTorch's published SHA-256
+`20cb297f45b11a0bf7ea12070b6d23a65905e7357ebb1800f66a71c52ddb52d9` before installation.
+The pinned environment inventory and hashes are recorded. No CPU model inference
+or hosted model calls were performed.
 
 ## Reproduction
 
@@ -72,6 +109,7 @@ See [methodology](METHODOLOGY.md) for dependencies and the information boundary.
 
 ```powershell
 python tools/study/verify_shadow_apparatus.py
+python tools/study/verify_laya_shadow.py
 python tools/study/prepare_laya.py
 artifacts/venvs/judge-baseline/Scripts/python.exe tools/study/run_laya_shadow.py --name laya-gpu-002
 ```
@@ -82,3 +120,10 @@ hashes; the bridge keeps SDK-normalized config copies in a separate local folder
 No large weights or third-party source are committed. The coding model/harness
 for the eventual matched repair comparison remains unconfigured. Laya supplies
 the small decision layer; it cannot generate the production patches by itself.
+
+[Frozen run protocol](results/laya-gpu-001/protocol.json),
+[all decisions](results/laya-gpu-001/decisions.json),
+[summary](results/laya-gpu-001/summary.json), and
+[post-run contract analysis](results/laya-gpu-001/analysis.json) preserve the full
+development result. This is a functioning GPU integration with a weak initial
+decision result, not a breakthrough or measured repair improvement.

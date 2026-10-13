@@ -131,7 +131,10 @@ Earlier development work is preserved separately:
   is unchanged; there is no measured repair speedup.
 - [Local System-1 baseline apparatus](experiments/judge-baseline/METHODOLOGY.md):
   shared development states, a rules baseline and optional DeepEval/Laya shadow
-  decisions. Local stub integration is verified; GPU model results are pending.
+  decisions. [GPU results](experiments/judge-baseline/REPORT.md): twelve decisions
+  completed on GTX 1050, median warm call 223 ms. Two of three exposed states
+  repeatedly receive unsupported setup-repair recommendations. Keep it advisory;
+  no repair gain or debugging calibration is established.
 - [Source-proposed observation study](experiments/observer-discovery/REPORT.md):
   44 processes across two exposed historical bugs. Eight AST proposals include
   one distinguishing Tornado observation; the Luigi normalized probe already

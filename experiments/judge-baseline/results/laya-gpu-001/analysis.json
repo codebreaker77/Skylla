@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "analysis_type": "post-run descriptive and declared-action contract review",
+  "source_sha256": {
+    "decisions.json": "c4c06244d541753cd7c24f6d50d44d57e4554733733ec8a23e2206e3c6d8c612",
+    "summary.json": "7a1800faa636329e18e80e26b18fd5132f7bdd3ec65d2b4332e22c8009dbf175",
+    "warmup.json": "9aaa6679fd6a77c0e3e6d13fac88df1e663cfcc24fa6e5c767b72cffb5ae0afc",
+    "protocol.json": "bc5b4335ca5292d1cc757d22e1660e903a53f3de85843fd71f2d1ad7d7c2a89d"
+  },
+  "script_sha256": "df073e1f09a49681ac2296cf50f2d99a43a40aff9d00233bae7206c00db07bae",
+  "groups": [
+    {
+      "state_id": "tornado-native-close",
+      "completed": 4,
+      "actions": [
+        "repair_setup"
+      ],
+      "median_inference_seconds": 0.2880396999989898,
+      "original_first_answer": {
+        "choice": "repair_setup",
+        "probabilities": {
+          "inspect_failure": 0.2229,
+          "repair_setup": 0.3059,
+          "propose_probe": 0.1297,
+          "continue_investigation": 0.1562,
+          "defer": 0.097,
+          "NONE": 0.0884
+        },
+        "confidence": 0.0554
+      },
+      "setup_repair_without_failed_precondition": 4
+    },
+    {
+      "state_id": "xarray-caught-method",
+      "completed": 4,
+      "actions": [
+        "inspect_failure"
+      ],
+      "median_inference_seconds": 0.22327990000121645,
+      "original_first_answer": {
+        "choice": "inspect_failure",
+        "probabilities": {
+          "inspect_failure": 0.4368,
+          "repair_setup": 0.2642,
+          "propose_probe": 0.1126,
+          "continue_investigation": 0.0789,
+          "defer": 0.0669,
+          "NONE": 0.0406
+        },
+        "confidence": 0.1791
+      },
+      "setup_repair_without_failed_precondition": 0
+    },
+    {
+      "state_id": "xarray-top-level",
+      "completed": 4,
+      "actions": [
+        "repair_setup"
+      ],
+      "median_inference_seconds": 0.2125100499997643,
+      "original_first_answer": {
+        "choice": "repair_setup",
+        "probabilities": {
+          "inspect_failure": 0.2003,
+          "repair_setup": 0.3393,
+          "propose_probe": 0.117,
+          "continue_investigation": 0.133,
+          "defer": 0.107,
+          "NONE": 0.1033
+        },
+        "confidence": 0.0613
+      },
+      "setup_repair_without_failed_precondition": 4
+    }
+  ],
+  "completed_decisions": 12,
+  "declared_setup_contract_violations": 8,
+  "median_inference_seconds": 0.22327990000121645,
+  "min_inference_seconds": 0.21003009999913047,
+  "max_inference_seconds": 0.2894672000002174,
+  "probability_order_changes": [
+    {
+      "state_id": "tornado-native-close",
+      "repetition": 0,
+      "total_variation": 0.08399999999999999
+    },
+    {
+      "state_id": "tornado-native-close",
+      "repetition": 1,
+      "total_variation": 0.08399999999999999
+    },
+    {
+      "state_id": "xarray-caught-method",
+      "repetition": 0,
+      "total_variation": 0.0857
+    },
+    {
+      "state_id": "xarray-caught-method",
+      "repetition": 1,
+      "total_variation": 0.0857
+    },
+    {
+      "state_id": "xarray-top-level",
+      "repetition": 0,
+      "total_variation": 0.10530000000000002
+    },
+    {
+      "state_id": "xarray-top-level",
+      "repetition": 1,
+      "total_variation": 0.10530000000000002
+    }
+  ],
+  "loader_warning": {
+    "source": "RuntimeWarning captured by execution tool; checkpoint config independently inspected",
+    "bucket": "choice:11+",
+    "stored_temperature": 0.10058280825614929,
+    "runtime_clipped_temperature": 0.5,
+    "current_options": 6,
+    "current_bucket": "choice:6-10",
+    "debugging_calibration": "not established"
+  },
+  "scope": "Three exposed states across two bugs, repeated twelve times; no independent correct-action or repair labels"
+}

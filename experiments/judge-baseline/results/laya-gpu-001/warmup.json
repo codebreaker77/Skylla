@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-13T16:39:00.878650+00:00",
+  "mode": "shadow",
+  "backend": "deepeval-laya",
+  "model": "laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions",
+  "state": {
+    "schema_version": 1,
+    "state_id": "tornado-native-close",
+    "issue": "Repeated creation and closure of IOLoops leaks resources.",
+    "remaining_seconds": 30,
+    "evidence": {
+      "preconditions": [
+        "passed"
+      ],
+      "observations": [
+        {
+          "cycles": 10,
+          "before": {},
+          "events": [
+            {
+              "native_closed": true,
+              "active": {},
+              "closed": {}
+            },
+            {
+              "native_closed": true,
+              "active": {},
+              "closed": {}
+            },
+            {
+              "native_closed": true,
+              "active": {},
+              "closed": {}
+            },
+            {
+              "native_closed": true,
+              "active": {},
+              "closed": {}
+            },
+            {
+              "native_closed": true,
+              "active": {},
+              "closed": {}
+            },
+            {
+              "native_closed": true,
+              "active": {},
+              "closed": {}
+            },
+            {
+              "native_closed": true,
+              "active": {},
+              "closed": {}
+            },
+            {
+              "native_closed": true,
+              "active": {},
+              "closed": {}
+            },
+            {
+              "native_closed": true,
+              "active": {},
+              "closed": {}
+            },
+            {
+              "native_closed": true,
+              "active": {},
+              "closed": {}
+            }
+          ],
+          "after": {}
+        }
+      ],
+      "requirement_exercised": null
+    }
+  },
+  "state_sha256": "5913c2296e37b6a95adf743d4939677b0e2d802c7696d607c0856090d17d0e54",
+  "options": {
+    "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+    "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+    "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+    "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+    "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+  },
+  "option_order": [
+    "inspect_failure",
+    "repair_setup",
+    "propose_probe",
+    "continue_investigation",
+    "defer"
+  ],
+  "option_order_sha256": "ea53b4de7688ac574bebbfb8bb569ecdf1a12a362ada3266d947a7a60e26dc37",
+  "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+  "script_sha256": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+  "recommendation": {
+    "action": "repair_setup",
+    "reason": "Decided by laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions. Label \"repair_setup\" (P=0.31, confidence=0.06). Alternatives: inspect_failure 0.22, continue_investigation 0.16, propose_probe 0.13, defer 0.10, NONE 0.09.",
+    "inference_seconds": 2.6555862999994133,
+    "reported_cost_usd": null,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "provider_calls": [
+      {
+        "state": {
+          "test_case": {
+            "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Repeated creation and closure of IOLoops leaks resources.\",\"remaining_seconds\":30,\"state_id\":\"tornado-native-close\"}",
+            "actual_output": "{\"observations\":[{\"after\":{},\"before\":{},\"cycles\":10,\"events\":[{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true}]}],\"preconditions\":[\"passed\"],\"requirement_exercised\":null}"
+          }
+        },
+        "questions": {
+          "label": {
+            "instructions": "Which option best describes `test_case`? Each option is a label; where a description is given it is the authoritative boundary for that label. Pick `NONE` only when no other label fits.",
+            "options": {
+              "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+              "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+              "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+              "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+              "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action.",
+              "NONE": "None of the other labels apply."
+            }
+          }
+        },
+        "answers": {
+          "nouls": {},
+          "choices": {
+            "label": {
+              "choice": "repair_setup",
+              "probabilities": {
+                "inspect_failure": 0.2229,
+                "repair_setup": 0.3059,
+                "propose_probe": 0.1297,
+                "continue_investigation": 0.1562,
+                "defer": 0.097,
+                "NONE": 0.0884
+              },
+              "confidence": 0.0554
+            }
+          },
+          "scores": {}
+        },
+        "reported_cost_usd": null,
+        "elapsed_seconds": 2.6137498000025516
+      }
+    ],
+    "local_model_load_seconds": 38.74785390000034,
+    "local_model_raw": {
+      "model": "laya-rl-agent",
+      "answers": {
+        "label": {
+          "type": "choice",
+          "choice": "repair_setup",
+          "probabilities": {
+            "inspect_failure": 0.2229,
+            "repair_setup": 0.3059,
+            "propose_probe": 0.1297,
+            "continue_investigation": 0.1562,
+            "defer": 0.097,
+            "NONE": 0.0884
+          },
+          "confidence": 0.0554,
+          "answer_confidence": 0.3059,
+          "action": {
+            "act_probability": 1.0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 456,
+        "output_tokens": 0
+      }
+    },
+    "hardware": {
+      "device": "cuda:0",
+      "name": "NVIDIA GeForce GTX 1050",
+      "capability": [
+        6,
+        1
+      ],
+      "dtype": "float16",
+      "cpu_inference_fallback": false
+    },
+    "provider_state": {
+      "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Repeated creation and closure of IOLoops leaks resources.\",\"remaining_seconds\":30,\"state_id\":\"tornado-native-close\"}",
+      "actual_output": "{\"observations\":[{\"after\":{},\"before\":{},\"cycles\":10,\"events\":[{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true}]}],\"preconditions\":[\"passed\"],\"requirement_exercised\":null}"
+    }
+  },
+  "status": "completed",
+  "package_versions": {
+    "deepeval": "4.2.8"
+  },
+  "wall_seconds": 2.8814112000000023,
+  "calls_attempted": 1
+}

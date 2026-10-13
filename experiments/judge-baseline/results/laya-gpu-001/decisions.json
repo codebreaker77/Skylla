@@ -1,0 +1,1990 @@
+[
+  {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-13T16:39:03.761035+00:00",
+    "mode": "shadow",
+    "backend": "deepeval-laya",
+    "model": "laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions",
+    "state": {
+      "schema_version": 1,
+      "state_id": "tornado-native-close",
+      "issue": "Repeated creation and closure of IOLoops leaks resources.",
+      "remaining_seconds": 30,
+      "evidence": {
+        "preconditions": [
+          "passed"
+        ],
+        "observations": [
+          {
+            "cycles": 10,
+            "before": {},
+            "events": [
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              }
+            ],
+            "after": {}
+          }
+        ],
+        "requirement_exercised": null
+      }
+    },
+    "state_sha256": "5913c2296e37b6a95adf743d4939677b0e2d802c7696d607c0856090d17d0e54",
+    "options": {
+      "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+      "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+      "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+      "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+      "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+    },
+    "option_order": [
+      "inspect_failure",
+      "repair_setup",
+      "propose_probe",
+      "continue_investigation",
+      "defer"
+    ],
+    "option_order_sha256": "ea53b4de7688ac574bebbfb8bb569ecdf1a12a362ada3266d947a7a60e26dc37",
+    "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+    "script_sha256": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+    "recommendation": {
+      "action": "repair_setup",
+      "reason": "Decided by laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions. Label \"repair_setup\" (P=0.31, confidence=0.06). Alternatives: inspect_failure 0.22, continue_investigation 0.16, propose_probe 0.13, defer 0.10, NONE 0.09.",
+      "inference_seconds": 0.28600589999769,
+      "reported_cost_usd": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_calls": [
+        {
+          "state": {
+            "test_case": {
+              "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Repeated creation and closure of IOLoops leaks resources.\",\"remaining_seconds\":30,\"state_id\":\"tornado-native-close\"}",
+              "actual_output": "{\"observations\":[{\"after\":{},\"before\":{},\"cycles\":10,\"events\":[{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true}]}],\"preconditions\":[\"passed\"],\"requirement_exercised\":null}"
+            }
+          },
+          "questions": {
+            "label": {
+              "instructions": "Which option best describes `test_case`? Each option is a label; where a description is given it is the authoritative boundary for that label. Pick `NONE` only when no other label fits.",
+              "options": {
+                "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+                "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+                "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+                "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+                "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action.",
+                "NONE": "None of the other labels apply."
+              }
+            }
+          },
+          "answers": {
+            "nouls": {},
+            "choices": {
+              "label": {
+                "choice": "repair_setup",
+                "probabilities": {
+                  "inspect_failure": 0.2229,
+                  "repair_setup": 0.3059,
+                  "propose_probe": 0.1297,
+                  "continue_investigation": 0.1562,
+                  "defer": 0.097,
+                  "NONE": 0.0884
+                },
+                "confidence": 0.0554
+              }
+            },
+            "scores": {}
+          },
+          "reported_cost_usd": null,
+          "elapsed_seconds": 0.2853852000007464
+        }
+      ],
+      "local_model_load_seconds": 38.74785390000034,
+      "local_model_raw": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "label": {
+            "type": "choice",
+            "choice": "repair_setup",
+            "probabilities": {
+              "inspect_failure": 0.2229,
+              "repair_setup": 0.3059,
+              "propose_probe": 0.1297,
+              "continue_investigation": 0.1562,
+              "defer": 0.097,
+              "NONE": 0.0884
+            },
+            "confidence": 0.0554,
+            "answer_confidence": 0.3059,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 456,
+          "output_tokens": 0
+        }
+      },
+      "hardware": {
+        "device": "cuda:0",
+        "name": "NVIDIA GeForce GTX 1050",
+        "capability": [
+          6,
+          1
+        ],
+        "dtype": "float16",
+        "cpu_inference_fallback": false
+      },
+      "provider_state": {
+        "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Repeated creation and closure of IOLoops leaks resources.\",\"remaining_seconds\":30,\"state_id\":\"tornado-native-close\"}",
+        "actual_output": "{\"observations\":[{\"after\":{},\"before\":{},\"cycles\":10,\"events\":[{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true}]}],\"preconditions\":[\"passed\"],\"requirement_exercised\":null}"
+      }
+    },
+    "status": "completed",
+    "package_versions": {
+      "deepeval": "4.2.8"
+    },
+    "wall_seconds": 0.2925636999971175,
+    "calls_attempted": 1,
+    "repetition": 0,
+    "order_name": "original"
+  },
+  {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-13T16:39:04.056059+00:00",
+    "mode": "shadow",
+    "backend": "deepeval-laya",
+    "model": "laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions",
+    "state": {
+      "schema_version": 1,
+      "state_id": "xarray-caught-method",
+      "issue": "Dataset.merge should accept a named DataArray, as the top-level merge function does.",
+      "remaining_seconds": 30,
+      "evidence": {
+        "preconditions": [
+          "passed"
+        ],
+        "observations": [
+          {
+            "mode": "caught_method",
+            "xarray_version": "0+untagged.1.gef6e6a7",
+            "top_level_variables": [
+              "a",
+              "b"
+            ],
+            "method_exercised": true,
+            "method_exception": {
+              "type": "AttributeError",
+              "message": "'DataArray' object has no attribute 'items'"
+            },
+            "relation_holds": false
+          }
+        ],
+        "requirement_exercised": true
+      }
+    },
+    "state_sha256": "14ba469da96595649bc1c530f7d0d21ef9ad8e3ba91226ae53c92723bc24522f",
+    "options": {
+      "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+      "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+      "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+      "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+      "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+    },
+    "option_order": [
+      "inspect_failure",
+      "repair_setup",
+      "propose_probe",
+      "continue_investigation",
+      "defer"
+    ],
+    "option_order_sha256": "ea53b4de7688ac574bebbfb8bb569ecdf1a12a362ada3266d947a7a60e26dc37",
+    "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+    "script_sha256": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+    "recommendation": {
+      "action": "inspect_failure",
+      "reason": "Decided by laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions. Label \"inspect_failure\" (P=0.44, confidence=0.18). Alternatives: repair_setup 0.26, propose_probe 0.11, continue_investigation 0.08, defer 0.07, NONE 0.04.",
+      "inference_seconds": 0.26010580000001937,
+      "reported_cost_usd": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_calls": [
+        {
+          "state": {
+            "test_case": {
+              "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-caught-method\"}",
+              "actual_output": "{\"observations\":[{\"method_exception\":{\"message\":\"'DataArray' object has no attribute 'items'\",\"type\":\"AttributeError\"},\"method_exercised\":true,\"mode\":\"caught_method\",\"relation_holds\":false,\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":true}"
+            }
+          },
+          "questions": {
+            "label": {
+              "instructions": "Which option best describes `test_case`? Each option is a label; where a description is given it is the authoritative boundary for that label. Pick `NONE` only when no other label fits.",
+              "options": {
+                "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+                "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+                "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+                "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+                "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action.",
+                "NONE": "None of the other labels apply."
+              }
+            }
+          },
+          "answers": {
+            "nouls": {},
+            "choices": {
+              "label": {
+                "choice": "inspect_failure",
+                "probabilities": {
+                  "inspect_failure": 0.4368,
+                  "repair_setup": 0.2642,
+                  "propose_probe": 0.1126,
+                  "continue_investigation": 0.0789,
+                  "defer": 0.0669,
+                  "NONE": 0.0406
+                },
+                "confidence": 0.1791
+              }
+            },
+            "scores": {}
+          },
+          "reported_cost_usd": null,
+          "elapsed_seconds": 0.2595732000008866
+        }
+      ],
+      "local_model_load_seconds": 38.74785390000034,
+      "local_model_raw": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "label": {
+            "type": "choice",
+            "choice": "inspect_failure",
+            "probabilities": {
+              "inspect_failure": 0.4368,
+              "repair_setup": 0.2642,
+              "propose_probe": 0.1126,
+              "continue_investigation": 0.0789,
+              "defer": 0.0669,
+              "NONE": 0.0406
+            },
+            "confidence": 0.1791,
+            "answer_confidence": 0.4368,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 367,
+          "output_tokens": 0
+        }
+      },
+      "hardware": {
+        "device": "cuda:0",
+        "name": "NVIDIA GeForce GTX 1050",
+        "capability": [
+          6,
+          1
+        ],
+        "dtype": "float16",
+        "cpu_inference_fallback": false
+      },
+      "provider_state": {
+        "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-caught-method\"}",
+        "actual_output": "{\"observations\":[{\"method_exception\":{\"message\":\"'DataArray' object has no attribute 'items'\",\"type\":\"AttributeError\"},\"method_exercised\":true,\"mode\":\"caught_method\",\"relation_holds\":false,\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":true}"
+      }
+    },
+    "status": "completed",
+    "package_versions": {
+      "deepeval": "4.2.8"
+    },
+    "wall_seconds": 0.2654651999982889,
+    "calls_attempted": 1,
+    "repetition": 0,
+    "order_name": "original"
+  },
+  {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-13T16:39:04.323148+00:00",
+    "mode": "shadow",
+    "backend": "deepeval-laya",
+    "model": "laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions",
+    "state": {
+      "schema_version": 1,
+      "state_id": "xarray-top-level",
+      "issue": "Dataset.merge should accept a named DataArray, as the top-level merge function does.",
+      "remaining_seconds": 30,
+      "evidence": {
+        "preconditions": [
+          "passed"
+        ],
+        "observations": [
+          {
+            "mode": "top_level_only",
+            "xarray_version": "0+untagged.1.gef6e6a7",
+            "top_level_variables": [
+              "a",
+              "b"
+            ],
+            "method_exercised": false
+          }
+        ],
+        "requirement_exercised": false
+      }
+    },
+    "state_sha256": "4953ff90e971eed66ea88205e8e27b74cc9224f527ee6e2c6c486941aa08dc0a",
+    "options": {
+      "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+      "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+      "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+      "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+      "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+    },
+    "option_order": [
+      "inspect_failure",
+      "repair_setup",
+      "propose_probe",
+      "continue_investigation",
+      "defer"
+    ],
+    "option_order_sha256": "ea53b4de7688ac574bebbfb8bb569ecdf1a12a362ada3266d947a7a60e26dc37",
+    "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+    "script_sha256": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+    "recommendation": {
+      "action": "repair_setup",
+      "reason": "Decided by laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions. Label \"repair_setup\" (P=0.34, confidence=0.06). Alternatives: inspect_failure 0.20, continue_investigation 0.13, propose_probe 0.12, defer 0.11, NONE 0.10.",
+      "inference_seconds": 0.21294230000057723,
+      "reported_cost_usd": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_calls": [
+        {
+          "state": {
+            "test_case": {
+              "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-top-level\"}",
+              "actual_output": "{\"observations\":[{\"method_exercised\":false,\"mode\":\"top_level_only\",\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":false}"
+            }
+          },
+          "questions": {
+            "label": {
+              "instructions": "Which option best describes `test_case`? Each option is a label; where a description is given it is the authoritative boundary for that label. Pick `NONE` only when no other label fits.",
+              "options": {
+                "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+                "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+                "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+                "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+                "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action.",
+                "NONE": "None of the other labels apply."
+              }
+            }
+          },
+          "answers": {
+            "nouls": {},
+            "choices": {
+              "label": {
+                "choice": "repair_setup",
+                "probabilities": {
+                  "inspect_failure": 0.2003,
+                  "repair_setup": 0.3393,
+                  "propose_probe": 0.117,
+                  "continue_investigation": 0.133,
+                  "defer": 0.107,
+                  "NONE": 0.1033
+                },
+                "confidence": 0.0613
+              }
+            },
+            "scores": {}
+          },
+          "reported_cost_usd": null,
+          "elapsed_seconds": 0.2122639999979583
+        }
+      ],
+      "local_model_load_seconds": 38.74785390000034,
+      "local_model_raw": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "label": {
+            "type": "choice",
+            "choice": "repair_setup",
+            "probabilities": {
+              "inspect_failure": 0.2003,
+              "repair_setup": 0.3393,
+              "propose_probe": 0.117,
+              "continue_investigation": 0.133,
+              "defer": 0.107,
+              "NONE": 0.1033
+            },
+            "confidence": 0.0613,
+            "answer_confidence": 0.3393,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 329,
+          "output_tokens": 0
+        }
+      },
+      "hardware": {
+        "device": "cuda:0",
+        "name": "NVIDIA GeForce GTX 1050",
+        "capability": [
+          6,
+          1
+        ],
+        "dtype": "float16",
+        "cpu_inference_fallback": false
+      },
+      "provider_state": {
+        "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-top-level\"}",
+        "actual_output": "{\"observations\":[{\"method_exercised\":false,\"mode\":\"top_level_only\",\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":false}"
+      }
+    },
+    "status": "completed",
+    "package_versions": {
+      "deepeval": "4.2.8"
+    },
+    "wall_seconds": 0.2182848999982525,
+    "calls_attempted": 1,
+    "repetition": 0,
+    "order_name": "original"
+  },
+  {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-13T16:39:04.545050+00:00",
+    "mode": "shadow",
+    "backend": "deepeval-laya",
+    "model": "laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions",
+    "state": {
+      "schema_version": 1,
+      "state_id": "tornado-native-close",
+      "issue": "Repeated creation and closure of IOLoops leaks resources.",
+      "remaining_seconds": 30,
+      "evidence": {
+        "preconditions": [
+          "passed"
+        ],
+        "observations": [
+          {
+            "cycles": 10,
+            "before": {},
+            "events": [
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              }
+            ],
+            "after": {}
+          }
+        ],
+        "requirement_exercised": null
+      }
+    },
+    "state_sha256": "5913c2296e37b6a95adf743d4939677b0e2d802c7696d607c0856090d17d0e54",
+    "options": {
+      "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+      "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+      "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+      "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+      "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+    },
+    "option_order": [
+      "defer",
+      "continue_investigation",
+      "propose_probe",
+      "repair_setup",
+      "inspect_failure"
+    ],
+    "option_order_sha256": "ec731746b0fb9773ec918932b9ff04e457a49855751334f0f1338fa41dfe98e5",
+    "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+    "script_sha256": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+    "recommendation": {
+      "action": "repair_setup",
+      "reason": "Decided by laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions. Label \"repair_setup\" (P=0.30, confidence=0.08). Alternatives: inspect_failure 0.27, propose_probe 0.17, continue_investigation 0.12, defer 0.08, NONE 0.06.",
+      "inference_seconds": 0.2894672000002174,
+      "reported_cost_usd": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_calls": [
+        {
+          "state": {
+            "test_case": {
+              "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Repeated creation and closure of IOLoops leaks resources.\",\"remaining_seconds\":30,\"state_id\":\"tornado-native-close\"}",
+              "actual_output": "{\"observations\":[{\"after\":{},\"before\":{},\"cycles\":10,\"events\":[{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true}]}],\"preconditions\":[\"passed\"],\"requirement_exercised\":null}"
+            }
+          },
+          "questions": {
+            "label": {
+              "instructions": "Which option best describes `test_case`? Each option is a label; where a description is given it is the authoritative boundary for that label. Pick `NONE` only when no other label fits.",
+              "options": {
+                "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action.",
+                "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+                "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+                "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+                "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+                "NONE": "None of the other labels apply."
+              }
+            }
+          },
+          "answers": {
+            "nouls": {},
+            "choices": {
+              "label": {
+                "choice": "repair_setup",
+                "probabilities": {
+                  "defer": 0.0775,
+                  "continue_investigation": 0.1182,
+                  "propose_probe": 0.1677,
+                  "repair_setup": 0.3031,
+                  "inspect_failure": 0.2688,
+                  "NONE": 0.0646
+                },
+                "confidence": 0.0836
+              }
+            },
+            "scores": {}
+          },
+          "reported_cost_usd": null,
+          "elapsed_seconds": 0.28891610000209766
+        }
+      ],
+      "local_model_load_seconds": 38.74785390000034,
+      "local_model_raw": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "label": {
+            "type": "choice",
+            "choice": "repair_setup",
+            "probabilities": {
+              "defer": 0.0775,
+              "continue_investigation": 0.1182,
+              "propose_probe": 0.1677,
+              "repair_setup": 0.3031,
+              "inspect_failure": 0.2688,
+              "NONE": 0.0646
+            },
+            "confidence": 0.0836,
+            "answer_confidence": 0.3031,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 456,
+          "output_tokens": 0
+        }
+      },
+      "hardware": {
+        "device": "cuda:0",
+        "name": "NVIDIA GeForce GTX 1050",
+        "capability": [
+          6,
+          1
+        ],
+        "dtype": "float16",
+        "cpu_inference_fallback": false
+      },
+      "provider_state": {
+        "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Repeated creation and closure of IOLoops leaks resources.\",\"remaining_seconds\":30,\"state_id\":\"tornado-native-close\"}",
+        "actual_output": "{\"observations\":[{\"after\":{},\"before\":{},\"cycles\":10,\"events\":[{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true}]}],\"preconditions\":[\"passed\"],\"requirement_exercised\":null}"
+      }
+    },
+    "status": "completed",
+    "package_versions": {
+      "deepeval": "4.2.8"
+    },
+    "wall_seconds": 0.2944434999990335,
+    "calls_attempted": 1,
+    "repetition": 0,
+    "order_name": "reversed"
+  },
+  {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-13T16:39:04.843157+00:00",
+    "mode": "shadow",
+    "backend": "deepeval-laya",
+    "model": "laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions",
+    "state": {
+      "schema_version": 1,
+      "state_id": "xarray-caught-method",
+      "issue": "Dataset.merge should accept a named DataArray, as the top-level merge function does.",
+      "remaining_seconds": 30,
+      "evidence": {
+        "preconditions": [
+          "passed"
+        ],
+        "observations": [
+          {
+            "mode": "caught_method",
+            "xarray_version": "0+untagged.1.gef6e6a7",
+            "top_level_variables": [
+              "a",
+              "b"
+            ],
+            "method_exercised": true,
+            "method_exception": {
+              "type": "AttributeError",
+              "message": "'DataArray' object has no attribute 'items'"
+            },
+            "relation_holds": false
+          }
+        ],
+        "requirement_exercised": true
+      }
+    },
+    "state_sha256": "14ba469da96595649bc1c530f7d0d21ef9ad8e3ba91226ae53c92723bc24522f",
+    "options": {
+      "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+      "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+      "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+      "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+      "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+    },
+    "option_order": [
+      "defer",
+      "continue_investigation",
+      "propose_probe",
+      "repair_setup",
+      "inspect_failure"
+    ],
+    "option_order_sha256": "ec731746b0fb9773ec918932b9ff04e457a49855751334f0f1338fa41dfe98e5",
+    "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+    "script_sha256": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+    "recommendation": {
+      "action": "inspect_failure",
+      "reason": "Decided by laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions. Label \"inspect_failure\" (P=0.41, confidence=0.16). Alternatives: repair_setup 0.23, propose_probe 0.18, continue_investigation 0.09, defer 0.05, NONE 0.03.",
+      "inference_seconds": 0.22433950000049663,
+      "reported_cost_usd": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_calls": [
+        {
+          "state": {
+            "test_case": {
+              "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-caught-method\"}",
+              "actual_output": "{\"observations\":[{\"method_exception\":{\"message\":\"'DataArray' object has no attribute 'items'\",\"type\":\"AttributeError\"},\"method_exercised\":true,\"mode\":\"caught_method\",\"relation_holds\":false,\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":true}"
+            }
+          },
+          "questions": {
+            "label": {
+              "instructions": "Which option best describes `test_case`? Each option is a label; where a description is given it is the authoritative boundary for that label. Pick `NONE` only when no other label fits.",
+              "options": {
+                "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action.",
+                "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+                "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+                "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+                "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+                "NONE": "None of the other labels apply."
+              }
+            }
+          },
+          "answers": {
+            "nouls": {},
+            "choices": {
+              "label": {
+                "choice": "inspect_failure",
+                "probabilities": {
+                  "defer": 0.0505,
+                  "continue_investigation": 0.0944,
+                  "propose_probe": 0.1828,
+                  "repair_setup": 0.2301,
+                  "inspect_failure": 0.409,
+                  "NONE": 0.0332
+                },
+                "confidence": 0.1623
+              }
+            },
+            "scores": {}
+          },
+          "reported_cost_usd": null,
+          "elapsed_seconds": 0.22353560000192374
+        }
+      ],
+      "local_model_load_seconds": 38.74785390000034,
+      "local_model_raw": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "label": {
+            "type": "choice",
+            "choice": "inspect_failure",
+            "probabilities": {
+              "defer": 0.0505,
+              "continue_investigation": 0.0944,
+              "propose_probe": 0.1828,
+              "repair_setup": 0.2301,
+              "inspect_failure": 0.409,
+              "NONE": 0.0332
+            },
+            "confidence": 0.1623,
+            "answer_confidence": 0.409,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 367,
+          "output_tokens": 0
+        }
+      },
+      "hardware": {
+        "device": "cuda:0",
+        "name": "NVIDIA GeForce GTX 1050",
+        "capability": [
+          6,
+          1
+        ],
+        "dtype": "float16",
+        "cpu_inference_fallback": false
+      },
+      "provider_state": {
+        "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-caught-method\"}",
+        "actual_output": "{\"observations\":[{\"method_exception\":{\"message\":\"'DataArray' object has no attribute 'items'\",\"type\":\"AttributeError\"},\"method_exercised\":true,\"mode\":\"caught_method\",\"relation_holds\":false,\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":true}"
+      }
+    },
+    "status": "completed",
+    "package_versions": {
+      "deepeval": "4.2.8"
+    },
+    "wall_seconds": 0.23006509999686386,
+    "calls_attempted": 1,
+    "repetition": 0,
+    "order_name": "reversed"
+  },
+  {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-13T16:39:05.076794+00:00",
+    "mode": "shadow",
+    "backend": "deepeval-laya",
+    "model": "laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions",
+    "state": {
+      "schema_version": 1,
+      "state_id": "xarray-top-level",
+      "issue": "Dataset.merge should accept a named DataArray, as the top-level merge function does.",
+      "remaining_seconds": 30,
+      "evidence": {
+        "preconditions": [
+          "passed"
+        ],
+        "observations": [
+          {
+            "mode": "top_level_only",
+            "xarray_version": "0+untagged.1.gef6e6a7",
+            "top_level_variables": [
+              "a",
+              "b"
+            ],
+            "method_exercised": false
+          }
+        ],
+        "requirement_exercised": false
+      }
+    },
+    "state_sha256": "4953ff90e971eed66ea88205e8e27b74cc9224f527ee6e2c6c486941aa08dc0a",
+    "options": {
+      "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+      "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+      "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+      "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+      "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+    },
+    "option_order": [
+      "defer",
+      "continue_investigation",
+      "propose_probe",
+      "repair_setup",
+      "inspect_failure"
+    ],
+    "option_order_sha256": "ec731746b0fb9773ec918932b9ff04e457a49855751334f0f1338fa41dfe98e5",
+    "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+    "script_sha256": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+    "recommendation": {
+      "action": "repair_setup",
+      "reason": "Decided by laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions. Label \"repair_setup\" (P=0.33, confidence=0.08). Alternatives: propose_probe 0.22, inspect_failure 0.18, continue_investigation 0.11, NONE 0.09, defer 0.07.",
+      "inference_seconds": 0.21207779999895138,
+      "reported_cost_usd": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_calls": [
+        {
+          "state": {
+            "test_case": {
+              "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-top-level\"}",
+              "actual_output": "{\"observations\":[{\"method_exercised\":false,\"mode\":\"top_level_only\",\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":false}"
+            }
+          },
+          "questions": {
+            "label": {
+              "instructions": "Which option best describes `test_case`? Each option is a label; where a description is given it is the authoritative boundary for that label. Pick `NONE` only when no other label fits.",
+              "options": {
+                "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action.",
+                "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+                "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+                "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+                "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+                "NONE": "None of the other labels apply."
+              }
+            }
+          },
+          "answers": {
+            "nouls": {},
+            "choices": {
+              "label": {
+                "choice": "repair_setup",
+                "probabilities": {
+                  "defer": 0.0682,
+                  "continue_investigation": 0.1128,
+                  "propose_probe": 0.2223,
+                  "repair_setup": 0.3303,
+                  "inspect_failure": 0.1798,
+                  "NONE": 0.0865
+                },
+                "confidence": 0.0792
+              }
+            },
+            "scores": {}
+          },
+          "reported_cost_usd": null,
+          "elapsed_seconds": 0.2114614000020083
+        }
+      ],
+      "local_model_load_seconds": 38.74785390000034,
+      "local_model_raw": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "label": {
+            "type": "choice",
+            "choice": "repair_setup",
+            "probabilities": {
+              "defer": 0.0682,
+              "continue_investigation": 0.1128,
+              "propose_probe": 0.2223,
+              "repair_setup": 0.3303,
+              "inspect_failure": 0.1798,
+              "NONE": 0.0865
+            },
+            "confidence": 0.0792,
+            "answer_confidence": 0.3303,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 329,
+          "output_tokens": 0
+        }
+      },
+      "hardware": {
+        "device": "cuda:0",
+        "name": "NVIDIA GeForce GTX 1050",
+        "capability": [
+          6,
+          1
+        ],
+        "dtype": "float16",
+        "cpu_inference_fallback": false
+      },
+      "provider_state": {
+        "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-top-level\"}",
+        "actual_output": "{\"observations\":[{\"method_exercised\":false,\"mode\":\"top_level_only\",\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":false}"
+      }
+    },
+    "status": "completed",
+    "package_versions": {
+      "deepeval": "4.2.8"
+    },
+    "wall_seconds": 0.21786469999642577,
+    "calls_attempted": 1,
+    "repetition": 0,
+    "order_name": "reversed"
+  },
+  {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-13T16:39:05.299803+00:00",
+    "mode": "shadow",
+    "backend": "deepeval-laya",
+    "model": "laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions",
+    "state": {
+      "schema_version": 1,
+      "state_id": "tornado-native-close",
+      "issue": "Repeated creation and closure of IOLoops leaks resources.",
+      "remaining_seconds": 30,
+      "evidence": {
+        "preconditions": [
+          "passed"
+        ],
+        "observations": [
+          {
+            "cycles": 10,
+            "before": {},
+            "events": [
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              }
+            ],
+            "after": {}
+          }
+        ],
+        "requirement_exercised": null
+      }
+    },
+    "state_sha256": "5913c2296e37b6a95adf743d4939677b0e2d802c7696d607c0856090d17d0e54",
+    "options": {
+      "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+      "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+      "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+      "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+      "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+    },
+    "option_order": [
+      "inspect_failure",
+      "repair_setup",
+      "propose_probe",
+      "continue_investigation",
+      "defer"
+    ],
+    "option_order_sha256": "ea53b4de7688ac574bebbfb8bb569ecdf1a12a362ada3266d947a7a60e26dc37",
+    "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+    "script_sha256": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+    "recommendation": {
+      "action": "repair_setup",
+      "reason": "Decided by laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions. Label \"repair_setup\" (P=0.31, confidence=0.06). Alternatives: inspect_failure 0.22, continue_investigation 0.16, propose_probe 0.13, defer 0.10, NONE 0.09.",
+      "inference_seconds": 0.2868720999977086,
+      "reported_cost_usd": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_calls": [
+        {
+          "state": {
+            "test_case": {
+              "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Repeated creation and closure of IOLoops leaks resources.\",\"remaining_seconds\":30,\"state_id\":\"tornado-native-close\"}",
+              "actual_output": "{\"observations\":[{\"after\":{},\"before\":{},\"cycles\":10,\"events\":[{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true}]}],\"preconditions\":[\"passed\"],\"requirement_exercised\":null}"
+            }
+          },
+          "questions": {
+            "label": {
+              "instructions": "Which option best describes `test_case`? Each option is a label; where a description is given it is the authoritative boundary for that label. Pick `NONE` only when no other label fits.",
+              "options": {
+                "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+                "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+                "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+                "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+                "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action.",
+                "NONE": "None of the other labels apply."
+              }
+            }
+          },
+          "answers": {
+            "nouls": {},
+            "choices": {
+              "label": {
+                "choice": "repair_setup",
+                "probabilities": {
+                  "inspect_failure": 0.2229,
+                  "repair_setup": 0.3059,
+                  "propose_probe": 0.1297,
+                  "continue_investigation": 0.1562,
+                  "defer": 0.097,
+                  "NONE": 0.0884
+                },
+                "confidence": 0.0554
+              }
+            },
+            "scores": {}
+          },
+          "reported_cost_usd": null,
+          "elapsed_seconds": 0.28634859999874607
+        }
+      ],
+      "local_model_load_seconds": 38.74785390000034,
+      "local_model_raw": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "label": {
+            "type": "choice",
+            "choice": "repair_setup",
+            "probabilities": {
+              "inspect_failure": 0.2229,
+              "repair_setup": 0.3059,
+              "propose_probe": 0.1297,
+              "continue_investigation": 0.1562,
+              "defer": 0.097,
+              "NONE": 0.0884
+            },
+            "confidence": 0.0554,
+            "answer_confidence": 0.3059,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 456,
+          "output_tokens": 0
+        }
+      },
+      "hardware": {
+        "device": "cuda:0",
+        "name": "NVIDIA GeForce GTX 1050",
+        "capability": [
+          6,
+          1
+        ],
+        "dtype": "float16",
+        "cpu_inference_fallback": false
+      },
+      "provider_state": {
+        "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Repeated creation and closure of IOLoops leaks resources.\",\"remaining_seconds\":30,\"state_id\":\"tornado-native-close\"}",
+        "actual_output": "{\"observations\":[{\"after\":{},\"before\":{},\"cycles\":10,\"events\":[{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true}]}],\"preconditions\":[\"passed\"],\"requirement_exercised\":null}"
+      }
+    },
+    "status": "completed",
+    "package_versions": {
+      "deepeval": "4.2.8"
+    },
+    "wall_seconds": 0.291697299999214,
+    "calls_attempted": 1,
+    "repetition": 1,
+    "order_name": "original"
+  },
+  {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-13T16:39:05.594368+00:00",
+    "mode": "shadow",
+    "backend": "deepeval-laya",
+    "model": "laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions",
+    "state": {
+      "schema_version": 1,
+      "state_id": "xarray-caught-method",
+      "issue": "Dataset.merge should accept a named DataArray, as the top-level merge function does.",
+      "remaining_seconds": 30,
+      "evidence": {
+        "preconditions": [
+          "passed"
+        ],
+        "observations": [
+          {
+            "mode": "caught_method",
+            "xarray_version": "0+untagged.1.gef6e6a7",
+            "top_level_variables": [
+              "a",
+              "b"
+            ],
+            "method_exercised": true,
+            "method_exception": {
+              "type": "AttributeError",
+              "message": "'DataArray' object has no attribute 'items'"
+            },
+            "relation_holds": false
+          }
+        ],
+        "requirement_exercised": true
+      }
+    },
+    "state_sha256": "14ba469da96595649bc1c530f7d0d21ef9ad8e3ba91226ae53c92723bc24522f",
+    "options": {
+      "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+      "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+      "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+      "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+      "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+    },
+    "option_order": [
+      "inspect_failure",
+      "repair_setup",
+      "propose_probe",
+      "continue_investigation",
+      "defer"
+    ],
+    "option_order_sha256": "ea53b4de7688ac574bebbfb8bb569ecdf1a12a362ada3266d947a7a60e26dc37",
+    "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+    "script_sha256": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+    "recommendation": {
+      "action": "inspect_failure",
+      "reason": "Decided by laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions. Label \"inspect_failure\" (P=0.44, confidence=0.18). Alternatives: repair_setup 0.26, propose_probe 0.11, continue_investigation 0.08, defer 0.07, NONE 0.04.",
+      "inference_seconds": 0.22222030000193627,
+      "reported_cost_usd": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_calls": [
+        {
+          "state": {
+            "test_case": {
+              "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-caught-method\"}",
+              "actual_output": "{\"observations\":[{\"method_exception\":{\"message\":\"'DataArray' object has no attribute 'items'\",\"type\":\"AttributeError\"},\"method_exercised\":true,\"mode\":\"caught_method\",\"relation_holds\":false,\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":true}"
+            }
+          },
+          "questions": {
+            "label": {
+              "instructions": "Which option best describes `test_case`? Each option is a label; where a description is given it is the authoritative boundary for that label. Pick `NONE` only when no other label fits.",
+              "options": {
+                "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+                "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+                "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+                "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+                "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action.",
+                "NONE": "None of the other labels apply."
+              }
+            }
+          },
+          "answers": {
+            "nouls": {},
+            "choices": {
+              "label": {
+                "choice": "inspect_failure",
+                "probabilities": {
+                  "inspect_failure": 0.4368,
+                  "repair_setup": 0.2642,
+                  "propose_probe": 0.1126,
+                  "continue_investigation": 0.0789,
+                  "defer": 0.0669,
+                  "NONE": 0.0406
+                },
+                "confidence": 0.1791
+              }
+            },
+            "scores": {}
+          },
+          "reported_cost_usd": null,
+          "elapsed_seconds": 0.22171929999967688
+        }
+      ],
+      "local_model_load_seconds": 38.74785390000034,
+      "local_model_raw": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "label": {
+            "type": "choice",
+            "choice": "inspect_failure",
+            "probabilities": {
+              "inspect_failure": 0.4368,
+              "repair_setup": 0.2642,
+              "propose_probe": 0.1126,
+              "continue_investigation": 0.0789,
+              "defer": 0.0669,
+              "NONE": 0.0406
+            },
+            "confidence": 0.1791,
+            "answer_confidence": 0.4368,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 367,
+          "output_tokens": 0
+        }
+      },
+      "hardware": {
+        "device": "cuda:0",
+        "name": "NVIDIA GeForce GTX 1050",
+        "capability": [
+          6,
+          1
+        ],
+        "dtype": "float16",
+        "cpu_inference_fallback": false
+      },
+      "provider_state": {
+        "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-caught-method\"}",
+        "actual_output": "{\"observations\":[{\"method_exception\":{\"message\":\"'DataArray' object has no attribute 'items'\",\"type\":\"AttributeError\"},\"method_exercised\":true,\"mode\":\"caught_method\",\"relation_holds\":false,\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":true}"
+      }
+    },
+    "status": "completed",
+    "package_versions": {
+      "deepeval": "4.2.8"
+    },
+    "wall_seconds": 0.22643230000176118,
+    "calls_attempted": 1,
+    "repetition": 1,
+    "order_name": "original"
+  },
+  {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-13T16:39:05.824719+00:00",
+    "mode": "shadow",
+    "backend": "deepeval-laya",
+    "model": "laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions",
+    "state": {
+      "schema_version": 1,
+      "state_id": "xarray-top-level",
+      "issue": "Dataset.merge should accept a named DataArray, as the top-level merge function does.",
+      "remaining_seconds": 30,
+      "evidence": {
+        "preconditions": [
+          "passed"
+        ],
+        "observations": [
+          {
+            "mode": "top_level_only",
+            "xarray_version": "0+untagged.1.gef6e6a7",
+            "top_level_variables": [
+              "a",
+              "b"
+            ],
+            "method_exercised": false
+          }
+        ],
+        "requirement_exercised": false
+      }
+    },
+    "state_sha256": "4953ff90e971eed66ea88205e8e27b74cc9224f527ee6e2c6c486941aa08dc0a",
+    "options": {
+      "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+      "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+      "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+      "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+      "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+    },
+    "option_order": [
+      "inspect_failure",
+      "repair_setup",
+      "propose_probe",
+      "continue_investigation",
+      "defer"
+    ],
+    "option_order_sha256": "ea53b4de7688ac574bebbfb8bb569ecdf1a12a362ada3266d947a7a60e26dc37",
+    "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+    "script_sha256": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+    "recommendation": {
+      "action": "repair_setup",
+      "reason": "Decided by laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions. Label \"repair_setup\" (P=0.34, confidence=0.06). Alternatives: inspect_failure 0.20, continue_investigation 0.13, propose_probe 0.12, defer 0.11, NONE 0.10.",
+      "inference_seconds": 0.21003009999913047,
+      "reported_cost_usd": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_calls": [
+        {
+          "state": {
+            "test_case": {
+              "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-top-level\"}",
+              "actual_output": "{\"observations\":[{\"method_exercised\":false,\"mode\":\"top_level_only\",\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":false}"
+            }
+          },
+          "questions": {
+            "label": {
+              "instructions": "Which option best describes `test_case`? Each option is a label; where a description is given it is the authoritative boundary for that label. Pick `NONE` only when no other label fits.",
+              "options": {
+                "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+                "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+                "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+                "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+                "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action.",
+                "NONE": "None of the other labels apply."
+              }
+            }
+          },
+          "answers": {
+            "nouls": {},
+            "choices": {
+              "label": {
+                "choice": "repair_setup",
+                "probabilities": {
+                  "inspect_failure": 0.2003,
+                  "repair_setup": 0.3393,
+                  "propose_probe": 0.117,
+                  "continue_investigation": 0.133,
+                  "defer": 0.107,
+                  "NONE": 0.1033
+                },
+                "confidence": 0.0613
+              }
+            },
+            "scores": {}
+          },
+          "reported_cost_usd": null,
+          "elapsed_seconds": 0.20875229999728617
+        }
+      ],
+      "local_model_load_seconds": 38.74785390000034,
+      "local_model_raw": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "label": {
+            "type": "choice",
+            "choice": "repair_setup",
+            "probabilities": {
+              "inspect_failure": 0.2003,
+              "repair_setup": 0.3393,
+              "propose_probe": 0.117,
+              "continue_investigation": 0.133,
+              "defer": 0.107,
+              "NONE": 0.1033
+            },
+            "confidence": 0.0613,
+            "answer_confidence": 0.3393,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 329,
+          "output_tokens": 0
+        }
+      },
+      "hardware": {
+        "device": "cuda:0",
+        "name": "NVIDIA GeForce GTX 1050",
+        "capability": [
+          6,
+          1
+        ],
+        "dtype": "float16",
+        "cpu_inference_fallback": false
+      },
+      "provider_state": {
+        "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-top-level\"}",
+        "actual_output": "{\"observations\":[{\"method_exercised\":false,\"mode\":\"top_level_only\",\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":false}"
+      }
+    },
+    "status": "completed",
+    "package_versions": {
+      "deepeval": "4.2.8"
+    },
+    "wall_seconds": 0.21398449999833247,
+    "calls_attempted": 1,
+    "repetition": 1,
+    "order_name": "original"
+  },
+  {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-13T16:39:06.043829+00:00",
+    "mode": "shadow",
+    "backend": "deepeval-laya",
+    "model": "laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions",
+    "state": {
+      "schema_version": 1,
+      "state_id": "tornado-native-close",
+      "issue": "Repeated creation and closure of IOLoops leaks resources.",
+      "remaining_seconds": 30,
+      "evidence": {
+        "preconditions": [
+          "passed"
+        ],
+        "observations": [
+          {
+            "cycles": 10,
+            "before": {},
+            "events": [
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              },
+              {
+                "native_closed": true,
+                "active": {},
+                "closed": {}
+              }
+            ],
+            "after": {}
+          }
+        ],
+        "requirement_exercised": null
+      }
+    },
+    "state_sha256": "5913c2296e37b6a95adf743d4939677b0e2d802c7696d607c0856090d17d0e54",
+    "options": {
+      "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+      "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+      "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+      "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+      "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+    },
+    "option_order": [
+      "defer",
+      "continue_investigation",
+      "propose_probe",
+      "repair_setup",
+      "inspect_failure"
+    ],
+    "option_order_sha256": "ec731746b0fb9773ec918932b9ff04e457a49855751334f0f1338fa41dfe98e5",
+    "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+    "script_sha256": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+    "recommendation": {
+      "action": "repair_setup",
+      "reason": "Decided by laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions. Label \"repair_setup\" (P=0.30, confidence=0.08). Alternatives: inspect_failure 0.27, propose_probe 0.17, continue_investigation 0.12, defer 0.08, NONE 0.06.",
+      "inference_seconds": 0.28920730000027106,
+      "reported_cost_usd": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_calls": [
+        {
+          "state": {
+            "test_case": {
+              "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Repeated creation and closure of IOLoops leaks resources.\",\"remaining_seconds\":30,\"state_id\":\"tornado-native-close\"}",
+              "actual_output": "{\"observations\":[{\"after\":{},\"before\":{},\"cycles\":10,\"events\":[{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true}]}],\"preconditions\":[\"passed\"],\"requirement_exercised\":null}"
+            }
+          },
+          "questions": {
+            "label": {
+              "instructions": "Which option best describes `test_case`? Each option is a label; where a description is given it is the authoritative boundary for that label. Pick `NONE` only when no other label fits.",
+              "options": {
+                "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action.",
+                "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+                "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+                "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+                "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+                "NONE": "None of the other labels apply."
+              }
+            }
+          },
+          "answers": {
+            "nouls": {},
+            "choices": {
+              "label": {
+                "choice": "repair_setup",
+                "probabilities": {
+                  "defer": 0.0775,
+                  "continue_investigation": 0.1182,
+                  "propose_probe": 0.1677,
+                  "repair_setup": 0.3031,
+                  "inspect_failure": 0.2688,
+                  "NONE": 0.0646
+                },
+                "confidence": 0.0836
+              }
+            },
+            "scores": {}
+          },
+          "reported_cost_usd": null,
+          "elapsed_seconds": 0.28865940000105184
+        }
+      ],
+      "local_model_load_seconds": 38.74785390000034,
+      "local_model_raw": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "label": {
+            "type": "choice",
+            "choice": "repair_setup",
+            "probabilities": {
+              "defer": 0.0775,
+              "continue_investigation": 0.1182,
+              "propose_probe": 0.1677,
+              "repair_setup": 0.3031,
+              "inspect_failure": 0.2688,
+              "NONE": 0.0646
+            },
+            "confidence": 0.0836,
+            "answer_confidence": 0.3031,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 456,
+          "output_tokens": 0
+        }
+      },
+      "hardware": {
+        "device": "cuda:0",
+        "name": "NVIDIA GeForce GTX 1050",
+        "capability": [
+          6,
+          1
+        ],
+        "dtype": "float16",
+        "cpu_inference_fallback": false
+      },
+      "provider_state": {
+        "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Repeated creation and closure of IOLoops leaks resources.\",\"remaining_seconds\":30,\"state_id\":\"tornado-native-close\"}",
+        "actual_output": "{\"observations\":[{\"after\":{},\"before\":{},\"cycles\":10,\"events\":[{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true},{\"active\":{},\"closed\":{},\"native_closed\":true}]}],\"preconditions\":[\"passed\"],\"requirement_exercised\":null}"
+      }
+    },
+    "status": "completed",
+    "package_versions": {
+      "deepeval": "4.2.8"
+    },
+    "wall_seconds": 0.2941672999986622,
+    "calls_attempted": 1,
+    "repetition": 1,
+    "order_name": "reversed"
+  },
+  {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-13T16:39:06.342130+00:00",
+    "mode": "shadow",
+    "backend": "deepeval-laya",
+    "model": "laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions",
+    "state": {
+      "schema_version": 1,
+      "state_id": "xarray-caught-method",
+      "issue": "Dataset.merge should accept a named DataArray, as the top-level merge function does.",
+      "remaining_seconds": 30,
+      "evidence": {
+        "preconditions": [
+          "passed"
+        ],
+        "observations": [
+          {
+            "mode": "caught_method",
+            "xarray_version": "0+untagged.1.gef6e6a7",
+            "top_level_variables": [
+              "a",
+              "b"
+            ],
+            "method_exercised": true,
+            "method_exception": {
+              "type": "AttributeError",
+              "message": "'DataArray' object has no attribute 'items'"
+            },
+            "relation_holds": false
+          }
+        ],
+        "requirement_exercised": true
+      }
+    },
+    "state_sha256": "14ba469da96595649bc1c530f7d0d21ef9ad8e3ba91226ae53c92723bc24522f",
+    "options": {
+      "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+      "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+      "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+      "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+      "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+    },
+    "option_order": [
+      "defer",
+      "continue_investigation",
+      "propose_probe",
+      "repair_setup",
+      "inspect_failure"
+    ],
+    "option_order_sha256": "ec731746b0fb9773ec918932b9ff04e457a49855751334f0f1338fa41dfe98e5",
+    "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+    "script_sha256": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+    "recommendation": {
+      "action": "inspect_failure",
+      "reason": "Decided by laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions. Label \"inspect_failure\" (P=0.41, confidence=0.16). Alternatives: repair_setup 0.23, propose_probe 0.18, continue_investigation 0.09, defer 0.05, NONE 0.03.",
+      "inference_seconds": 0.22007209999719635,
+      "reported_cost_usd": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_calls": [
+        {
+          "state": {
+            "test_case": {
+              "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-caught-method\"}",
+              "actual_output": "{\"observations\":[{\"method_exception\":{\"message\":\"'DataArray' object has no attribute 'items'\",\"type\":\"AttributeError\"},\"method_exercised\":true,\"mode\":\"caught_method\",\"relation_holds\":false,\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":true}"
+            }
+          },
+          "questions": {
+            "label": {
+              "instructions": "Which option best describes `test_case`? Each option is a label; where a description is given it is the authoritative boundary for that label. Pick `NONE` only when no other label fits.",
+              "options": {
+                "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action.",
+                "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+                "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+                "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+                "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+                "NONE": "None of the other labels apply."
+              }
+            }
+          },
+          "answers": {
+            "nouls": {},
+            "choices": {
+              "label": {
+                "choice": "inspect_failure",
+                "probabilities": {
+                  "defer": 0.0505,
+                  "continue_investigation": 0.0944,
+                  "propose_probe": 0.1828,
+                  "repair_setup": 0.2301,
+                  "inspect_failure": 0.409,
+                  "NONE": 0.0332
+                },
+                "confidence": 0.1623
+              }
+            },
+            "scores": {}
+          },
+          "reported_cost_usd": null,
+          "elapsed_seconds": 0.21952779999992345
+        }
+      ],
+      "local_model_load_seconds": 38.74785390000034,
+      "local_model_raw": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "label": {
+            "type": "choice",
+            "choice": "inspect_failure",
+            "probabilities": {
+              "defer": 0.0505,
+              "continue_investigation": 0.0944,
+              "propose_probe": 0.1828,
+              "repair_setup": 0.2301,
+              "inspect_failure": 0.409,
+              "NONE": 0.0332
+            },
+            "confidence": 0.1623,
+            "answer_confidence": 0.409,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 367,
+          "output_tokens": 0
+        }
+      },
+      "hardware": {
+        "device": "cuda:0",
+        "name": "NVIDIA GeForce GTX 1050",
+        "capability": [
+          6,
+          1
+        ],
+        "dtype": "float16",
+        "cpu_inference_fallback": false
+      },
+      "provider_state": {
+        "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-caught-method\"}",
+        "actual_output": "{\"observations\":[{\"method_exception\":{\"message\":\"'DataArray' object has no attribute 'items'\",\"type\":\"AttributeError\"},\"method_exercised\":true,\"mode\":\"caught_method\",\"relation_holds\":false,\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":true}"
+      }
+    },
+    "status": "completed",
+    "package_versions": {
+      "deepeval": "4.2.8"
+    },
+    "wall_seconds": 0.22525540000060573,
+    "calls_attempted": 1,
+    "repetition": 1,
+    "order_name": "reversed"
+  },
+  {
+    "schema_version": 1,
+    "created_at_utc": "2026-10-13T16:39:06.574375+00:00",
+    "mode": "shadow",
+    "backend": "deepeval-laya",
+    "model": "laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions",
+    "state": {
+      "schema_version": 1,
+      "state_id": "xarray-top-level",
+      "issue": "Dataset.merge should accept a named DataArray, as the top-level merge function does.",
+      "remaining_seconds": 30,
+      "evidence": {
+        "preconditions": [
+          "passed"
+        ],
+        "observations": [
+          {
+            "mode": "top_level_only",
+            "xarray_version": "0+untagged.1.gef6e6a7",
+            "top_level_variables": [
+              "a",
+              "b"
+            ],
+            "method_exercised": false
+          }
+        ],
+        "requirement_exercised": false
+      }
+    },
+    "state_sha256": "4953ff90e971eed66ea88205e8e27b74cc9224f527ee6e2c6c486941aa08dc0a",
+    "options": {
+      "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+      "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+      "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+      "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+      "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action."
+    },
+    "option_order": [
+      "defer",
+      "continue_investigation",
+      "propose_probe",
+      "repair_setup",
+      "inspect_failure"
+    ],
+    "option_order_sha256": "ec731746b0fb9773ec918932b9ff04e457a49855751334f0f1338fa41dfe98e5",
+    "options_sha256": "1942c35e21186647ec92b23120ec726734118f434e977357b93557e62a17d05f",
+    "script_sha256": "abfbdfa8bf6102d0700e6a5cd50a3ba7284efb89092c6e21673416150c0b577a",
+    "recommendation": {
+      "action": "repair_setup",
+      "reason": "Decided by laya@7b928d828b7b0e022f929d9bd2e44165aa270148:typed-decisions. Label \"repair_setup\" (P=0.33, confidence=0.08). Alternatives: propose_probe 0.22, inspect_failure 0.18, continue_investigation 0.11, NONE 0.09, defer 0.07.",
+      "inference_seconds": 0.21428949999972247,
+      "reported_cost_usd": null,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_calls": [
+        {
+          "state": {
+            "test_case": {
+              "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-top-level\"}",
+              "actual_output": "{\"observations\":[{\"method_exercised\":false,\"mode\":\"top_level_only\",\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":false}"
+            }
+          },
+          "questions": {
+            "label": {
+              "instructions": "Which option best describes `test_case`? Each option is a label; where a description is given it is the authoritative boundary for that label. Pick `NONE` only when no other label fits.",
+              "options": {
+                "defer": "Return unresolved when the remaining execution budget is zero or evidence cannot support a next action.",
+                "continue_investigation": "Continue ordinary source inspection or repair investigation when no explicit execution obstacle needs handling.",
+                "propose_probe": "Propose a new behavioral check when the supplied evidence does not exercise the reported requirement.",
+                "repair_setup": "Repair an explicitly failed execution precondition before interpreting a probe.",
+                "inspect_failure": "Inspect an observed exception or failed requirement before changing production code.",
+                "NONE": "None of the other labels apply."
+              }
+            }
+          },
+          "answers": {
+            "nouls": {},
+            "choices": {
+              "label": {
+                "choice": "repair_setup",
+                "probabilities": {
+                  "defer": 0.0682,
+                  "continue_investigation": 0.1128,
+                  "propose_probe": 0.2223,
+                  "repair_setup": 0.3303,
+                  "inspect_failure": 0.1798,
+                  "NONE": 0.0865
+                },
+                "confidence": 0.0792
+              }
+            },
+            "scores": {}
+          },
+          "reported_cost_usd": null,
+          "elapsed_seconds": 0.2133200999996916
+        }
+      ],
+      "local_model_load_seconds": 38.74785390000034,
+      "local_model_raw": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "label": {
+            "type": "choice",
+            "choice": "repair_setup",
+            "probabilities": {
+              "defer": 0.0682,
+              "continue_investigation": 0.1128,
+              "propose_probe": 0.2223,
+              "repair_setup": 0.3303,
+              "inspect_failure": 0.1798,
+              "NONE": 0.0865
+            },
+            "confidence": 0.0792,
+            "answer_confidence": 0.3303,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 329,
+          "output_tokens": 0
+        }
+      },
+      "hardware": {
+        "device": "cuda:0",
+        "name": "NVIDIA GeForce GTX 1050",
+        "capability": [
+          6,
+          1
+        ],
+        "dtype": "float16",
+        "cpu_inference_fallback": false
+      },
+      "provider_state": {
+        "input": "{\"instruction\":\"Recommend one next debugging action; a successful shell exit does not establish a correct repair.\",\"issue\":\"Dataset.merge should accept a named DataArray, as the top-level merge function does.\",\"remaining_seconds\":30,\"state_id\":\"xarray-top-level\"}",
+        "actual_output": "{\"observations\":[{\"method_exercised\":false,\"mode\":\"top_level_only\",\"top_level_variables\":[\"a\",\"b\"],\"xarray_version\":\"0+untagged.1.gef6e6a7\"}],\"preconditions\":[\"passed\"],\"requirement_exercised\":false}"
+      }
+    },
+    "status": "completed",
+    "package_versions": {
+      "deepeval": "4.2.8"
+    },
+    "wall_seconds": 0.22060210000199731,
+    "calls_attempted": 1,
+    "repetition": 1,
+    "order_name": "reversed"
+  }
+]
