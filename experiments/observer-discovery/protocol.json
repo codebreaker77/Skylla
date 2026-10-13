@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-10-13T11:43:31.153641+00:00",
+  "scope": "Exposed development; not a repair or model comparison",
+  "source_identities": {
+    "luigi-7": {
+      "commit": "dd1f2ce0061e7787166522a3c75339ba4755dd2c",
+      "source_sha256": "3fed31179dff4a273d5ae10035d98ef26cb8d37b342cdef67bf23b2cc6674099"
+    },
+    "tornado-6": {
+      "commit": "fb74e4816ccfa7fc6a7abd8c8aab1f415cfc1b13",
+      "source_sha256": "ddbd0fa35fa6da2264dc5b91da5a472bffe9da13ff6386af17c74bb10c28c529"
+    }
+  },
+  "cases": [
+    {
+      "id": "luigi-7",
+      "repository": "https://github.com/spotify/luigi",
+      "buggy_commit": "dd1f2ce0061e7787166522a3c75339ba4755dd2c",
+      "fixed_commit": "daf9ce99a3a7ed4227d1564570c5fce8848357e5",
+      "benchmark_python": "3.8.3",
+      "test_file": "test/scheduler_api_test.py",
+      "test_mode": "pytest",
+      "targets": [
+        "test/scheduler_api_test.py::SchedulerApiTest::test_status_wont_override"
+      ],
+      "original_commands": [
+        "pytest test/scheduler_api_test.py::SchedulerApiTest::test_status_wont_override"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    },
+    {
+      "id": "tornado-6",
+      "repository": "https://github.com/tornadoweb/tornado",
+      "buggy_commit": "fb74e4816ccfa7fc6a7abd8c8aab1f415cfc1b13",
+      "fixed_commit": "2905ee4fb3c283d40b10f609359e189c83a0dc06",
+      "benchmark_python": "3.7.0",
+      "test_file": "tornado/test/asyncio_test.py",
+      "test_mode": "unittest",
+      "targets": [
+        "tornado.test.asyncio_test.LeakTest.test_ioloop_close_leak",
+        "tornado.test.asyncio_test.LeakTest.test_asyncio_close_leak"
+      ],
+      "original_commands": [
+        "python -m unittest -q tornado.test.asyncio_test.LeakTest.test_ioloop_close_leak",
+        "python -m unittest -q tornado.test.asyncio_test.LeakTest.test_asyncio_close_leak"
+      ],
+      "selection_reason": "Execution/workflow symptoms suggested by test names; selected before source inspection and without viewing reference patches"
+    }
+  ],
+  "repetitions": 3,
+  "cycles": [
+    1,
+    10
+  ],
+  "arms": [
+    "normalize",
+    "source_containers"
+  ],
+  "neighbor_tests": {
+    "tornado-6": "tornado.test.asyncio_test.AsyncIOLoopTest.test_asyncio_callback",
+    "luigi-7": "test/scheduler_api_test.py::SchedulerApiTest::test_dep"
+  },
+  "implementation_sha256": {
+    "tools/study/observer_candidates.py": "819bdf911b916f1e942416f71f3ca8d6da09ecd232020d1424ac9bf0ce50e26d",
+    "tools/study/observer_probe.py": "eae0c2d4dd280889d110f9d80ad2510a4cc96c47189ccda37680412ed0fd5845",
+    "tools/study/observer_study.py": "da02ef7c07ba27a9a2c3e67060f49cfa405d5a28950099cc57ecfca39035ef59",
+    "tools/study/process_record.py": "22eff277ebc1842c4d355c2e86601fe72bc5267a33e9737c0de87076e72086b2",
+    "tools/pilot/prepare.py": "497441a69253bf2f74408ec25ff81ca91dbde415e4d138fd0ea323dfc041df08",
+    "tools/pilot/run.py": "5db9b103dc1508b2e406e7274b65ffd971597c4b957ca67c6c357b5623d28ca1"
+  },
+  "method_sha256": "c30919d4a55d8aa9f9d767b25effa51bf1fe6f7ff30c248ab366bf89256b60b1",
+  "proposals_sha256": "5faf1e43d49fc18a73237619de4fac915b65eb3228be183c62f78eb714888e1c",
+  "generation_and_source_check_seconds": 8.6170251
+}
