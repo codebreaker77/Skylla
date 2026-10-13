@@ -62,6 +62,10 @@ outcome labels, divided by estimated seconds. It is a heuristic, not information
 gain, calibrated causal confidence, or expected repair value. Exact duplicate
 argument vectors count once. Conflicting predictions or control tags for the same
 execution invalidate that group. Cost and an argument-vector hash break ties.
+The score can change its selected execution when one explanation is duplicated
+under another hypothesis ID. The current schema does not encode hypothesis
+aliases; see the [reproduced counterexample](IDEATION.md). Candidate deduplication
+does not solve this separate hypothesis-representation limitation.
 Setup failures do not falsify hypotheses. Returning to the solver does not assert
 repair success.
 

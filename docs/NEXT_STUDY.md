@@ -3,6 +3,12 @@
 October 13, 2026. Proposed plan. This document formulates a testable direction;
 it does not claim a new algorithm, established novelty, or an existing moat.
 
+Follow-up: the [ideation memo](IDEATION.md) proposes a narrower mechanism study:
+choose when to repair an experiment's setup, intervention, or observation before
+expanding explanations. It adds closer baselines and counterexamples to the
+current selector. The staged evaluation below remains a planning framework;
+this proposed mechanism has not been implemented or shown to improve repairs.
+
 ## Decision
 
 Time-box the next research iteration to two focused weeks. Investigate whether

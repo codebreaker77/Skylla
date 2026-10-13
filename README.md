@@ -43,6 +43,8 @@ See the [controller contract](docs/CONTROLLER.md) for integration boundaries.
 
 ## Read the design
 
+- [Latest research ideation](docs/IDEATION.md): experiment repair, new prior-art
+  overlap, reproducible design counterexamples, and the next falsification study.
 - [Expansion development report](experiments/expansion/REPORT.md): screening,
   runtime observations, setup deviations, and the next evaluation gate.
 - [Claim matrix](docs/CLAIM_MATRIX.md): implemented behavior, prior-art overlap,

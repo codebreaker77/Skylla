@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "purpose": "Design falsification; no novelty, prevalence, or repair-performance claim",
+  "controller_sha256": "c8d50465d9aca0c7194fc9e612a5a65482e1d72c0a1c1bae529fc8bb1eefad9e",
+  "checker_sha256": "893d7c6a6884fe03acc54ca8dd0a040dd81afd7307c69920d824881d5adb785c",
+  "hypothesis_duplication": {
+    "kind": "constructed counterexample against current controller",
+    "alias_assumption": "C_reworded denotes the same explanation as C",
+    "before": {
+      "selected": "probe-a",
+      "counts": {
+        "probe-a": 2,
+        "probe-c": 2
+      }
+    },
+    "after": {
+      "selected": "probe-c",
+      "counts": {
+        "probe-a": 3,
+        "probe-c": 4
+      }
+    },
+    "choice_changed": true,
+    "limitation": "Does not imply hypotheses with matching predictions are semantically equivalent"
+  },
+  "observation_projection": {
+    "kind": "post-hoc projection of existing observations; no new target executions",
+    "source": "experiments/expansion/runtime/results/run-001/observations.jsonl",
+    "parsed_records_sha256": "7ec4fa0351fdd16a950180954b3bac8cd009b7128195faf4654955e9a6f7b89d",
+    "pairs": [
+      {
+        "probe": "asyncio_close",
+        "native_closed": {
+          "buggy": true,
+          "fixed": true
+        },
+        "registry_delta": {
+          "buggy": 10,
+          "fixed": 1
+        }
+      },
+      {
+        "probe": "gc",
+        "native_closed": {
+          "buggy": true,
+          "fixed": true
+        },
+        "registry_delta": {
+          "buggy": 10,
+          "fixed": 0
+        }
+      },
+      {
+        "probe": "repeated_close",
+        "native_closed": {
+          "buggy": true,
+          "fixed": true
+        },
+        "registry_delta": {
+          "buggy": 10,
+          "fixed": 0
+        }
+      },
+      {
+        "probe": "single_close",
+        "native_closed": {
+          "buggy": true,
+          "fixed": true
+        },
+        "registry_delta": {
+          "buggy": 1,
+          "fixed": 0
+        }
+      }
+    ],
+    "changed_native_closed_pairs": 0,
+    "changed_registry_pairs": 4,
+    "limitation": "Observer field chosen after seeing results; no automatic discovery or held-out result"
+  },
+  "null_result_ambiguity": {
+    "kind": "exhaustive truth table for an assumed Boolean model",
+    "equation": "Y = H * R * O",
+    "worlds": [
+      {
+        "H": 0,
+        "R": 0,
+        "O": 0,
+        "Y": 0
+      },
+      {
+        "H": 0,
+        "R": 0,
+        "O": 1,
+        "Y": 0
+      },
+      {
+        "H": 0,
+        "R": 1,
+        "O": 0,
+        "Y": 0
+      },
+      {
+        "H": 0,
+        "R": 1,
+        "O": 1,
+        "Y": 0
+      },
+      {
+        "H": 1,
+        "R": 0,
+        "O": 0,
+        "Y": 0
+      },
+      {
+        "H": 1,
+        "R": 0,
+        "O": 1,
+        "Y": 0
+      },
+      {
+        "H": 1,
+        "R": 1,
+        "O": 0,
+        "Y": 0
+      },
+      {
+        "H": 1,
+        "R": 1,
+        "O": 1,
+        "Y": 1
+      }
+    ],
+    "null_worlds": 7,
+    "H_values_compatible_with_null": [
+      0,
+      1
+    ],
+    "limitation": "R and O are latent model variables, not implemented oracles; noise and confounding omitted"
+  }
+}
