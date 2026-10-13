@@ -49,8 +49,8 @@ confirmation data or be used to estimate prevalence.
 | Case | Development role | Current evidence | Next gate |
 | --- | --- | --- | --- |
 | Xarray 3677 | Evidence-handling/normalization control | [Replay completed](../experiments/evidence-pilot/REPORT.md): nine valid processes; caught method failure exits zero | Retain as control; improve failure-path logging before broader screening |
-| Tornado 6 (BugsInPy) | Candidate observation-surface case | Prior runtime probes distinguish registry behavior while a native closure field does not | Provide issue/source to generator without useful observer; determine whether native tools already resolve it |
-| Luigi 7 (BugsInPy) | Adequate-probe control | Earlier identity/status/order probes all distinguish versions | Ensure proposed method avoids unnecessary expansion |
+| Tornado 6 (BugsInPy) | Candidate observation-surface case | [AST generator replay](../experiments/observer-discovery/REPORT.md) supplies a distinguishing field among eight proposals | Test receiver-aware filtering, then equal-budget native-agent repairs; blind discovery remains untested |
+| Luigi 7 (BugsInPy) | Adequate-probe control | Normalized probe distinguishes versions in all three repeated pairs | Retain the cheap probe; avoided expansion and agent repair remain unmeasured |
 
 Every queued case and attempted setup gets a disposition. Do not quietly replace
 cases after seeing policy outcomes. BugsInPy cases retain the revisions and

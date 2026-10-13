@@ -35,6 +35,10 @@ production-code repair, and native harness adapters remain planned. State IDs
 and precondition checks depend on the integrating caller. See the
 [controller contract](docs/CONTROLLER.md) for complete behavior and limitations.
 
+Separate study tooling now generates container-observation candidates from source
+ASTs. It is a bounded research heuristic, with no learned ranking or automatic
+repair; see the [development replay](experiments/observer-discovery/REPORT.md).
+
 ## Quick start
 
 Requires Python 3.9 or newer. The controller has no runtime dependencies.
@@ -118,6 +122,11 @@ Skylla paper yet.
 
 Earlier development work is preserved separately:
 
+- [Source-proposed observation study](experiments/observer-discovery/REPORT.md):
+  44 processes across two exposed historical bugs. Eight AST proposals include
+  one distinguishing Tornado observation; the Luigi normalized probe already
+  suffices. [Graph](experiments/observer-discovery/figures/source-observations.png).
+  Candidate availability is measured; native-agent repair gains remain untested.
 - [Real-bug evidence replay](experiments/evidence-pilot/REPORT.md): on pinned
   Xarray source, nine valid processes distinguish an unexercised method, a
   caught method failure at zero exit, and an explicit failed requirement check.
@@ -137,8 +146,9 @@ Earlier development work is preserved separately:
 
 ## Reproduce the work
 
-The standard-library suite contains 23 tests covering controller decisions,
-controlled-study apparatus, screening triage, and trajectory extraction.
+The standard-library suite contains 29 tests covering controller decisions,
+controlled-study apparatus, screening triage, trajectory extraction, AST proposal
+boundaries, and process/readiness failure handling.
 
 ```sh
 python -m unittest discover -s tests -v

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "script_sha256": "04a0370e4870e30c3887541ecde28f8b0342abf774460169fb29022de9d04333",
+  "source_sha256": {
+    "results/run-001/processes.json": "a3eebbd521ecb12a31d02d8769be239a0a3024602249b3dedee9bb4f6431936c",
+    "results/run-001/analysis.json": "ca8afa1c91b55333d32414b27517af864e11a825b47a663678426b2d53f7a45d"
+  },
+  "versions": {
+    "matplotlib": "3.9.4",
+    "numpy": "1.26.4"
+  },
+  "assets_sha256": {
+    "source-observations.png": "70afeb5f72ac4ed5e4e31e075a76d0b6818dc64cccc5ff1b559ddec5190869b9",
+    "source-observations.svg": "5644eceb86dcf74592936ddabf1fda6c87818e0f6110055baa5fc1ebd2e701c5"
+  }
+}

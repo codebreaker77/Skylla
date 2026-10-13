@@ -1,0 +1,417 @@
+{
+  "schema_version": 1,
+  "analysis_type": "post-run descriptive reference contrast",
+  "processes_sha256": "a3eebbd521ecb12a31d02d8769be239a0a3024602249b3dedee9bb4f6431936c",
+  "summary_sha256": "449bcb232119fe4616e16fd1236951126500364b62ad4ba06b97ab504de412b8",
+  "script_sha256": "d8b77fdc2b35091e1abfafa70b05ed85aee751be1e20993ea7c1e97554c8987b",
+  "expected_probe_pairs": 15,
+  "missing_probe_pairs": [],
+  "probe_failures": [],
+  "contrasts": [
+    {
+      "case": "luigi-7",
+      "arm": "normalize",
+      "pairs": 3,
+      "comparable_pairs": 3,
+      "different_pairs": 3
+    },
+    {
+      "case": "tornado-6",
+      "arm": "normalize",
+      "pairs": 6,
+      "comparable_pairs": 6,
+      "different_pairs": 0
+    },
+    {
+      "case": "tornado-6",
+      "arm": "source_containers",
+      "pairs": 6,
+      "comparable_pairs": 6,
+      "different_pairs": 6
+    }
+  ],
+  "pairs": [
+    {
+      "case": "luigi-7",
+      "arm": "normalize",
+      "cycles": 1,
+      "repetition": 0,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "case": "luigi-7",
+      "arm": "normalize",
+      "cycles": 1,
+      "repetition": 1,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "case": "luigi-7",
+      "arm": "normalize",
+      "cycles": 1,
+      "repetition": 2,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "case": "tornado-6",
+      "arm": "normalize",
+      "cycles": 1,
+      "repetition": 0,
+      "comparable": true,
+      "different": false
+    },
+    {
+      "case": "tornado-6",
+      "arm": "normalize",
+      "cycles": 1,
+      "repetition": 1,
+      "comparable": true,
+      "different": false
+    },
+    {
+      "case": "tornado-6",
+      "arm": "normalize",
+      "cycles": 1,
+      "repetition": 2,
+      "comparable": true,
+      "different": false
+    },
+    {
+      "case": "tornado-6",
+      "arm": "normalize",
+      "cycles": 10,
+      "repetition": 0,
+      "comparable": true,
+      "different": false
+    },
+    {
+      "case": "tornado-6",
+      "arm": "normalize",
+      "cycles": 10,
+      "repetition": 1,
+      "comparable": true,
+      "different": false
+    },
+    {
+      "case": "tornado-6",
+      "arm": "normalize",
+      "cycles": 10,
+      "repetition": 2,
+      "comparable": true,
+      "different": false
+    },
+    {
+      "case": "tornado-6",
+      "arm": "source_containers",
+      "cycles": 1,
+      "repetition": 0,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "case": "tornado-6",
+      "arm": "source_containers",
+      "cycles": 1,
+      "repetition": 1,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "case": "tornado-6",
+      "arm": "source_containers",
+      "cycles": 1,
+      "repetition": 2,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "case": "tornado-6",
+      "arm": "source_containers",
+      "cycles": 10,
+      "repetition": 0,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "case": "tornado-6",
+      "arm": "source_containers",
+      "cycles": 10,
+      "repetition": 1,
+      "comparable": true,
+      "different": true
+    },
+    {
+      "case": "tornado-6",
+      "arm": "source_containers",
+      "cycles": 10,
+      "repetition": 2,
+      "comparable": true,
+      "different": true
+    }
+  ],
+  "candidates": [
+    {
+      "candidate": {
+        "id": "candidate-000",
+        "scope": "class",
+        "module": "tornado.ioloop",
+        "declaring_class": "IOLoop",
+        "attribute": "_ioloop_for_asyncio",
+        "source_file": "tornado/ioloop.py",
+        "source_line": 188,
+        "source_sha256": "4833cc1046913a19673db6ee37c5e41e4ce7ad3a4bacdfc8a976da44623c000f",
+        "extractor": "length",
+        "reason": "Container initializer found in source AST"
+      },
+      "comparable_pairs": 6,
+      "different_pairs": 6,
+      "unavailable_pairs": 0
+    },
+    {
+      "candidate": {
+        "id": "candidate-001",
+        "scope": "instance",
+        "module": "tornado.ioloop",
+        "declaring_class": "PollIOLoop",
+        "attribute": "_handlers",
+        "source_file": "tornado/ioloop.py",
+        "source_line": 850,
+        "source_sha256": "4833cc1046913a19673db6ee37c5e41e4ce7ad3a4bacdfc8a976da44623c000f",
+        "extractor": "length",
+        "reason": "Container initializer found in source AST"
+      },
+      "comparable_pairs": 0,
+      "different_pairs": 0,
+      "unavailable_pairs": 6
+    },
+    {
+      "candidate": {
+        "id": "candidate-002",
+        "scope": "instance",
+        "module": "tornado.ioloop",
+        "declaring_class": "PollIOLoop",
+        "attribute": "_events",
+        "source_file": "tornado/ioloop.py",
+        "source_line": 851,
+        "source_sha256": "4833cc1046913a19673db6ee37c5e41e4ce7ad3a4bacdfc8a976da44623c000f",
+        "extractor": "length",
+        "reason": "Container initializer found in source AST"
+      },
+      "comparable_pairs": 0,
+      "different_pairs": 0,
+      "unavailable_pairs": 6
+    },
+    {
+      "candidate": {
+        "id": "candidate-003",
+        "scope": "instance",
+        "module": "tornado.ioloop",
+        "declaring_class": "PollIOLoop",
+        "attribute": "_callbacks",
+        "source_file": "tornado/ioloop.py",
+        "source_line": 852,
+        "source_sha256": "4833cc1046913a19673db6ee37c5e41e4ce7ad3a4bacdfc8a976da44623c000f",
+        "extractor": "length",
+        "reason": "Container initializer found in source AST"
+      },
+      "comparable_pairs": 0,
+      "different_pairs": 0,
+      "unavailable_pairs": 6
+    },
+    {
+      "candidate": {
+        "id": "candidate-004",
+        "scope": "instance",
+        "module": "tornado.ioloop",
+        "declaring_class": "PollIOLoop",
+        "attribute": "_timeouts",
+        "source_file": "tornado/ioloop.py",
+        "source_line": 853,
+        "source_sha256": "4833cc1046913a19673db6ee37c5e41e4ce7ad3a4bacdfc8a976da44623c000f",
+        "extractor": "length",
+        "reason": "Container initializer found in source AST"
+      },
+      "comparable_pairs": 0,
+      "different_pairs": 0,
+      "unavailable_pairs": 6
+    },
+    {
+      "candidate": {
+        "id": "candidate-005",
+        "scope": "instance",
+        "module": "tornado.platform.asyncio",
+        "declaring_class": "BaseAsyncIOLoop",
+        "attribute": "handlers",
+        "source_file": "tornado/platform/asyncio.py",
+        "source_line": 36,
+        "source_sha256": "86926d863f248fca5a752c1740536a868efc4eea124571cd08648c3ca7437ccb",
+        "extractor": "length",
+        "reason": "Container initializer found in source AST"
+      },
+      "comparable_pairs": 6,
+      "different_pairs": 0,
+      "unavailable_pairs": 0
+    },
+    {
+      "candidate": {
+        "id": "candidate-006",
+        "scope": "instance",
+        "module": "tornado.platform.asyncio",
+        "declaring_class": "BaseAsyncIOLoop",
+        "attribute": "readers",
+        "source_file": "tornado/platform/asyncio.py",
+        "source_line": 38,
+        "source_sha256": "86926d863f248fca5a752c1740536a868efc4eea124571cd08648c3ca7437ccb",
+        "extractor": "length",
+        "reason": "Container initializer found in source AST"
+      },
+      "comparable_pairs": 6,
+      "different_pairs": 0,
+      "unavailable_pairs": 0
+    },
+    {
+      "candidate": {
+        "id": "candidate-007",
+        "scope": "instance",
+        "module": "tornado.platform.asyncio",
+        "declaring_class": "BaseAsyncIOLoop",
+        "attribute": "writers",
+        "source_file": "tornado/platform/asyncio.py",
+        "source_line": 39,
+        "source_sha256": "86926d863f248fca5a752c1740536a868efc4eea124571cd08648c3ca7437ccb",
+        "extractor": "length",
+        "reason": "Container initializer found in source AST"
+      },
+      "comparable_pairs": 6,
+      "different_pairs": 0,
+      "unavailable_pairs": 0
+    }
+  ],
+  "costs": [
+    {
+      "case": "luigi-7",
+      "kind": "probe",
+      "arm": "normalize",
+      "processes": 6,
+      "elapsed_seconds": 2.9265807999999964
+    },
+    {
+      "case": "luigi-7",
+      "kind": "readiness",
+      "arm": "",
+      "processes": 2,
+      "elapsed_seconds": 1.4575862999999996
+    },
+    {
+      "case": "luigi-7",
+      "kind": "reference_test",
+      "arm": "",
+      "processes": 4,
+      "elapsed_seconds": 4.860301199999999
+    },
+    {
+      "case": "tornado-6",
+      "kind": "probe",
+      "arm": "normalize",
+      "processes": 12,
+      "elapsed_seconds": 4.3227974999999965
+    },
+    {
+      "case": "tornado-6",
+      "kind": "probe",
+      "arm": "source_containers",
+      "processes": 12,
+      "elapsed_seconds": 4.213036899999988
+    },
+    {
+      "case": "tornado-6",
+      "kind": "readiness",
+      "arm": "",
+      "processes": 2,
+      "elapsed_seconds": 0.7155422999999992
+    },
+    {
+      "case": "tornado-6",
+      "kind": "reference_test",
+      "arm": "",
+      "processes": 6,
+      "elapsed_seconds": 3.5753373000000153
+    }
+  ],
+  "reference_tests": [
+    {
+      "case": "luigi-7",
+      "variant": "buggy",
+      "target": "test/scheduler_api_test.py::SchedulerApiTest::test_status_wont_override",
+      "returncode": 1,
+      "timed_out": false
+    },
+    {
+      "case": "luigi-7",
+      "variant": "buggy",
+      "target": "test/scheduler_api_test.py::SchedulerApiTest::test_dep",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "case": "luigi-7",
+      "variant": "fixed",
+      "target": "test/scheduler_api_test.py::SchedulerApiTest::test_status_wont_override",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "case": "luigi-7",
+      "variant": "fixed",
+      "target": "test/scheduler_api_test.py::SchedulerApiTest::test_dep",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "case": "tornado-6",
+      "variant": "buggy",
+      "target": "tornado.test.asyncio_test.LeakTest.test_ioloop_close_leak",
+      "returncode": 1,
+      "timed_out": false
+    },
+    {
+      "case": "tornado-6",
+      "variant": "buggy",
+      "target": "tornado.test.asyncio_test.LeakTest.test_asyncio_close_leak",
+      "returncode": 1,
+      "timed_out": false
+    },
+    {
+      "case": "tornado-6",
+      "variant": "buggy",
+      "target": "tornado.test.asyncio_test.AsyncIOLoopTest.test_asyncio_callback",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "case": "tornado-6",
+      "variant": "fixed",
+      "target": "tornado.test.asyncio_test.LeakTest.test_ioloop_close_leak",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "case": "tornado-6",
+      "variant": "fixed",
+      "target": "tornado.test.asyncio_test.LeakTest.test_asyncio_close_leak",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "case": "tornado-6",
+      "variant": "fixed",
+      "target": "tornado.test.asyncio_test.AsyncIOLoopTest.test_asyncio_callback",
+      "returncode": 0,
+      "timed_out": false
+    }
+  ],
+  "scope": "Two exposed bugs, repeated probes; no independent repair utility labels or model comparison"
+}
