@@ -4,6 +4,12 @@ October 13, 2026. A research proposal supported by design counterexamples, not a
 breakthrough claim. This memo extends the [study plan](NEXT_STUDY.md) and narrows
 the prior suggestion to discover missing causes. No external model runs were made.
 
+Follow-up: the [controlled mechanism study](../experiments/probe-repair/REPORT.md)
+has now run. Simple normalization matched both calibration policies on recovery
+and used fewer target calls. Its deliberately masked observer also passed the
+narrow control while hiding the fault. This limits the case for calibration;
+automatic observer discovery and real agent-repair benefit remain untested.
+
 ## The proposed question
 
 **Can a debugging tool distinguish an inadequate experiment from an inadequate

@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "analysis_status": "Post-run descriptive analysis; no new target executions",
+  "episodes_sha256": "d35e679e5c346542817d16fd41b4e16d5579c309a95292561e2dfe2732c9be76",
+  "analysis_script_sha256": "845dcdb2cb84c68de9f54c68948857c325ca7e227ce35a633b8d351b4c087b02",
+  "paired_conditional_vs": {
+    "blind_search": {
+      "positive_wins": 36,
+      "positive_losses": 0,
+      "positive_ties": 48,
+      "completed_cost_pairs": 168,
+      "mean_extra_invocations_conditional": -0.8809523809523809
+    },
+    "input_sweep": {
+      "positive_wins": 12,
+      "positive_losses": 0,
+      "positive_ties": 72,
+      "completed_cost_pairs": 168,
+      "mean_extra_invocations_conditional": 0.4523809523809524
+    },
+    "normalize_then_sweep": {
+      "positive_wins": 0,
+      "positive_losses": 0,
+      "positive_ties": 84,
+      "completed_cost_pairs": 168,
+      "mean_extra_invocations_conditional": 2.642857142857143
+    },
+    "always_calibrate": {
+      "positive_wins": 0,
+      "positive_losses": 0,
+      "positive_ties": 84,
+      "completed_cost_pairs": 168,
+      "mean_extra_invocations_conditional": -0.42857142857142855
+    }
+  },
+  "positive_results_by_order_seed": {
+    "blind_search": {
+      "101": {
+        "positive_episodes": 28,
+        "verified": 24
+      },
+      "202": {
+        "positive_episodes": 28,
+        "verified": 4
+      },
+      "303": {
+        "positive_episodes": 28,
+        "verified": 8
+      }
+    },
+    "input_sweep": {
+      "101": {
+        "positive_episodes": 28,
+        "verified": 20
+      },
+      "202": {
+        "positive_episodes": 28,
+        "verified": 20
+      },
+      "303": {
+        "positive_episodes": 28,
+        "verified": 20
+      }
+    },
+    "normalize_then_sweep": {
+      "101": {
+        "positive_episodes": 28,
+        "verified": 24
+      },
+      "202": {
+        "positive_episodes": 28,
+        "verified": 24
+      },
+      "303": {
+        "positive_episodes": 28,
+        "verified": 24
+      }
+    },
+    "always_calibrate": {
+      "101": {
+        "positive_episodes": 28,
+        "verified": 24
+      },
+      "202": {
+        "positive_episodes": 28,
+        "verified": 24
+      },
+      "303": {
+        "positive_episodes": 28,
+        "verified": 24
+      }
+    },
+    "conditional_calibrate": {
+      "101": {
+        "positive_episodes": 28,
+        "verified": 24
+      },
+      "202": {
+        "positive_episodes": 28,
+        "verified": 24
+      },
+      "303": {
+        "positive_episodes": 28,
+        "verified": 24
+      }
+    }
+  },
+  "total_policy_invocations": 4960,
+  "total_reference_invocations": 4024,
+  "example_episode_id": "configuration__source_and_observer__True__101__conditional_calibrate",
+  "example_trace": [
+    {
+      "invocation": 1,
+      "kind": "probe",
+      "probe": {
+        "input": "input-695",
+        "observer": "status",
+        "source": "fallback"
+      },
+      "receipt": {
+        "observation": "ok",
+        "symptom": false,
+        "source_matches": false
+      }
+    },
+    {
+      "invocation": 2,
+      "kind": "probe",
+      "probe": {
+        "input": "input-695",
+        "observer": "status",
+        "source": "workspace"
+      },
+      "receipt": {
+        "observation": "ok",
+        "symptom": false,
+        "source_matches": true
+      }
+    },
+    {
+      "invocation": 3,
+      "kind": "calibration_clean",
+      "probe": {
+        "input": "input-695",
+        "observer": "status",
+        "source": "workspace"
+      },
+      "receipt": {
+        "observation": "ok",
+        "symptom": false,
+        "source_matches": true
+      }
+    },
+    {
+      "invocation": 4,
+      "kind": "calibration_positive",
+      "probe": {
+        "input": "input-695",
+        "observer": "status",
+        "source": "workspace"
+      },
+      "receipt": {
+        "observation": "ok",
+        "symptom": false,
+        "source_matches": true
+      }
+    },
+    {
+      "invocation": 5,
+      "kind": "calibration_placebo",
+      "probe": {
+        "input": "input-695",
+        "observer": "status",
+        "source": "workspace"
+      },
+      "receipt": {
+        "observation": "ok",
+        "symptom": false,
+        "source_matches": true
+      }
+    },
+    {
+      "invocation": 6,
+      "kind": "probe",
+      "probe": {
+        "input": "input-695",
+        "observer": "result",
+        "source": "workspace"
+      },
+      "receipt": {
+        "observation": "disk",
+        "symptom": true,
+        "source_matches": true
+      }
+    }
+  ]
+}

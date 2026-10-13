@@ -23,6 +23,12 @@ buggy/fixed difference. Another 24 runtime probe executions cover three of those
 cases. These are development observations, not measured agent-repair improvement.
 There is no published paper yet.
 
+A subsequent [controlled probe-repair study](experiments/probe-repair/REPORT.md)
+ran 840 episodes over four original microprograms. Simple normalization matched
+calibration-based recovery while using fewer target calls. This is development
+mechanism evidence; the episodes are not independent historical bugs or agent
+repair evaluations.
+
 The initial literature review points toward studying experiment selection under a
 fixed debugging budget. We will test that direction before investing in a broad
 platform or training a selector.
@@ -43,6 +49,9 @@ See the [controller contract](docs/CONTROLLER.md) for integration boundaries.
 
 ## Read the design
 
+- [Controlled experiment method](experiments/probe-repair/METHODOLOGY.md) and
+  [observations](experiments/probe-repair/REPORT.md): frozen protocol, full traces,
+  negative results for calibration overhead, and reproducible analysis.
 - [Latest research ideation](docs/IDEATION.md): experiment repair, new prior-art
   overlap, reproducible design counterexamples, and the next falsification study.
 - [Expansion development report](experiments/expansion/REPORT.md): screening,

@@ -1,0 +1,238 @@
+{
+  "arms": {
+    "blind_search": {
+      "positive_episodes": 84,
+      "verified_discriminators": 36,
+      "negative_episodes": 84,
+      "false_completions": 0,
+      "completed_episodes": 168,
+      "target_invocations": 1200,
+      "mean_invocations_completed": 7.142857142857143,
+      "mean_invocations_positive": 6.285714285714286,
+      "calibration_invocations": 0,
+      "reference_invocations": 1200,
+      "masked_positive_controls_passed": 0,
+      "sum_subprocess_wall_seconds": 35.90635030000004
+    },
+    "input_sweep": {
+      "positive_episodes": 84,
+      "verified_discriminators": 60,
+      "negative_episodes": 84,
+      "false_completions": 0,
+      "completed_episodes": 168,
+      "target_invocations": 976,
+      "mean_invocations_completed": 5.809523809523809,
+      "mean_invocations_positive": 5.333333333333333,
+      "calibration_invocations": 0,
+      "reference_invocations": 976,
+      "masked_positive_controls_passed": 0,
+      "sum_subprocess_wall_seconds": 35.90286940000002
+    },
+    "normalize_then_sweep": {
+      "positive_episodes": 84,
+      "verified_discriminators": 72,
+      "negative_episodes": 84,
+      "false_completions": 0,
+      "completed_episodes": 168,
+      "target_invocations": 608,
+      "mean_invocations_completed": 3.619047619047619,
+      "mean_invocations_positive": 2.6666666666666665,
+      "calibration_invocations": 0,
+      "reference_invocations": 608,
+      "masked_positive_controls_passed": 0,
+      "sum_subprocess_wall_seconds": 35.05627740000002
+    },
+    "always_calibrate": {
+      "positive_episodes": 84,
+      "verified_discriminators": 72,
+      "negative_episodes": 84,
+      "false_completions": 0,
+      "completed_episodes": 168,
+      "target_invocations": 1124,
+      "mean_invocations_completed": 6.690476190476191,
+      "mean_invocations_positive": 5.809523809523809,
+      "calibration_invocations": 504,
+      "reference_invocations": 620,
+      "masked_positive_controls_passed": 12,
+      "sum_subprocess_wall_seconds": 35.571160799999994
+    },
+    "conditional_calibrate": {
+      "positive_episodes": 84,
+      "verified_discriminators": 72,
+      "negative_episodes": 84,
+      "false_completions": 0,
+      "completed_episodes": 168,
+      "target_invocations": 1052,
+      "mean_invocations_completed": 6.261904761904762,
+      "mean_invocations_positive": 4.9523809523809526,
+      "calibration_invocations": 432,
+      "reference_invocations": 620,
+      "masked_positive_controls_passed": 12,
+      "sum_subprocess_wall_seconds": 35.37673690000001
+    }
+  },
+  "positive_results_by_condition": {
+    "blind_search": {
+      "adequate": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "wrong_input": {
+        "episodes": 12,
+        "verified": 4
+      },
+      "wrong_observer": {
+        "episodes": 12,
+        "verified": 4
+      },
+      "wrong_source": {
+        "episodes": 12,
+        "verified": 4
+      },
+      "input_and_observer": {
+        "episodes": 12,
+        "verified": 4
+      },
+      "source_and_observer": {
+        "episodes": 12,
+        "verified": 8
+      },
+      "masked_result": {
+        "episodes": 12,
+        "verified": 0
+      }
+    },
+    "input_sweep": {
+      "adequate": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "wrong_input": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "wrong_observer": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "wrong_source": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "input_and_observer": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "source_and_observer": {
+        "episodes": 12,
+        "verified": 0
+      },
+      "masked_result": {
+        "episodes": 12,
+        "verified": 0
+      }
+    },
+    "normalize_then_sweep": {
+      "adequate": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "wrong_input": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "wrong_observer": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "wrong_source": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "input_and_observer": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "source_and_observer": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "masked_result": {
+        "episodes": 12,
+        "verified": 0
+      }
+    },
+    "always_calibrate": {
+      "adequate": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "wrong_input": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "wrong_observer": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "wrong_source": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "input_and_observer": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "source_and_observer": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "masked_result": {
+        "episodes": 12,
+        "verified": 0
+      }
+    },
+    "conditional_calibrate": {
+      "adequate": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "wrong_input": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "wrong_observer": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "wrong_source": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "input_and_observer": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "source_and_observer": {
+        "episodes": 12,
+        "verified": 12
+      },
+      "masked_result": {
+        "episodes": 12,
+        "verified": 0
+      }
+    }
+  },
+  "records": 840,
+  "completed": 840,
+  "failures": [],
+  "started_at_utc": "2026-10-13T05:24:02.208355+00:00",
+  "finished_at_utc": "2026-10-13T05:25:07.375337+00:00",
+  "elapsed_wall_seconds": 65.16621260000001,
+  "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.22000-SP0",
+  "workers": 3,
+  "protocol_sha256": "d1179cf5a1d5e57889dbdf566f4584d68bfa8f18095fa57704a86cce438b94aa",
+  "episodes_sha256": "d35e679e5c346542817d16fd41b4e16d5579c309a95292561e2dfe2732c9be76",
+  "purpose": "Controlled development mechanism study, no model or agent repair evaluation"
+}

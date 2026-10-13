@@ -7,7 +7,13 @@ Follow-up: the [ideation memo](IDEATION.md) proposes a narrower mechanism study:
 choose when to repair an experiment's setup, intervention, or observation before
 expanding explanations. It adds closer baselines and counterexamples to the
 current selector. The staged evaluation below remains a planning framework;
-this proposed mechanism has not been implemented or shown to improve repairs.
+the update below states the implemented scope and measured result.
+
+Update after the [v1 controlled experiment](../experiments/probe-repair/REPORT.md):
+bounded deterministic experiment-repair heuristics have been implemented and
+compared on four constructed fault families. Normalization matches calibration
+at lower invocation cost. Agent repair and automatic observer discovery remain
+pending; the original broader plan below has not been completed.
 
 ## Decision
 

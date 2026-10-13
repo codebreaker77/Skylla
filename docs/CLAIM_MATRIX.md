@@ -8,6 +8,11 @@ and repairing experiments before expanding explanations. It also reproduces a
 hypothesis-alias sensitivity in the current pair-count heuristic. Neither finding
 establishes novelty or measured repair benefit.
 
+A [controlled follow-up](../experiments/probe-repair/REPORT.md) now compares five
+deterministic probe-repair heuristics. Calibration adds no recovery over simple
+normalization on its supplied menus and costs more target calls. This is evidence
+against that added step for the tested fixtures, not a repair-agent result.
+
 | Proposed claim | Present evidence | Evidence still required |
 | --- | --- | --- |
 | Provider-independent local decisions | Python/JSON core, no inference dependency, CLI smoke check | Multiple real harness integrations |
