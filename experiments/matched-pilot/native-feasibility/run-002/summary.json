@@ -1,0 +1,81 @@
+{
+  "scope": "Two native-only development feasibility episodes; no Skylla or Laya treatment",
+  "protocol_sha256": "fa64dbc7336f85034a4f28e7d8eb4c7b18ff7e880d20a69bf7ac213dbf896766",
+  "cases": [
+    {
+      "case_id": "bugsinpy:luigi-4",
+      "inference": {
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_seconds": 60.614272,
+        "usage": [
+          {
+            "input_tokens": 196788,
+            "cached_input_tokens": 159232,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1531,
+            "reasoning_output_tokens": 365
+          }
+        ],
+        "completed_command_calls": 5,
+        "stdout_sha256": "5ee54b36588a30ae6ce2dfce31e696c81190fe8e011dbabf161e97503af17ca9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "event_count": 18
+      },
+      "changed_production_files": [
+        "luigi/contrib/redshift.py"
+      ],
+      "deleted_production_files": [],
+      "patch_sha256": "9eee633f96beb86124971edc412107d95cd4a26173eb70e208edf8456f17fd02",
+      "evaluation": [
+        {
+          "kind": "target",
+          "returncode": 0,
+          "timed_out": false,
+          "record_sha256": "f5b46c23cb76658546412a3e89ccaecc775336799ad2d3405fb845e1aeb1bdc8"
+        },
+        {
+          "kind": "regression_class",
+          "returncode": 0,
+          "timed_out": false,
+          "record_sha256": "2bb5d6c7bfbd31803fcc0e2131a864cbf14548c37eef935bee01e5cfe4222f68"
+        }
+      ],
+      "status": "candidate_passes_selected_checks_pending_review"
+    },
+    {
+      "case_id": "bugsinpy:tornado-10",
+      "inference": {
+        "returncode": 1,
+        "timed_out": true,
+        "elapsed_seconds": 120.1369187,
+        "usage": [],
+        "completed_command_calls": 8,
+        "stdout_sha256": "408c108f2d4e4e2dc3dba7f36d1e756b6e1eae14dd911b12edfeec3e03b79fa4",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "event_count": 23
+      },
+      "changed_production_files": [
+        "tornado/web.py"
+      ],
+      "deleted_production_files": [],
+      "patch_sha256": "96835b0696cc069b5a862cf216812bc7586b579b478afa7dead4415587770101",
+      "evaluation": [
+        {
+          "kind": "target",
+          "returncode": 0,
+          "timed_out": false,
+          "record_sha256": "f641566fed36c51e07d390c27dbb6999795239981dace7414df12d45499a4e98"
+        },
+        {
+          "kind": "regression_class",
+          "returncode": 0,
+          "timed_out": false,
+          "record_sha256": "36b8b0fc464bb69fb122261eb4c33cc16b81fa7ba96c0b146bb8036f5273c57b"
+        }
+      ],
+      "status": "not_verified"
+    }
+  ],
+  "note": "Inspect test counts and failures before claiming verified repairs; no comparative effect measured."
+}

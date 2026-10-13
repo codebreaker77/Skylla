@@ -1,0 +1,41 @@
+{
+  "case_id": "bugsinpy:luigi-4",
+  "inference": {
+    "returncode": 0,
+    "timed_out": false,
+    "elapsed_seconds": 60.614272,
+    "usage": [
+      {
+        "input_tokens": 196788,
+        "cached_input_tokens": 159232,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1531,
+        "reasoning_output_tokens": 365
+      }
+    ],
+    "completed_command_calls": 5,
+    "stdout_sha256": "5ee54b36588a30ae6ce2dfce31e696c81190fe8e011dbabf161e97503af17ca9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "event_count": 18
+  },
+  "changed_production_files": [
+    "luigi/contrib/redshift.py"
+  ],
+  "deleted_production_files": [],
+  "patch_sha256": "9eee633f96beb86124971edc412107d95cd4a26173eb70e208edf8456f17fd02",
+  "evaluation": [
+    {
+      "kind": "target",
+      "returncode": 0,
+      "timed_out": false,
+      "record_sha256": "f5b46c23cb76658546412a3e89ccaecc775336799ad2d3405fb845e1aeb1bdc8"
+    },
+    {
+      "kind": "regression_class",
+      "returncode": 0,
+      "timed_out": false,
+      "record_sha256": "2bb5d6c7bfbd31803fcc0e2131a864cbf14548c37eef935bee01e5cfe4222f68"
+    }
+  ],
+  "status": "candidate_passes_selected_checks_pending_review"
+}

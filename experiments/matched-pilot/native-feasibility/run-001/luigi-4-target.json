@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "D:\\labs\\skylla\\artifacts\\venvs\\study\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "addopts=",
+    "test/contrib/redshift_test.py::TestS3CopyToTable::test_s3_copy_with_nonetype_columns"
+  ],
+  "cwd": "D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\luigi-4-eval-target",
+  "returncode": 1,
+  "stdout": "F                                                                        [100%]\n================================== FAILURES ===================================\n____________ TestS3CopyToTable.test_s3_copy_with_nonetype_columns _____________\n\nself = <contrib.redshift_test.TestS3CopyToTable testMethod=test_s3_copy_with_nonetype_columns>\nmock_redshift_target = <MagicMock name='RedshiftTarget' id='2068673051856'>\n\n    @mock.patch(\"luigi.contrib.redshift.RedshiftTarget\")\n    def test_s3_copy_with_nonetype_columns(self, mock_redshift_target):\n        task = DummyS3CopyToTableKey(columns=None)\n>       task.run()\n\ntest\\contrib\\redshift_test.py:337: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nluigi\\contrib\\redshift.py:338: in run\n    self.copy(cursor, path)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = DummyS3CopyToTableKey(table=dummy_table, columns=null)\ncursor = <MagicMock name='RedshiftTarget().connect().cursor()' id='2068675050176'>\nf = 's3://bucket/key'\n\n    def copy(self, cursor, f):\n        \"\"\"\n        Defines copying from s3 into redshift.\n    \n        If both key-based and role-based credentials are provided, role-based will be used.\n        \"\"\"\n        logger.info(\"Inserting file: %s\", f)\n        colnames = ''\n>       if len(self.columns) > 0:\nE       TypeError: object of type 'NoneType' has no len()\n\nluigi\\contrib\\redshift.py:356: TypeError\n============================== warnings summary ===============================\nluigi\\parameter.py:28\n  D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\luigi-4-eval-target\\luigi\\parameter.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    from collections import OrderedDict, Mapping\n\nluigi\\scheduler.py:208\n  D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\luigi-4-eval-target\\luigi\\scheduler.py:208: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    class OrderedSet(collections.MutableSet):\n\nluigi\\scheduler.py:98: 29 warnings\n  D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\luigi-4-eval-target\\luigi\\scheduler.py:98: DeprecationWarning: inspect.getargspec() is deprecated since Python 3.0, use inspect.signature() or inspect.getfullargspec()\n    fn_args = inspect.getargspec(fn)\n\n-- Docs: https://docs.pytest.org/en/stable/warnings.html\n=========================== short test summary info ===========================\nFAILED test/contrib/redshift_test.py::TestS3CopyToTable::test_s3_copy_with_nonetype_columns\n1 failed, 31 warnings in 0.61s\n",
+  "stderr": "",
+  "timed_out": false,
+  "launch_error": null,
+  "elapsed_seconds": 0.9589928000000008,
+  "payload": null,
+  "payload_error": "JSONDecodeError"
+}

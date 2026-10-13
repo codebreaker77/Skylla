@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "D:\\labs\\skylla\\artifacts\\venvs\\study\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "-q",
+    "tornado.test.websocket_test.WebSocketTest"
+  ],
+  "cwd": "D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\tornado-10-eval-regression_class",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "WARNING:tornado.access:426 GET /echo (127.0.0.1) 0.00ms\nWARNING:tornado.access:403 GET /echo (127.0.0.1) 0.00ms\nWARNING:tornado.access:403 GET /echo (127.0.0.1) 0.00ms\nWARNING:tornado.access:403 GET /echo (127.0.0.1) 1.00ms\nWARNING:tornado.access:400 GET /echo (127.0.0.1) 0.00ms\nERROR:tornado.application:Uncaught exception in /render\nTraceback (most recent call last):\n  File \"D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\tornado-10-eval-regression_class\\tornado\\websocket.py\", line 484, in _run_callback\n    result = callback(*args, **kwargs)\n  File \"D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\tornado-10-eval-regression_class\\tornado\\test\\websocket_test.py\", line 136, in on_message\n    self.write_message(self.render_string('message.html', message=message))\n  File \"D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\tornado-10-eval-regression_class\\tornado\\web.py\", line 863, in render_string\n    namespace = self.get_template_namespace()\n  File \"D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\tornado-10-eval-regression_class\\tornado\\web.py\", line 887, in get_template_namespace\n    namespace.update(self.ui)\nTypeError: 'NoneType' object is not iterable\nWARNING:tornado.access:404 GET /notfound (127.0.0.1) 1.00ms\n======================================================================\nFAIL: test_render_message (tornado.test.websocket_test.WebSocketTest)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\tornado-10-eval-regression_class\\tornado\\testing.py\", line 136, in __call__\n    result = self.orig_method(*args, **kwargs)\n  File \"D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\tornado-10-eval-regression_class\\tornado\\testing.py\", line 527, in post_coroutine\n    return self.io_loop.run_sync(\n  File \"D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\tornado-10-eval-regression_class\\tornado\\ioloop.py\", line 458, in run_sync\n    return future_cell[0].result()\n  File \"D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\tornado-10-eval-regression_class\\tornado\\concurrent.py\", line 238, in result\n    raise_exc_info(self._exc_info)\n  File \"<string>\", line 4, in raise_exc_info\n  File \"D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\tornado-10-eval-regression_class\\tornado\\gen.py\", line 1069, in run\n    yielded = self.gen.send(value)\n  File \"C:\\Users\\visma\\AppData\\Local\\Programs\\Python\\Python39\\lib\\types.py\", line 215, in send\n    return self.__wrapped.send(val)\n  File \"D:\\labs\\skylla\\artifacts\\matched-native\\run-001\\tornado-10-eval-regression_class\\tornado\\test\\websocket_test.py\", line 241, in test_render_message\n    self.assertEqual(response, '<b>hello</b>')\nAssertionError: None != '<b>hello</b>'\n\n----------------------------------------------------------------------\nRan 24 tests in 3.071s\n\nFAILED (failures=1)\n",
+  "timed_out": false,
+  "launch_error": null,
+  "elapsed_seconds": 3.8035217000000046,
+  "payload": null,
+  "payload_error": "JSONDecodeError"
+}

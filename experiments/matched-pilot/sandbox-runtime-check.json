@@ -1,0 +1,30 @@
+{
+  "scope": "Non-model project-runner check on already patched solver workspace; no new repair or inference",
+  "argv": [
+    "C:\\Users\\visma\\AppData\\Roaming\\npm\\codex.cmd",
+    "-c",
+    "windows.sandbox=\"elevated\"",
+    "sandbox",
+    "-P",
+    ":workspace",
+    "-C",
+    "D:\\labs\\skylla\\artifacts\\matched-native\\run-002\\luigi-4-solver",
+    "D:\\labs\\skylla\\artifacts\\runtime\\python39\\python.exe",
+    "-c",
+    "import os; os.environ['PYTEST_DISABLE_PLUGIN_AUTOLOAD']='1'; import pytest; raise SystemExit(pytest.main(['-q','-p','no:cacheprovider','-o','addopts=','test/contrib/redshift_test.py::TestS3CopyToTable']))"
+  ],
+  "runtime_manifest_sha256": "e836370d05a6e247010196a1653a52814d0cb2f0190c239372d34bff79828fc7",
+  "implementation_sha256": "1b541637858bc439f39104619b580d326cba14f43012168369caa6014d18a10c",
+  "result": {
+    "returncode": 0,
+    "timed_out": false,
+    "elapsed_seconds": 2.2921011,
+    "usage": [],
+    "completed_command_calls": 0,
+    "stdout_sha256": "e1a3b44f49b6ad1e9a34eb4633c3a70096976e31f9606e5e14ec0383bc937b01",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "event_count": 0
+  },
+  "stdout": ".....                                                                    [100%]\n============================== warnings summary ===============================\nluigi\\parameter.py:28\n  D:\\labs\\skylla\\artifacts\\matched-native\\run-002\\luigi-4-solver\\luigi\\parameter.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    from collections import OrderedDict, Mapping\n\nluigi\\scheduler.py:208\n  D:\\labs\\skylla\\artifacts\\matched-native\\run-002\\luigi-4-solver\\luigi\\scheduler.py:208: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    class OrderedSet(collections.MutableSet):\n\nluigi\\scheduler.py:98: 29 warnings\n  D:\\labs\\skylla\\artifacts\\matched-native\\run-002\\luigi-4-solver\\luigi\\scheduler.py:98: DeprecationWarning: inspect.getargspec() is deprecated since Python 3.0, use inspect.signature() or inspect.getfullargspec()\n    fn_args = inspect.getargspec(fn)\n\n-- Docs: https://docs.pytest.org/en/stable/warnings.html\n5 passed, 31 warnings in 0.59s\n",
+  "stderr": ""
+}

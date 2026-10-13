@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "scope": "Evaluator-only local screening; no agent, Laya inference or repair gain",
+  "cohort_sha256": "ae17fa473f5139d8ec91e49f5220cca1ca46b8e7da1846c4789fb31da0701ea8",
+  "benchmark_commit": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+  "method_sha256": "4f54db88e9ad7300f1092bac9d9b52653b6c85431c829edba02df383e33dd797",
+  "implementation_sha256": {
+    "tools/study/screen_matched_pilot.py": "041c12a93701639efa4df8556cde624c2620829aafc4d120044ca2de84c82ed2",
+    "tools/study/process_record.py": "22eff277ebc1842c4d355c2e86601fe72bc5267a33e9737c0de87076e72086b2",
+    "tools/pilot/prepare.py": "497441a69253bf2f74408ec25ff81ca91dbde415e4d138fd0ea323dfc041df08"
+  },
+  "python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+  "platform": "win32",
+  "repetitions": 1,
+  "per_process_timeout_seconds": 30,
+  "case_workers": 3,
+  "deviations": "Windows Python 3.9 local environment; differs from original benchmark runtimes. Fixed-version fixture files in evaluator workspaces only."
+}

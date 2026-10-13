@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "D:\\labs\\skylla\\artifacts\\venvs\\study\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "-q",
+    "tornado.test.websocket_test.WebSocketTest.test_nodelay"
+  ],
+  "cwd": "D:\\labs\\skylla\\workspaces\\matched-screen\\tornado-1-buggy-vtbvh0nr",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "======================================================================\nERROR: test_nodelay (tornado.test.websocket_test.WebSocketTest)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\labs\\skylla\\workspaces\\matched-screen\\tornado-1-buggy-vtbvh0nr\\tornado\\testing.py\", line 385, in setUp\n    self.http_server.add_sockets([sock])\n  File \"D:\\labs\\skylla\\workspaces\\matched-screen\\tornado-1-buggy-vtbvh0nr\\tornado\\tcpserver.py\", line 165, in add_sockets\n    self._handlers[sock.fileno()] = add_accept_handler(\n  File \"D:\\labs\\skylla\\workspaces\\matched-screen\\tornado-1-buggy-vtbvh0nr\\tornado\\netutil.py\", line 279, in add_accept_handler\n    io_loop.add_handler(sock, accept_handler, IOLoop.READ)\n  File \"D:\\labs\\skylla\\workspaces\\matched-screen\\tornado-1-buggy-vtbvh0nr\\tornado\\platform\\asyncio.py\", line 99, in add_handler\n    self.asyncio_loop.add_reader(fd, self._handle_events, fd, IOLoop.READ)\n  File \"C:\\Users\\visma\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\events.py\", line 504, in add_reader\n    raise NotImplementedError\nNotImplementedError\n\n----------------------------------------------------------------------\nRan 1 test in 0.013s\n\nFAILED (errors=1)\n",
+  "timed_out": false,
+  "launch_error": null,
+  "elapsed_seconds": 0.8085245000000008,
+  "payload": null,
+  "payload_error": "JSONDecodeError"
+}

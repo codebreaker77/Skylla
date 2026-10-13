@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "D:\\labs\\skylla\\artifacts\\venvs\\study\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "-q",
+    "tornado.test.websocket_test.WebSocketTest.test_render_message"
+  ],
+  "cwd": "D:\\labs\\skylla\\artifacts\\matched-native\\run-002\\tornado-10-eval-target",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "----------------------------------------------------------------------\nRan 1 test in 0.008s\n\nOK\n",
+  "timed_out": false,
+  "launch_error": null,
+  "elapsed_seconds": 0.7220757999999989,
+  "payload": null,
+  "payload_error": "JSONDecodeError"
+}

@@ -1,0 +1,31 @@
+{
+  "case_id": "bugsinpy:tornado-10",
+  "inference": {
+    "returncode": 1,
+    "timed_out": true,
+    "elapsed_seconds": 120.11749130000001,
+    "usage": [],
+    "completed_command_calls": 0,
+    "stdout_sha256": "11b7b1d82d3776cddc27a92e77bb9c1670bf0b673ee0cfb0402fbc653903153e",
+    "stderr_sha256": "0e2f22197b8471dc9c80c564727428c7829094fa7b8581507efb1b013f1d88cb",
+    "event_count": 6
+  },
+  "changed_production_files": [],
+  "deleted_production_files": [],
+  "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evaluation": [
+    {
+      "kind": "target",
+      "returncode": 1,
+      "timed_out": false,
+      "record_sha256": "e18f0cd69fd205af3d1d79efb9386f53b3d9e8229ba05e72034fab17c473ea1b"
+    },
+    {
+      "kind": "regression_class",
+      "returncode": 1,
+      "timed_out": false,
+      "record_sha256": "5673ad9550a579e5bb66a709b94fa0dd6cea89f7f3c1f947d6fb75388f1bf0c9"
+    }
+  ],
+  "status": "not_verified"
+}

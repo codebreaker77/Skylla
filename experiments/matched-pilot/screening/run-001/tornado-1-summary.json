@@ -1,0 +1,56 @@
+{
+  "case_id": "bugsinpy:tornado-1",
+  "status": "pending_review",
+  "runs": [
+    {
+      "variant": "buggy",
+      "returncode": 1,
+      "timed_out": false,
+      "launch_error": null,
+      "elapsed_seconds": 0.8085245000000008,
+      "log": "experiments/matched-pilot/screening/run-001/tornado-1-buggy-target.json",
+      "log_sha256": "2c467ce4cba7c89ed61dbef65b20a4f1f792d139dee05a5809219b210088b3ac",
+      "status": "awaiting_failure_and_test_count_review"
+    },
+    {
+      "variant": "fixed",
+      "returncode": 1,
+      "timed_out": false,
+      "launch_error": null,
+      "elapsed_seconds": 0.6730060999999985,
+      "log": "experiments/matched-pilot/screening/run-001/tornado-1-fixed-target.json",
+      "log_sha256": "fd093b9cb8084793fea0b5f3fee46348a0a9b601d31ee9a12e7251dd7784bbbd",
+      "status": "awaiting_failure_and_test_count_review"
+    }
+  ],
+  "sources": [
+    {
+      "id": "tornado-1",
+      "variant": "buggy",
+      "commit": "6a5a0bfa370b6c0d3dbbf9589a560a98202d2baa",
+      "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/6a5a0bfa370b6c0d3dbbf9589a560a98202d2baa",
+      "archive_sha256": "ee41fd6dd6a2d33447f6089e2cc1611b97f0bb3ee857abf0f4613f302c5ea84d",
+      "files": 301,
+      "path": "artifacts\\sources\\tornado-1-buggy",
+      "excluded_archive_prefixes": [
+        "maint/test/appengine/"
+      ],
+      "omitted_links": []
+    },
+    {
+      "id": "tornado-1",
+      "variant": "fixed",
+      "commit": "4677c54cc18bbfbdf0f4dadf11610fab6203fd63",
+      "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/4677c54cc18bbfbdf0f4dadf11610fab6203fd63",
+      "archive_sha256": "bb094e64afe77f97684b149d1e13686d32e60817ac2067d021ce52363c15393e",
+      "files": 301,
+      "path": "artifacts\\sources\\tornado-1-fixed",
+      "excluded_archive_prefixes": [
+        "maint/test/appengine/"
+      ],
+      "omitted_links": []
+    }
+  ],
+  "exit_pattern_candidate": false,
+  "note": "Exit pattern is triage only: inspect target assertions, executed/skipped counts, setup failures and regression checks before admission."
+}

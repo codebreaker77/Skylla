@@ -1,0 +1,48 @@
+{
+  "case_id": "bugsinpy:luigi-17",
+  "status": "pending_review",
+  "runs": [
+    {
+      "variant": "buggy",
+      "returncode": 1,
+      "timed_out": false,
+      "launch_error": null,
+      "elapsed_seconds": 1.4591326999999996,
+      "log": "experiments/matched-pilot/screening/run-001/luigi-17-buggy-target.json",
+      "log_sha256": "6c1a5158789e0dc12767d40ce53affe844bdb3edfb8e2fd12d455658bd8c77d9",
+      "status": "awaiting_failure_and_test_count_review"
+    },
+    {
+      "variant": "fixed",
+      "returncode": 0,
+      "timed_out": false,
+      "launch_error": null,
+      "elapsed_seconds": 0.6193773,
+      "log": "experiments/matched-pilot/screening/run-001/luigi-17-fixed-target.json",
+      "log_sha256": "ddfb6c61bbfc32f893ddbdef66a7ad8310bc4368eadf7d488b654027a491d12d",
+      "status": "awaiting_failure_and_test_count_review"
+    }
+  ],
+  "sources": [
+    {
+      "id": "luigi-17",
+      "variant": "buggy",
+      "commit": "c39922350cba3a93c96c2ed223283bf8cf315a7d",
+      "archive_url": "https://codeload.github.com/spotify/luigi/tar.gz/c39922350cba3a93c96c2ed223283bf8cf315a7d",
+      "archive_sha256": "3e35a31a077c09c76c7432fa8561170caff23384e0c5493e3fa3dec98c8230c4",
+      "files": 316,
+      "path": "artifacts\\sources\\luigi-17-buggy"
+    },
+    {
+      "id": "luigi-17",
+      "variant": "fixed",
+      "commit": "e38392a1381dd8daee0f180f0ac7f651edb88e0c",
+      "archive_url": "https://codeload.github.com/spotify/luigi/tar.gz/e38392a1381dd8daee0f180f0ac7f651edb88e0c",
+      "archive_sha256": "0a7230bd23a2c271e2eb58277b0b5cc6e46d8e5fc5faebf4e679130198b9f3bc",
+      "files": 316,
+      "path": "artifacts\\sources\\luigi-17-fixed"
+    }
+  ],
+  "exit_pattern_candidate": true,
+  "note": "Exit pattern is triage only: inspect target assertions, executed/skipped counts, setup failures and regression checks before admission."
+}

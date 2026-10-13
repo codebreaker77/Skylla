@@ -126,8 +126,9 @@ Skylla paper yet.
 Earlier development work is preserved separately:
 
 - [Matched repair pilot preparation](experiments/matched-pilot/REPORT.md): six
-  new development case IDs selected with prior exposure exclusions; a separate
-  Terra/medium Codex access check passed. Comparative repair results are pending.
+  new development case IDs screened with prior exposure exclusions. Terra/medium
+  produces two patches passing selected independent checks; one session completes,
+  one times out. This is native feasibility, with no measured Skylla treatment gain.
 - [Receiver-filter replay](experiments/receiver-filter/REPORT.md): 24 fresh
   processes on the exposed Tornado case retain the distinguishing observation
   while reducing field accesses from 1,080 to 552. The number of probe processes
@@ -162,9 +163,10 @@ Earlier development work is preserved separately:
 
 ## Reproduce the work
 
-The standard-library suite contains 36 tests covering controller decisions,
+The standard-library suite contains 39 tests covering controller decisions,
 controlled-study apparatus, screening triage, trajectory extraction, AST proposal
-boundaries, process/readiness failure handling, shadow inputs and CUDA-only guards.
+boundaries, process/readiness failure handling, shadow inputs, action admissibility,
+cohort sampling and CUDA-only guards.
 
 ```sh
 python -m unittest discover -s tests -v

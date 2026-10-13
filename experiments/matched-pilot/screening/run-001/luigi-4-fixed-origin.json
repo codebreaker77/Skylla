@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "D:\\labs\\skylla\\artifacts\\venvs\\study\\Scripts\\python.exe",
+    "-c",
+    "import importlib,json,pathlib; m=importlib.import_module('luigi'); p=pathlib.Path(m.__file__).resolve(); print(json.dumps({'origin':str(p),'local':p.is_relative_to(pathlib.Path.cwd())}))"
+  ],
+  "cwd": "D:\\labs\\skylla\\workspaces\\matched-screen\\luigi-4-fixed-f3139h72",
+  "returncode": 0,
+  "stdout": "{\"origin\": \"D:\\\\labs\\\\skylla\\\\workspaces\\\\matched-screen\\\\luigi-4-fixed-f3139h72\\\\luigi\\\\__init__.py\", \"local\": true}\n",
+  "stderr": "",
+  "timed_out": false,
+  "launch_error": null,
+  "elapsed_seconds": 0.5708196000000001,
+  "payload": {
+    "origin": "D:\\labs\\skylla\\workspaces\\matched-screen\\luigi-4-fixed-f3139h72\\luigi\\__init__.py",
+    "local": true
+  },
+  "payload_error": null
+}

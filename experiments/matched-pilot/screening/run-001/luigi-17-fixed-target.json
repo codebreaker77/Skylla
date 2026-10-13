@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "D:\\labs\\skylla\\artifacts\\venvs\\study\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "addopts=",
+    "test/scheduler_test.py::SchedulerTest::test_local_scheduler_task_history_status"
+  ],
+  "cwd": "D:\\labs\\skylla\\workspaces\\matched-screen\\luigi-17-fixed-gp6l1etn",
+  "returncode": 0,
+  "stdout": ".                                                                        [100%]\n1 passed in 0.23s\n",
+  "stderr": "",
+  "timed_out": false,
+  "launch_error": null,
+  "elapsed_seconds": 0.6193773,
+  "payload": null,
+  "payload_error": "JSONDecodeError"
+}

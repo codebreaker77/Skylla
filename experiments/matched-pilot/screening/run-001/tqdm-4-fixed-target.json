@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "D:\\labs\\skylla\\artifacts\\venvs\\study\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "addopts=",
+    "tqdm/tests/tests_tqdm.py::test_nototal"
+  ],
+  "cwd": "D:\\labs\\skylla\\workspaces\\matched-screen\\tqdm-4-fixed-ueuf7j8s",
+  "returncode": 1,
+  "stdout": "E                                                                        [100%]\n=================================== ERRORS ====================================\n_______________________ ERROR at setup of test_nototal ________________________\n\n    def pretest():\n        # setcheckinterval is deprecated\n>       getattr(sys, 'setswitchinterval', getattr(sys, 'setcheckinterval'))(100)\nE       AttributeError: module 'sys' has no attribute 'setcheckinterval'\n\ntqdm\\tests\\tests_tqdm.py:116: AttributeError\n============================== warnings summary ===============================\n..\\..\\..\\artifacts\\venvs\\study\\lib\\site-packages\\nose\\importer.py:12\n  D:\\labs\\skylla\\artifacts\\venvs\\study\\lib\\site-packages\\nose\\importer.py:12: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses\n    from imp import find_module, load_module, acquire_lock, release_lock\n\n-- Docs: https://docs.pytest.org/en/stable/warnings.html\n=========================== short test summary info ===========================\nERROR tqdm/tests/tests_tqdm.py::test_nototal - AttributeError: module 'sys' h...\n1 warning, 1 error in 0.36s\n",
+  "stderr": "",
+  "timed_out": false,
+  "launch_error": null,
+  "elapsed_seconds": 0.6827203999999973,
+  "payload": null,
+  "payload_error": "JSONDecodeError"
+}

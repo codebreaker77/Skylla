@@ -1,0 +1,64 @@
+{
+  "case_id": "bugsinpy:tornado-10",
+  "status": "pending_review",
+  "runs": [
+    {
+      "variant": "buggy",
+      "returncode": 1,
+      "timed_out": false,
+      "launch_error": null,
+      "elapsed_seconds": 0.8400173999999989,
+      "log": "experiments/matched-pilot/screening/run-001/tornado-10-buggy-target.json",
+      "log_sha256": "fc6164c37c93254a2947aa35ad4b0abb2f59584deb752cdf621779954eb0bbe6",
+      "status": "awaiting_failure_and_test_count_review"
+    },
+    {
+      "variant": "fixed",
+      "returncode": 0,
+      "timed_out": false,
+      "launch_error": null,
+      "elapsed_seconds": 0.7675576999999993,
+      "log": "experiments/matched-pilot/screening/run-001/tornado-10-fixed-target.json",
+      "log_sha256": "b1c32e63bd7602d59d949e8d36996c42ccd570e818748ef2c14acf72fbb8be95",
+      "status": "awaiting_failure_and_test_count_review"
+    }
+  ],
+  "sources": [
+    {
+      "id": "tornado-10",
+      "variant": "buggy",
+      "commit": "ecd8968c5135b810cd607b5902dda2cd32122b39",
+      "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/ecd8968c5135b810cd607b5902dda2cd32122b39",
+      "archive_sha256": "2b80687e9cfd3109fb3cae526985a43e61431deab86975d77aea1f2a6415d381",
+      "files": 305,
+      "path": "artifacts\\sources\\tornado-10-buggy",
+      "excluded_archive_prefixes": [
+        "maint/test/appengine/"
+      ],
+      "omitted_links": [
+        "maint/test/appengine/py27/cgi_runtests.py",
+        "maint/test/appengine/py27/runtests.py",
+        "maint/test/appengine/py27/tornado"
+      ]
+    },
+    {
+      "id": "tornado-10",
+      "variant": "fixed",
+      "commit": "5931d913b4ea250891a0b582f1f8b2901b868c79",
+      "archive_url": "https://codeload.github.com/tornadoweb/tornado/tar.gz/5931d913b4ea250891a0b582f1f8b2901b868c79",
+      "archive_sha256": "cd710fd30a9caf2f789e6b86d3eccdbdfd0db9f840a472f9848e19b050480ee5",
+      "files": 305,
+      "path": "artifacts\\sources\\tornado-10-fixed",
+      "excluded_archive_prefixes": [
+        "maint/test/appengine/"
+      ],
+      "omitted_links": [
+        "maint/test/appengine/py27/cgi_runtests.py",
+        "maint/test/appengine/py27/runtests.py",
+        "maint/test/appengine/py27/tornado"
+      ]
+    }
+  ],
+  "exit_pattern_candidate": true,
+  "note": "Exit pattern is triage only: inspect target assertions, executed/skipped counts, setup failures and regression checks before admission."
+}

@@ -151,9 +151,13 @@ Full repair budgets, tool accounting and a candidate-ranking adapter remain
 unresolved. These constraints do not block local replay, protocol writing or
 artifact verification; they remain prerequisites for the matched agent comparison.
 
-The [next matched pilot](../experiments/matched-pilot/REPORT.md) freezes six
+The [next matched pilot](../experiments/matched-pilot/REPORT.md) froze six
 previously unexamined development case IDs and a draft four-arm schedule before
-target screening. It excludes earlier case exposures and will keep failed
-setups in the record. The separate minimal recommendation check preserves and
+target screening. All six have now been screened, keeping three runtime failures
+and one ambiguous dependency role alongside two behavioral contrasts. Corrected
+Terra/medium native feasibility episodes produce two patches passing selected
+evaluator checks; Luigi completes and Tornado times out. There is no matched
+Skylla treatment result. A sandbox-readable project interpreter is prepared and
+checked for future runs. The separate minimal recommendation check preserves and
 rejects unsupported setup predictions; it does not improve measured accuracy
 or execute a repair. Laya inference continues to require the workstation GPU.

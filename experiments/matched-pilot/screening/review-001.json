@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "reviewer": "Single assistant manual exploratory review",
+  "scope": "Readiness triage only, not admission or repair outcomes",
+  "sources_sha256": {
+    "luigi-17-buggy-target.json": "6c1a5158789e0dc12767d40ce53affe844bdb3edfb8e2fd12d455658bd8c77d9",
+    "luigi-17-fixed-target.json": "ddfb6c61bbfc32f893ddbdef66a7ad8310bc4368eadf7d488b654027a491d12d",
+    "luigi-4-buggy-target.json": "bab52b709521ab87ade0eaf7cac5fe453e4a655c9286f94aaa8303a2d4c30965",
+    "luigi-4-fixed-target.json": "aac2d784c22f0b90194afbf41d6970bbd20b306af097576a218cb4aad5bd4e78",
+    "tornado-1-buggy-target.json": "2c467ce4cba7c89ed61dbef65b20a4f1f792d139dee05a5809219b210088b3ac",
+    "tornado-1-fixed-target.json": "fd093b9cb8084793fea0b5f3fee46348a0a9b601d31ee9a12e7251dd7784bbbd",
+    "tornado-10-buggy-target.json": "fc6164c37c93254a2947aa35ad4b0abb2f59584deb752cdf621779954eb0bbe6",
+    "tornado-10-fixed-target.json": "b1c32e63bd7602d59d949e8d36996c42ccd570e818748ef2c14acf72fbb8be95",
+    "tqdm-4-buggy-target.json": "95cf001de68aa6d477790a235cb82b97175cc1cee556deb359d45fe8d458b7ad",
+    "tqdm-4-fixed-target.json": "cb793a4d4434890946a0a70fce5519819e5e1e2d87c3457e146f70e4a637e979",
+    "tqdm-7-buggy-target.json": "3c5a5366260657643b495f591056fbb795da995f2abdd1fbb15cfac3edd38f94",
+    "tqdm-7-fixed-target.json": "8175e4ace2f90f8b2256f2f942a9cde5d69ffbc999edcdd4fbf9855d3d0455e5"
+  },
+  "cases": [
+    {
+      "case_id": "bugsinpy:luigi-4",
+      "disposition": "behavioral_contrast",
+      "reason": "Buggy target raises TypeError at len(columns) with columns=None; reference target executes one passing test.",
+      "repair_ready": false
+    },
+    {
+      "case_id": "bugsinpy:tornado-10",
+      "disposition": "behavioral_contrast",
+      "reason": "Buggy target fails rendered-message assertion with accompanying server TypeError; reference executes one passing test.",
+      "repair_ready": false
+    },
+    {
+      "case_id": "bugsinpy:luigi-17",
+      "disposition": "dependency_role_unresolved",
+      "reason": "Missing sqlalchemy occurs only along buggy local-scheduler task-history path. Could itself be the reported defect; do not label setup from exception alone.",
+      "repair_ready": false
+    },
+    {
+      "case_id": "bugsinpy:tornado-1",
+      "disposition": "runtime_incompatible",
+      "reason": "Both versions raise NotImplementedError in add_reader during fixture setup on the Windows asyncio policy.",
+      "repair_ready": false
+    },
+    {
+      "case_id": "bugsinpy:tqdm-7",
+      "disposition": "runtime_incompatible",
+      "reason": "Both versions fail fixture setup accessing removed sys.setcheckinterval on Python 3.9.",
+      "repair_ready": false
+    },
+    {
+      "case_id": "bugsinpy:tqdm-4",
+      "disposition": "runtime_incompatible",
+      "reason": "Both versions fail fixture setup accessing removed sys.setcheckinterval on Python 3.9.",
+      "repair_ready": false
+    }
+  ],
+  "remaining_gate": "Independent regression checks and reset validation; confirm dependency-role case against issue before admission"
+}

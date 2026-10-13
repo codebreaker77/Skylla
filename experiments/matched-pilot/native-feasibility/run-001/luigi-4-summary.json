@@ -1,0 +1,39 @@
+{
+  "case_id": "bugsinpy:luigi-4",
+  "inference": {
+    "returncode": 0,
+    "timed_out": false,
+    "elapsed_seconds": 27.0614214,
+    "usage": [
+      {
+        "input_tokens": 107244,
+        "cached_input_tokens": 83456,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 967,
+        "reasoning_output_tokens": 369
+      }
+    ],
+    "completed_command_calls": 0,
+    "stdout_sha256": "013f597b59cc0905d8d1daec941434f4869628dfc3814a285b65ec1fd56f59fc",
+    "stderr_sha256": "0ea192f291ec68011a863d7dda61d35cfb7cbd29083d4ff7901ce3a3e29c8d37",
+    "event_count": 6
+  },
+  "changed_production_files": [],
+  "deleted_production_files": [],
+  "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evaluation": [
+    {
+      "kind": "target",
+      "returncode": 1,
+      "timed_out": false,
+      "record_sha256": "0b54521fde63cc77a1ff3ff88cc94cf08ccb4bc2d5995495b0b047dbde4c8e30"
+    },
+    {
+      "kind": "regression_class",
+      "returncode": 1,
+      "timed_out": false,
+      "record_sha256": "f64a23264bfa0f0b982ab313df04c78b556ed814047c4a9698331d84b0dde672"
+    }
+  ],
+  "status": "not_verified"
+}

@@ -1,0 +1,48 @@
+{
+  "case_id": "bugsinpy:tqdm-7",
+  "status": "pending_review",
+  "runs": [
+    {
+      "variant": "buggy",
+      "returncode": 1,
+      "timed_out": false,
+      "launch_error": null,
+      "elapsed_seconds": 2.5466984000000004,
+      "log": "experiments/matched-pilot/screening/run-001/tqdm-7-buggy-target.json",
+      "log_sha256": "3c5a5366260657643b495f591056fbb795da995f2abdd1fbb15cfac3edd38f94",
+      "status": "awaiting_failure_and_test_count_review"
+    },
+    {
+      "variant": "fixed",
+      "returncode": 1,
+      "timed_out": false,
+      "launch_error": null,
+      "elapsed_seconds": 0.6387444000000002,
+      "log": "experiments/matched-pilot/screening/run-001/tqdm-7-fixed-target.json",
+      "log_sha256": "8175e4ace2f90f8b2256f2f942a9cde5d69ffbc999edcdd4fbf9855d3d0455e5",
+      "status": "awaiting_failure_and_test_count_review"
+    }
+  ],
+  "sources": [
+    {
+      "id": "tqdm-7",
+      "variant": "buggy",
+      "commit": "caefe02fd6f3165e5634460ab20caf4c60400120",
+      "archive_url": "https://codeload.github.com/tqdm/tqdm/tar.gz/caefe02fd6f3165e5634460ab20caf4c60400120",
+      "archive_sha256": "7a9bcaaae5c8332d7cc036df5ad7924e012b939ef9e2462dfe17ba3164a16081",
+      "files": 32,
+      "path": "artifacts\\sources\\tqdm-7-buggy"
+    },
+    {
+      "id": "tqdm-7",
+      "variant": "fixed",
+      "commit": "4efd35246c924236f34d8130b1055a3c3ba78605",
+      "archive_url": "https://codeload.github.com/tqdm/tqdm/tar.gz/4efd35246c924236f34d8130b1055a3c3ba78605",
+      "archive_sha256": "a394bb75fa9c10f2745653ef1820635b4417ccdb8b2e1c5508af860c2ec2f9d4",
+      "files": 32,
+      "path": "artifacts\\sources\\tqdm-7-fixed"
+    }
+  ],
+  "exit_pattern_candidate": false,
+  "note": "Exit pattern is triage only: inspect target assertions, executed/skipped counts, setup failures and regression checks before admission."
+}

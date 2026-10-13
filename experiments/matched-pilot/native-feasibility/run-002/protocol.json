@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-10-13T17:24:19.626900+00:00",
+  "scope": "Two native-only development feasibility episodes; no Skylla or Laya treatment",
+  "model": "gpt-5.6-terra",
+  "reasoning_effort": "medium",
+  "cli_version": "codex-cli 0.162.1",
+  "auth": "Existing ChatGPT login; no supplied API key",
+  "wall_cap_seconds_per_episode": 120,
+  "token_cap": null,
+  "token_note": "CLI usage measured after completion; no hard token quota or dollar estimate established",
+  "method_sha256": "ed624d94daa90540a53cb9d70e869e14f701ac0fa8d28b8d2b6d6462be51bbe4",
+  "launcher_revision": 2,
+  "permission_profile": ":workspace",
+  "windows_sandbox": "elevated",
+  "script_sha256": "e3bae44c630f0c8ffef0dacdd93d667e13544030bf6879e0cf2ff0f179245a32",
+  "cases": {
+    "bugsinpy:luigi-4": {
+      "issue": "S3CopyToTable crashes when columns=None: building the COPY statement calls len(None). The optional column list should be omittable; explicit column lists must continue to work. Repair the production implementation.",
+      "regression_target": "test/contrib/redshift_test.py::TestS3CopyToTable"
+    },
+    "bugsinpy:tornado-10": {
+      "issue": "Rendering a template from a WebSocketHandler fails. A handler rendering a template with message='hello' should produce '<b>hello</b>', but the request fails with TypeError: 'NoneType' object is not iterable and the client receives no rendered message. Repair template rendering while preserving ordinary WebSocket behavior.",
+      "regression_target": "tornado.test.websocket_test.WebSocketTest"
+    }
+  },
+  "runtime_python": "3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]",
+  "host": "win32",
+  "cohort_sha256": "ae17fa473f5139d8ec91e49f5220cca1ca46b8e7da1846c4789fb31da0701ea8"
+}

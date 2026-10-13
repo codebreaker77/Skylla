@@ -81,6 +81,9 @@ def main(name):
     executable = shutil.which("codex.cmd")
     if executable is None:
         raise RuntimeError("Codex Windows CLI unavailable")
+    model_interpreter = ROOT / "artifacts/runtime/python39/python.exe"
+    if not model_interpreter.exists():
+        raise RuntimeError("Prepare and check the sandbox-readable project interpreter first")
     rows = read(ROOT / "experiments/matched-pilot/v1/cohort.json")["selected"]
     selected = [row for row in rows if row["id"] in CASES]
     output = ROOT / "experiments/matched-pilot/native-feasibility" / name
@@ -93,8 +96,10 @@ def main(name):
                 "model": "gpt-5.6-terra", "reasoning_effort": "medium", "cli_version": version,
                 "auth": "Existing ChatGPT login; no supplied API key", "wall_cap_seconds_per_episode": 120,
                 "token_cap": None, "token_note": "CLI usage measured after completion; no hard token quota or dollar estimate established",
-                "method_sha256": sha(ROOT / "experiments/matched-pilot/NATIVE_FEASIBILITY_V2.md"),
-                "launcher_revision": 2, "permission_profile": ":workspace", "windows_sandbox": "elevated",
+                "method_sha256": sha(ROOT / "experiments/matched-pilot/NATIVE_FEASIBILITY_V3.md"),
+                "launcher_revision": 3, "permission_profile": ":workspace", "windows_sandbox": "elevated",
+                "solver_interpreter": str(model_interpreter),
+                "solver_runtime_manifest_sha256": sha(model_interpreter.parent / "manifest.json"),
                 "script_sha256": sha(Path(__file__)), "cases": CASES,
                 "runtime_python": sys.version, "host": sys.platform,
                 "cohort_sha256": sha(ROOT / "experiments/matched-pilot/v1/cohort.json")}
@@ -111,7 +116,7 @@ def main(name):
         prompt = (CASES[row["id"]]["issue"] + "\nUse only files inside this workspace. Do not read parent directories, "
                   "reference snapshots, benchmark metadata, credentials or network sources. You can inspect source, "
                   "edit production code and run native tests or your own probes. Do not modify evaluator tests. "
-                  "Use the existing Python interpreter at " + sys.executable + ". You have 120 seconds. "
+                  "Use the sandbox-readable Python interpreter at " + str(model_interpreter) + ". You have 120 seconds. "
                   "Leave the smallest production repair in this workspace, and report what you tested. No commit or push.")
         argv = [executable, "-a", "never", "exec", "--ignore-user-config", "--ephemeral", "--skip-git-repo-check",
                 "-C", str(work), "-s", "workspace-write", "-m", "gpt-5.6-terra", "-c", 'model_reasoning_effort="medium"',

@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "D:\\labs\\skylla\\artifacts\\venvs\\study\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "-q",
+    "tornado.test.websocket_test.WebSocketTest"
+  ],
+  "cwd": "D:\\labs\\skylla\\artifacts\\matched-native\\run-002\\tornado-10-eval-regression_class",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "WARNING:tornado.access:426 GET /echo (127.0.0.1) 1.03ms\nWARNING:tornado.access:403 GET /echo (127.0.0.1) 1.00ms\nWARNING:tornado.access:403 GET /echo (127.0.0.1) 0.00ms\nWARNING:tornado.access:403 GET /echo (127.0.0.1) 0.00ms\nWARNING:tornado.access:400 GET /echo (127.0.0.1) 1.03ms\nWARNING:tornado.access:404 GET /notfound (127.0.0.1) 0.00ms\n----------------------------------------------------------------------\nRan 24 tests in 3.093s\n\nOK\n",
+  "timed_out": false,
+  "launch_error": null,
+  "elapsed_seconds": 3.763053499999984,
+  "payload": null,
+  "payload_error": "JSONDecodeError"
+}
